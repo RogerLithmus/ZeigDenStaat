@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-slate-750: #1e293b;
+  --color-slate-850: #0f172a;
+  --color-slate-950: #020617;
+  
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  
+  --shadow-emerald-glow: 0 0 20px rgba(16, 185, 129, 0.25);
+  --shadow-blue-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+body {
+  background-color: #020617;
+  color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Custom background for React Flow Canvas */
+.react-flow__background {
+  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 70%, #020617 100%) !important;
+}
+
+/* React Flow control panel overrides for premium dark mode look */
+.react-flow__controls {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(51, 65, 85, 0.6) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.react-flow__controls-button {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5) !important;
+  fill: #94a3b8 !important;
+  color: #94a3b8 !important;
+  transition: all 0.2s !important;
+}
+
+.react-flow__controls-button:hover {
+  background: rgba(30, 41, 59, 0.95) !important;
+  fill: #3b82f6 !important;
+  color: #3b82f6 !important;
+}
+
+.react-flow__minimap {
+  background-color: rgba(15, 23, 42, 0.7) !important;
+  border: 1px solid rgba(51, 65, 85, 0.6) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2px !important;
+  transition: stroke 0.3s, stroke-width 0.3s !important;
+}
+
+/* ==========================================================================
+   3D Isometric City Metaphor Styles ("Bürokratiestadt")
+   ========================================================================== */
+
+.perspective-container {
+  perspective: 1500px;
+  perspective-origin: 50% 30%;
+  overflow: hidden;
+  position: relative;
+  background: radial-gradient(circle at 50% 30%, #0f172a 0%, #070a13 60%, #020408 100%);
+}
+
+/* Outer wrapper that can rotate and pan */
+.isometric-viewport {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ground grid of the city */
+.isometric-grid {
+  transform-style: preserve-3d;
+  background-image: 
+    radial-gradient(circle at center, rgba(30, 41, 59, 0.1) 0%, rgba(15, 23, 42, 0.8) 90%),
+    linear-gradient(rgba(51, 65, 85, 0.12) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(51, 65, 85, 0.12) 1.5px, transparent 1.5px);
+  background-size: 100% 100%, 80px 80px, 80px 80px;
+  background-position: center;
+  width: 2000px;
+  height: 2000px;
+  border-radius: 50%;
+  border: 3px dashed rgba(51, 65, 85, 0.3);
+  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.8), inset 0 0 100px rgba(0, 0, 0, 0.9);
+  position: relative;
+  transition: border-color 0.5s ease;
+}
+
+/* Grid lines and roads */
+.city-street-h {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: linear-gradient(to bottom, transparent, rgba(30, 41, 59, 0.4), transparent);
+  border-top: 1px solid rgba(51, 65, 85, 0.15);
+  border-bottom: 1px solid rgba(51, 65, 85, 0.15);
+  pointer-events: none;
+  transform: translateZ(0.5px);
+}
+
+.city-street-v {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  background: linear-gradient(to right, transparent, rgba(30, 41, 59, 0.4), transparent);
+  border-left: 1px solid rgba(51, 65, 85, 0.15);
+  border-right: 1px solid rgba(51, 65, 85, 0.15);
+  pointer-events: none;
+  transform: translateZ(0.5px);
+}
+
+/* 3D Building Main Container */
+.building-3d {
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+  cursor: pointer;
+}
+
+.building-3d:hover {
+  filter: brightness(1.2) drop-shadow(0 0 15px rgba(59, 130, 246, 0.3));
+}
+
+/* 3D Faces */
+.face-top {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(var(--building-h));
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.face-left {
+  position: absolute;
+  width: var(--building-h);
+  height: 100%;
+  transform: rotateY(-90deg);
+  transform-origin: left;
+  left: 0;
+  top: 0;
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.face-right {
+  position: absolute;
+  width: 100%;
+  height: var(--building-h);
+  transform: rotateX(90deg);
+  transform-origin: bottom;
+  left: 0;
+  bottom: 0;
+  transition: height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Wall Textures / Window Grids */
+.windows-left {
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
+    linear-gradient(rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
+  background-size: 12px 8px;
+}
+
+.windows-right {
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
+    linear-gradient(rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
+  background-size: 12px 8px;
+}
+
+.windows-glow-left {
+  background-image: 
+    linear-gradient(90deg, rgba(253, 224, 71, 0.15) 1.5px, transparent 1.5px),
+    linear-gradient(rgba(253, 224, 71, 0.15) 1.5px, transparent 1.5px);
+  background-size: 12px 8px;
+}
+
+.windows-glow-right {
+  background-image: 
+    linear-gradient(90deg, rgba(253, 224, 71, 0.15) 1.5px, transparent 1.5px),
+    linear-gradient(rgba(253, 224, 71, 0.15) 1.5px, transparent 1.5px);
+  background-size: 12px 8px;
+}
+
+/* --- COLOR PALETTES FOR SPECIFIC RESSRORTS --- */
+
+/* BMF (Finanzen) - Emerald / Green theme */
+.roof-bmf { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+.left-bmf { background: linear-gradient(to top, #047857 0%, #064e3b 100%); }
+.right-bmf { background: linear-gradient(to top, #065f46 0%, #064e3b 100%); }
+
+/* BMI (Inneres) - Blue theme */
+.roof-bmi { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); }
+.left-bmi { background: linear-gradient(to top, #1d4ed8 0%, #172554 100%); }
+.right-bmi { background: linear-gradient(to top, #1e40af 0%, #172554 100%); }
+
+/* BMVg (Verteidigung) - Amber / Tactical Orange theme */
+.roof-bmvg { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+.left-bmvg { background: linear-gradient(to top, #d97706 0%, #78350f 100%); }
+.right-bmvg { background: linear-gradient(to top, #b45309 0%, #78350f 100%); }
+
+/* BMDV (Digitales & Verkehr) - Purple / Violet theme */
+.roof-bmdv { background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%); }
+.left-bmdv { background: linear-gradient(to top, #7e22ce 0%, #4c1d95 100%); }
+.right-bmdv { background: linear-gradient(to top, #6b21a8 0%, #4c1d95 100%); }
+
+/* BMBF (Bildung & Forschung) - Cyan theme */
+.roof-bmbf { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); }
+.left-bmbf { background: linear-gradient(to top, #0891b2 0%, #164e63 100%); }
+.right-bmbf { background: linear-gradient(to top, #0e7490 0%, #164e63 100%); }
+
+/* Bundeskanzleramt (Machtzentrum) - Crimson Rose / Gold */
+.roof-bund { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); border: 2px solid #fbbf24; }
+.left-bund { background: linear-gradient(to top, #db2777 0%, #9d174d 100%); }
+.right-bund { background: linear-gradient(to top, #be185d 0%, #9d174d 100%); }
+
+/* Subordinate Agencies - Sleek Slate/Blue-grey */
+.roof-sub { background: linear-gradient(135deg, #64748b 0%, #475569 100%); }
+.left-sub { background: linear-gradient(to top, #475569 0%, #1e293b 100%); }
+.right-sub { background: linear-gradient(to top, #334155 0%, #1e293b 100%); }
+
+/* Default */
+.roof-default { background: linear-gradient(135deg, #475569 0%, #334155 100%); }
+.left-default { background: linear-gradient(to top, #334155 0%, #0f172a 100%); }
+.right-default { background: linear-gradient(to top, #1e293b 0%, #0f172a 100%); }
+
+/* --- 3D PARTICLE / ANIMATION EFFECTS --- */
+
+/* Paper airplane trajectory */
+@keyframes flyPlane {
+  0% {
+    transform: translate3d(var(--start-x), var(--start-y), var(--start-z)) rotateZ(var(--angle)) scale(0.6);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(var(--end-x), var(--end-y), var(--end-z)) rotateZ(var(--angle)) scale(0.6);
+    opacity: 0;
+  }
+}
+
+.paper-plane-particle {
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: flyPlane var(--duration) linear infinite;
+  animation-delay: var(--delay);
+  pointer-events: none;
+  font-size: 14px;
+}
+
+/* Floating documents for high bureaucracy */
+@keyframes floatPaperwork {
+  0% {
+    transform: translate3d(var(--x), var(--y), 10px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.75;
+  }
+  85% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(calc(var(--x) + var(--drift-x)), calc(var(--y) + var(--drift-y)), 300px) rotateX(360deg) rotateY(180deg) rotateZ(720deg);
+    opacity: 0;
+  }
+}
+
+.floating-document {
+  position: absolute;
+  animation: floatPaperwork var(--duration) ease-in-out infinite;
+  animation-delay: var(--delay);
+  pointer-events: none;
+  font-size: 16px;
+}
+
+/* Subtle pulse glow for scandal buildings */
+@keyframes scandalGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(239, 68, 68, 0.6);
+    filter: brightness(1.15) saturate(1.2);
+  }
+}
+
+.scandal-alert-glow {
+  animation: scandalGlow 2s infinite ease-in-out;
+  border: 1px solid rgba(239, 68, 68, 0.4) !important;
+}
+
+/* Ambient birds/drones flying over the city */
+@keyframes birdFly {
+  0% {
+    transform: translate3d(-200px, 400px, 200px) rotateZ(-30deg);
+  }
+  100% {
+    transform: translate3d(1200px, -200px, 250px) rotateZ(-30deg);
+  }
+}
+
+.city-bird {
+  position: absolute;
+  animation: birdFly 16s linear infinite;
+  font-size: 18px;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* ==========================================================================
+   Der Architektur-Bauplan-Apparat (Blueprint View) Styles
+   ========================================================================== */
+
+.font-mono-tech {
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+}
+
+.font-handwritten {
+  font-family: 'Caveat', cursive, sans-serif;
+}
+
+.font-scribble {
+  font-family: 'Architects Daughter', cursive, sans-serif;
+}
+
+.blueprint-grid, .paper-bg {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(rgba(17, 24, 39, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 24, 39, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(17, 24, 39, 0.015) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(17, 24, 39, 0.015) 1.5px, transparent 1.5px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: center center;
+  color: #111827;
+  position: relative;
+}
+
+.notebook-lines {
+  background: transparent !important;
+}
+
+/* Drafting grid markings and coordinate ticks */
+.blueprint-grid::before {
+  content: "METRIC SYSTEM / DRAFT v4.2";
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-family: 'Fira Code', monospace;
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  color: rgba(17, 24, 39, 0.4);
+}
+
+.blueprint-grid::after {
+  content: "SCALE 1:1,000,000,000 • ZEIG DEN STAAT";
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-family: 'Fira Code', monospace;
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  color: rgba(17, 24, 39, 0.4);
+}
+
+.blueprint-sheet {
+  background-color: #ffffff;
+  border-left: 2.5px solid #111827;
+  color: #111827;
+  font-family: 'Fira Code', monospace;
+}
+
+.blueprint-border-thick {
+  border: 2px solid #111827;
+}
+
+.blueprint-border-thin {
+  border: 1px solid #111827;
+}
+
+/* Ink stamps reimagined as precise geometric CAD stamps */
+.blueprint-stamp {
+  font-family: 'Fira Code', monospace;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 1.8px solid #111827;
+  padding: 5px 12px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  display: inline-block;
+  user-select: none;
+  pointer-events: none;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 3px 3px 0px rgba(17, 24, 39, 0.15);
+  animation: stamp-pop 0.14s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes stamp-pop {
+  0% {
+    transform: scale(2.2) rotate(calc(var(--stamp-rot, -3deg) * 2.5));
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(var(--stamp-rot, -3deg));
+    opacity: 0.95;
+  }
+}
+
+/* Flying loose pages as precise blueprints flying */
+@keyframes flyBlueprintPaper {
+  0% {
+    transform: translate3d(var(--x), var(--y), 0) rotate(0deg) scale(0.9);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(calc(var(--x) + var(--drift-x)), calc(var(--y) + var(--drift-y)), 0) rotate(180deg) scale(0.9);
+    opacity: 0;
+  }
+}
+
+.flying-blueprint-paper {
+  position: absolute;
+  animation: flyBlueprintPaper var(--duration) ease-in-out infinite;
+  animation-delay: var(--delay);
+  font-size: 18px;
+  pointer-events: none;
+  z-index: 10;
+  border: 1px solid rgba(17, 24, 39, 0.2);
+  background: white;
+  padding: 4px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Architectural smoke puffs as fine vector circles */
+@keyframes archSmoke {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.4);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate3d(var(--smoke-dx, 15px), -50px, 0) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.arch-smoke-puff {
+  position: absolute;
+  animation: archSmoke 2.5s ease-out infinite;
+  animation-delay: var(--smoke-delay, 0s);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 15;
+}
+
+/* Clean vector styling for architectural lines */
+.arch-path {
+  stroke: #111827;
+  stroke-width: 1.2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.arch-path-filled {
+  stroke: #111827;
+  stroke-width: 1.2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: #ffffff;
+}
+
+.arch-path-hatch {
+  stroke: #111827;
+  stroke-width: 1.2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: url(#arch-hatch-pattern);
+}
+
+.arch-path-hatch-red {
+  stroke: #111827;
+  stroke-width: 1.2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: url(#arch-hatch-red);
+}
+
+.arch-path-thin {
+  stroke: #4b5563;
+  stroke-width: 0.8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.arch-path-dash {
+  stroke: #6b7280;
+  stroke-width: 0.8px;
+  stroke-dasharray: 3 3;
+  fill: none;
+}
+
+

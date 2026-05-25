@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;500;700;900&display=swap');
+
+body {
+  background-color: #020617; /* bg-slate-950 equivalent */
+  color: #f1f5f9; /* text-slate-100 equivalent */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom theme configurations for Tailwind CSS v4 */
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-comic: "Architects Daughter", cursive, sans-serif;
+}
+
+/* Custom aesthetic utility: Radial Gradients */
+.bg-radial-gradient {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+/* Custom premium scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* High-fidelity slow spinning animation */
+.animate-spin-slow {
+  animation: spin 30s linear infinite;
+}
+
+/* Keyframe Pulsing and Fade Utilities */
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.95; transform: scale(1.05); }
+}
+
+@keyframes fade-out {
+  0% { transform: scale(0); opacity: 0.8; }
+  100% { transform: scale(1.1); opacity: 0; }
+}
+
+.animate-fade-out {
+  animation: fade-out 1.2s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
