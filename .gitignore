@@ -142,3 +142,6 @@ x86/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Antigravity CLI
+.antigravitycli
