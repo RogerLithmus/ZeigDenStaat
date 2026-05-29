@@ -1,23 +1,25 @@
 #!/usr/bin/env python3
 """
-Import agencies from a semicolon-delimited CSV into Neo4j (neo4j-driver v5+).
-CSV header: Id;Name;ParentId;Depth;Classification;Jurisdiction
+Import agencies from an Excel file into Neo4j (neo4j-driver v5+).
+Reads data from data/Bundesbehörden_Verzeichnis.xlsx, sheet "🏛️ Bundesbehörden".
 """
 
-import csv
 import os
+import openpyxl
 from neo4j import GraphDatabase
 from dotenv import load_dotenv
 
 # CONFIG
-load_dotenv()
+script_dir = os.path.dirname(os.path.abspath(__file__))
+load_dotenv(os.path.join(script_dir, ".env"))
+
 NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
 NEO4J_USER = os.getenv("NEO4J_USER")
 NEO4J_PASS = os.getenv("NEO4J_PASS")
-CSV_PATH = "../data/resolved_mappings.csv"
+EXCEL_PATH = os.path.abspath(os.path.join(script_dir, "../data/Bundesbehörden_Verzeichnis.xlsx"))
 BATCH_SIZE = 500
 
-print(NEO4J_USER, NEO4J_PASS)
+print(f"Connecting to Neo4j at {NEO4J_URI} as user {NEO4J_USER}")
 
 driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASS))
 
@@ -27,47 +29,111 @@ def ensure_constraints(tx):
     )
 
 def import_batch(tx, rows):
+    # 1. Base import of the nodes with properties
     query = """
     UNWIND $rows AS r
     MERGE (child:Agency {id: r.Id})
-      ON CREATE SET child.name = r.Name
-      ON MATCH SET child.name = coalesce(child.name, r.Name)
-    WITH child, r
-    WHERE r.ParentId IS NOT NULL AND r.ParentId <> ''
-    MERGE (parent:Agency {id: r.ParentId})
-    MERGE (parent)-[:PARENT_OF]->(child)
+    SET child.name = r.Name,
+        child.ressort = r.Ressort,
+        child.classification = r.Classification,
+        child.headquarters = r.Headquarters,
+        child.employees = r.Employees,
+        child.budget = r.Budget,
+        child.legal_form = r.LegalForm,
+        child.website = r.Website,
+        child.comment = r.Comment
     """
     tx.run(query, rows=rows)
+    
+    # 2. Add classification as additional dynamic label
+    by_class = {}
+    for r in rows:
+        c = r.get("Classification")
+        if c:
+            by_class.setdefault(c, []).append(r["Id"])
+            
+    for classification, ids in by_class.items():
+        clean_label = classification.replace("`", "").strip()
+        if not clean_label:
+            continue
+        label_query = f"""
+        UNWIND $ids AS node_id
+        MATCH (child:Agency {{id: node_id}})
+        SET child:`{clean_label}`
+        """
+        tx.run(label_query, ids=ids)
 
-def read_csv_in_batches(path, batch_size=BATCH_SIZE):
-    with open(path, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f, delimiter=';')
-        batch = []
-        for row in reader:
-            entry = {
-                "Id": row.get("Id", "").strip(),
-                "Name": row.get("Name", "").strip() if row.get("Name") else None,
-                "ParentId": format(float(row.get("ParentId", "")), "g") if row.get("ParentId") else None,
-            }
-            print(entry)
-            if not entry["Id"]:
-                print("Row without id. Skipping...")
-                continue
-            batch.append(entry)
-            if len(batch) >= batch_size:
-                yield batch
-                batch = []
-        if batch:
-            yield batch
+def read_excel_in_batches(path, batch_size=BATCH_SIZE):
+    wb = openpyxl.load_workbook(path, data_only=True)
+    ws = wb["🏛️ Bundesbehörden"]
+    
+    rows_to_import = []
+    
+    for row in ws.iter_rows(min_row=9):
+        val_id = row[0].value
+        if val_id is None:
+            continue
+        
+        try:
+            if isinstance(val_id, float):
+                agency_id = str(int(val_id))
+            else:
+                agency_id = str(int(val_id))
+        except (ValueError, TypeError):
+            agency_id = str(val_id).strip()
+            
+        if not agency_id:
+            continue
+            
+        name = str(row[1].value).strip() if row[1].value is not None else ""
+        ressort = str(row[2].value).strip() if row[2].value is not None else None
+        classification = str(row[3].value).strip() if row[3].value is not None else None
+        headquarters = str(row[4].value).strip() if row[4].value is not None else None
+        
+        employees = None
+        if row[5].value is not None:
+            try:
+                employees = int(row[5].value)
+            except (ValueError, TypeError):
+                pass
+                
+        budget = None
+        if row[6].value is not None:
+            try:
+                budget = float(row[6].value)
+            except (ValueError, TypeError):
+                pass
+                
+        legal_form = str(row[7].value).strip() if row[7].value is not None else None
+        website = str(row[8].value).strip() if row[8].value is not None else None
+        comment = str(row[9].value).strip() if row[9].value is not None else None
+        
+        entry = {
+            "Id": agency_id,
+            "Name": name,
+            "Ressort": ressort,
+            "Classification": classification,
+            "Headquarters": headquarters,
+            "Employees": employees,
+            "Budget": budget,
+            "LegalForm": legal_form,
+            "Website": website,
+            "Comment": comment,
+        }
+        rows_to_import.append(entry)
+        
+    print(f"Total nodes to import: {len(rows_to_import)}")
+    
+    for i in range(0, len(rows_to_import), batch_size):
+        yield rows_to_import[i:i + batch_size]
 
 def main():
     with driver.session() as session:
-        # use execute_write for v5+ drivers
         session.execute_write(lambda tx: ensure_constraints(tx))
-        for batch in read_csv_in_batches(CSV_PATH, BATCH_SIZE):
+        for batch in read_excel_in_batches(EXCEL_PATH, BATCH_SIZE):
             session.execute_write(lambda tx, rows=batch: import_batch(tx, rows))
     driver.close()
-    print("Import finished.")
+    print("Import finished successfully.")
 
 if __name__ == "__main__":
     main()
