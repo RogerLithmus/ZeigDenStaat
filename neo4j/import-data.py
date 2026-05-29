@@ -27,6 +27,9 @@ def ensure_constraints(tx):
     tx.run(
         "CREATE CONSTRAINT IF NOT EXISTS FOR (a:Agency) REQUIRE a.id IS UNIQUE"
     )
+    tx.run(
+        "CREATE CONSTRAINT IF NOT EXISTS FOR (r:Ressort) REQUIRE r.name IS UNIQUE"
+    )
 
 def import_batch(tx, rows):
     # 1. Base import of the nodes with properties
@@ -62,6 +65,16 @@ def import_batch(tx, rows):
         SET child:`{clean_label}`
         """
         tx.run(label_query, ids=ids)
+
+    # 3. Create Ressort nodes and relationships
+    ressort_query = """
+    UNWIND $rows AS r
+    WITH r WHERE r.Ressort IS NOT NULL AND r.Ressort <> ''
+    MATCH (child:Agency {id: r.Id})
+    MERGE (parent:Ressort {name: r.Ressort})
+    MERGE (child)-[:BELONGS_TO]->(parent)
+    """
+    tx.run(ressort_query, rows=rows)
 
 def read_excel_in_batches(path, batch_size=BATCH_SIZE):
     wb = openpyxl.load_workbook(path, data_only=True)
