@@ -1,0 +1,35 @@
+{
+  "id": "bun_114",
+  "excel_id": 114,
+  "name": "Bundespolizeipräsidium",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde / Sonderpolizei",
+  "ebene": "Bund",
+  "sitz": "Potsdam",
+  "bundesland": "Brandenburg",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Polizei",
+  "website": "https://www.bundespolizei.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 2400.0,
+  "beschaeftigte": 54000,
+  "ministerium_id": "bmi",
+  "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
+  "klassifikation": "Polizei",
+  "anmerkung": "Inklusive ca. 44.000 Polizeikräfte",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundespolizei.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

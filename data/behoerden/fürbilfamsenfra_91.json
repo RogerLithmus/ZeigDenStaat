@@ -1,0 +1,35 @@
+{
+  "id": "fürbilfamsenfra_91",
+  "excel_id": 91,
+  "name": "Bundesministerium für Bildung, Familie, Senioren, Frauen und Jugend",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.bmfsfj.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 14300.0,
+  "beschaeftigte": 950,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Familie, Senioren, Frauen und Jugend (BMFSFJ)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Familie, Senioren, Frauen, Jugend",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bmfsfj.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

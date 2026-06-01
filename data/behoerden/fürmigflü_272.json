@@ -1,0 +1,35 @@
+{
+  "id": "fürmigflü_272",
+  "excel_id": 272,
+  "name": "Bundesamt für Migration und Flüchtlinge",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Nürnberg",
+  "bundesland": "Bayern",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Integration",
+  "website": "https://www.bamf.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 1100.0,
+  "beschaeftigte": 8000,
+  "ministerium_id": "bmi",
+  "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
+  "klassifikation": "Integration",
+  "anmerkung": "Asyl, Migration und Integration",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bamf.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

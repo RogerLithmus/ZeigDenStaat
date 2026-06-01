@@ -1,0 +1,35 @@
+{
+  "id": "conkoodeuisrjug_308",
+  "excel_id": 308,
+  "name": "ConAct - Koordinierungszentrum Deutsch-Israelischer Jugendaustausch",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Jugend",
+  "website": "http://www.conact-org.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Familie, Senioren, Frauen und Jugend (BMFSFJ)",
+  "klassifikation": "Jugend",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Familie, Senioren, Frauen und Jugend (BMFSFJ)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "http://www.conact-org.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

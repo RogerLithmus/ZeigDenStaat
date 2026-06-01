@@ -1,0 +1,35 @@
+{
+  "id": "verbunlän_894",
+  "excel_id": 894,
+  "name": "Versorgungsanstalt des Bundes und der Länder",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Versorgungsamt",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 7356.56,
+  "beschaeftigte": 841,
+  "ministerium_id": "bmf",
+  "ressort": "Bundesministerium der Finanzen (BMF)",
+  "klassifikation": "Versorgungsamt",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Finanzen (BMF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

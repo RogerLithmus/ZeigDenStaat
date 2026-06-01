@@ -1,0 +1,35 @@
+{
+  "id": "beabunfürkulmed_155",
+  "excel_id": 155,
+  "name": "Beauftragter der Bundesregierung für Kultur und Medien",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Kultur",
+  "website": "https://www.kulturstaatsministerin.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 2300.0,
+  "beschaeftigte": 450,
+  "ministerium_id": "bkamt",
+  "ressort": "Beauftragte der Bundesregierung für Kultur und Medien (BKM)",
+  "klassifikation": "Kultur",
+  "anmerkung": "Kultur und Medien",
+  "beziehungen": [
+    {
+      "zu_id": "bkamt",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.kulturstaatsministerin.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

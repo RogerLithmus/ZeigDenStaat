@@ -1,0 +1,35 @@
+{
+  "id": "hauosn_569",
+  "excel_id": 569,
+  "name": "Hauptzollamt Osnabrück",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Dienststelle der Bundeszollverwaltung",
+  "ebene": "Bund",
+  "sitz": "Osnabrück",
+  "bundesland": "Niedersachsen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Hauptzollamt",
+  "website": "https://www.zoll.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmf",
+  "ressort": "Bundesministerium der Finanzen (BMF)",
+  "klassifikation": "Hauptzollamt",
+  "anmerkung": "Aggregiert unter Generalzolldirektion (GZD)",
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.zoll.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

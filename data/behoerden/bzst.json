@@ -1,0 +1,32 @@
+{
+  "id": "bzst",
+  "name": "Bundeszentralamt für Steuern",
+  "kuerzel": "BZSt",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 2006,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Steuerliche Identifikationsnummern, Umsatzsteuer, zwischenstaatlicher Informationsaustausch",
+  "website": "https://www.bzst.de",
+  "rechtsgrundlage": "Finanzverwaltungsgesetz (FVG) § 5",
+  "haushalt_mio_eur": 894.5,
+  "beschaeftigte": 2200,
+  "ministerium_id": "bmf",
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 2006
+    }
+  ],
+  "quellen": [
+    "https://www.bzst.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

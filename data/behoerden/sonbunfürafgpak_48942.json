@@ -1,0 +1,35 @@
+{
+  "id": "sonbunfürafgpak_48942",
+  "excel_id": 48942,
+  "name": "Der Sonderbeauftragte der Bundesregierung für Afghanistan und Pakistan",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Beauftragte",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 31.31,
+  "beschaeftigte": null,
+  "ministerium_id": "bmz",
+  "ressort": "Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)",
+  "klassifikation": "Beauftragte",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)",
+  "beziehungen": [
+    {
+      "zu_id": "bmz",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

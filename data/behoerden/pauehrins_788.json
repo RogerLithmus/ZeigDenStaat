@@ -1,0 +1,35 @@
+{
+  "id": "pauehrins_788",
+  "excel_id": 788,
+  "name": "Paul-Ehrlich-Institut",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Langen",
+  "bundesland": null,
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Arzneimittel und Medizin",
+  "website": "https://www.pei.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 110.0,
+  "beschaeftigte": 900,
+  "ministerium_id": "bmg",
+  "ressort": "Bundesministerium für Gesundheit (BMG)",
+  "klassifikation": "Arzneimittel und Medizin",
+  "anmerkung": "Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel",
+  "beziehungen": [
+    {
+      "zu_id": "bmg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.pei.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "frainsfürrecsof_490",
+  "excel_id": 490,
+  "name": "Fraunhofer-Institut für Rechnerarchitektur und Softwaretechnik",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Forschung",
+  "website": "http://www.first.fraunhofer.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": 120,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Bildung und Forschung (BMBF)",
+  "klassifikation": "Forschung",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Bildung und Forschung (BMBF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "http://www.first.fraunhofer.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

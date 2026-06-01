@@ -1,0 +1,35 @@
+{
+  "id": "bürbunangmer_50164",
+  "excel_id": 50164,
+  "name": "Büro der Bundeskanzlerin a. D. Dr. Angela Merkel",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": null,
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bkamt",
+  "ressort": "Bundeskanzleramt (BKAmt)",
+  "klassifikation": null,
+  "anmerkung": "Finanzierung über das Ressort Bundeskanzleramt (BKAmt)",
+  "beziehungen": [
+    {
+      "zu_id": "bkamt",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

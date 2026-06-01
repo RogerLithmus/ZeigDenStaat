@@ -1,0 +1,35 @@
+{
+  "id": "antbun_16",
+  "excel_id": 16,
+  "name": "Antidiskriminierungsstelle des Bundes",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Beratungsstelle",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 14.0,
+  "beschaeftigte": null,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Familie, Senioren, Frauen und Jugend (BMFSFJ)",
+  "klassifikation": "Beratungsstelle",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Familie, Senioren, Frauen und Jugend (BMFSFJ)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

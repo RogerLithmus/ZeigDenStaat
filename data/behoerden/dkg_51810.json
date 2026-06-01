@@ -1,0 +1,35 @@
+{
+  "id": "dkg_51810",
+  "excel_id": 51810,
+  "name": "Deutsche Krankenhausgesellschaft (DKG)",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Verein",
+  "website": "https://www.dkgev.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 177.32,
+  "beschaeftigte": null,
+  "ministerium_id": "bmg",
+  "ressort": "Bundesministerium für Gesundheit (BMG)",
+  "klassifikation": "Verein",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Gesundheit (BMG)",
+  "beziehungen": [
+    {
+      "zu_id": "bmg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.dkgev.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

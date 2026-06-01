@@ -1,0 +1,35 @@
+{
+  "id": "bun_63",
+  "excel_id": 63,
+  "name": "Bundesfinanzhof",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Finanzgericht",
+  "website": "https://www.bundesfinanzhof.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 21.7,
+  "beschaeftigte": null,
+  "ministerium_id": "bmvg",
+  "ressort": "Bundesministerium der Verteidigung (BMVg)",
+  "klassifikation": "Finanzgericht",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Verteidigung (BMVg)",
+  "beziehungen": [
+    {
+      "zu_id": "bmvg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundesfinanzhof.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

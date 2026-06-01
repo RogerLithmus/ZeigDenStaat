@@ -1,0 +1,35 @@
+{
+  "id": "verers_4024",
+  "excel_id": 4024,
+  "name": "Verband der Ersatzkassen e.V.",
+  "kuerzel": null,
+  "typ": "KdöR",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Sozialversicherung",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmas",
+  "ressort": "Bundesministerium für Arbeit und Soziales (BMAS)",
+  "klassifikation": "Sozialversicherung",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Arbeit und Soziales (BMAS)",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

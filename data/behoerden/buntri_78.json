@@ -1,0 +1,35 @@
+{
+  "id": "buntri_78",
+  "excel_id": 78,
+  "name": "Bundeskasse Trier",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Trier",
+  "bundesland": "Rheinland-Pfalz",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bundeskasse",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmg",
+  "ressort": "Bundesministerium für Gesundheit (BMG)",
+  "klassifikation": "Bundeskasse",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Gesundheit (BMG)",
+  "beziehungen": [
+    {
+      "zu_id": "bmg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

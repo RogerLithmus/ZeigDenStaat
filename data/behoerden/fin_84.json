@@ -1,0 +1,35 @@
+{
+  "id": "fin_84",
+  "excel_id": 84,
+  "name": "Bundesministerium der Finanzen",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.bundesfinanzministerium.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 9100.0,
+  "beschaeftigte": 2200,
+  "ministerium_id": "bmf",
+  "ressort": "Bundesministerium der Finanzen (BMF)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Ressortbudget operational",
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundesfinanzministerium.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

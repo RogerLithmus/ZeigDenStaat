@@ -1,0 +1,35 @@
+{
+  "id": "ikkcla_6603",
+  "excel_id": 6603,
+  "name": "IKK classic",
+  "kuerzel": null,
+  "typ": "KdöR",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Krankenkasse",
+  "website": "https://www.ikk-classic.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 12000.0,
+  "beschaeftigte": 6727,
+  "ministerium_id": "bmas",
+  "ressort": "Bundesministerium für Arbeit und Soziales (BMAS)",
+  "klassifikation": "Krankenkasse",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Arbeit und Soziales (BMAS)",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.ikk-classic.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

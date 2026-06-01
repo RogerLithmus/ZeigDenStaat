@@ -1,0 +1,35 @@
+{
+  "id": "bun_4052",
+  "excel_id": 4052,
+  "name": "Bundesärztekammer",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ärztekammer",
+  "website": "https://www.bundesaerztekammer.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmi",
+  "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
+  "klassifikation": "Ärztekammer",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium des Innern und für Heimat (BMI)",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundesaerztekammer.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

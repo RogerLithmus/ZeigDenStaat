@@ -1,0 +1,32 @@
+{
+  "id": "baaInBw",
+  "name": "Bundesamt für Ausrüstung, Informationstechnik und Nutzung der Bundeswehr",
+  "kuerzel": "BAAINBw",
+  "typ": "Bundesamt",
+  "rechtsform": "Dienststelle der Bundeswehrverwaltung",
+  "ebene": "Bund",
+  "sitz": "Koblenz",
+  "bundesland": "Rheinland-Pfalz",
+  "gruendungsjahr": 2012,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Rüstung, IT der Bundeswehr, Beschaffung, Nutzungsmanagement, Materialerhaltung",
+  "website": "https://www.baainbw.de",
+  "rechtsgrundlage": "Organisationserlass BMVg",
+  "haushalt_mio_eur": null,
+  "beschaeftigte": 11000,
+  "ministerium_id": "bmvg",
+  "beziehungen": [
+    {
+      "zu_id": "bmvg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 2012
+    }
+  ],
+  "quellen": [
+    "https://www.baainbw.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "beabunfürmenjus_48945",
+  "excel_id": 48945,
+  "name": "Beauftragte der Bundesregierung für Menschenrechtsfragen im Bundesministerium der Justiz",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Beauftragte",
+  "website": "https://www.bmj.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 1200.0,
+  "beschaeftigte": 1000,
+  "ministerium_id": "bmjv",
+  "ressort": "Bundesministerium der Justiz (BMJ)",
+  "klassifikation": "Beauftragte",
+  "anmerkung": "Bundesministerium der Justiz",
+  "beziehungen": [
+    {
+      "zu_id": "bmjv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bmj.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

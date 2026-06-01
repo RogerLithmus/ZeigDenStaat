@@ -1,0 +1,35 @@
+{
+  "id": "bkkver_6585",
+  "excel_id": 6585,
+  "name": "BKK Verbundplus",
+  "kuerzel": null,
+  "typ": "KdöR",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Krankenkasse",
+  "website": "https://www.bkk-verbundplus.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 554.0,
+  "beschaeftigte": 213,
+  "ministerium_id": "bmas",
+  "ressort": "Bundesministerium für Arbeit und Soziales (BMAS)",
+  "klassifikation": "Krankenkasse",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Arbeit und Soziales (BMAS)",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bkk-verbundplus.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

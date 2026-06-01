@@ -1,0 +1,35 @@
+{
+  "id": "fürwohstabau_49833",
+  "excel_id": 49833,
+  "name": "Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.bmwsb.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 7300.0,
+  "beschaeftigte": 600,
+  "ministerium_id": "bmwsb",
+  "ressort": "Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen (BMWSB)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Wohnen, Stadtentwicklung und Bauwesen",
+  "beziehungen": [
+    {
+      "zu_id": "bmwsb",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bmwsb.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

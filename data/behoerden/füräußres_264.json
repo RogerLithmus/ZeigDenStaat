@@ -1,0 +1,35 @@
+{
+  "id": "füräußres_264",
+  "excel_id": 264,
+  "name": "Bundesamt für Äußere Restitutionen",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": null,
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 131.67,
+  "beschaeftigte": null,
+  "ministerium_id": "bmf",
+  "ressort": "Bundesministerium der Finanzen (BMF)",
+  "klassifikation": null,
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Finanzen (BMF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

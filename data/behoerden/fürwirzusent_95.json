@@ -1,0 +1,35 @@
+{
+  "id": "fürwirzusent_95",
+  "excel_id": 95,
+  "name": "Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.bmz.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 11200.0,
+  "beschaeftigte": 1100,
+  "ministerium_id": "bmz",
+  "ressort": "Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Wirtschaftliche Zusammenarbeit",
+  "beziehungen": [
+    {
+      "zu_id": "bmz",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bmz.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "bibb",
+  "name": "Bundesinstitut für Berufsbildung",
+  "kuerzel": "BIBB",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1970,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Berufsbildungsforschung, Ausbildungsordnungen, Berufsbildungsplanung, duale Ausbildung",
+  "website": "https://www.bibb.de",
+  "rechtsgrundlage": "Berufsbildungsgesetz (BBiG) § 84-101",
+  "haushalt_mio_eur": 75.0,
+  "beschaeftigte": 800,
+  "ministerium_id": "bmbfsj",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 2025
+    }
+  ],
+  "quellen": [
+    "https://www.bibb.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

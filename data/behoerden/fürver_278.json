@@ -1,0 +1,35 @@
+{
+  "id": "fürver_278",
+  "excel_id": 278,
+  "name": "Bundesamt für Verfassungsschutz",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Köln",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Verfassungsschutz",
+  "website": "https://www.verfassungsschutz.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 480.0,
+  "beschaeftigte": 4200,
+  "ministerium_id": "bmi",
+  "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
+  "klassifikation": "Verfassungsschutz",
+  "anmerkung": "Inlandsnachrichtendienst",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.verfassungsschutz.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

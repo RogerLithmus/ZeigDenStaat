@@ -1,0 +1,35 @@
+{
+  "id": "gefhee_515",
+  "excel_id": 515,
+  "name": "Gefechtsübungszentrum des Heeres",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bundeswehr",
+  "website": "https://www.bundeswehr.de/de/organisation/heer/organisation/ausbildungskommando/gefechtsuebungszentrum-heer/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmvg",
+  "ressort": "Bundesministerium der Verteidigung (BMVg)",
+  "klassifikation": "Bundeswehr",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Verteidigung (BMVg)",
+  "beziehungen": [
+    {
+      "zu_id": "bmvg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundeswehr.de/de/organisation/heer/organisation/ausbildungskommando/gefechtsuebungszentrum-heer/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

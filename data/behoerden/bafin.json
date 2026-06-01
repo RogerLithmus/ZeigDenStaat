@@ -1,0 +1,38 @@
+{
+  "id": "bafin",
+  "name": "Bundesanstalt für Finanzdienstleistungsaufsicht",
+  "kuerzel": "BaFin",
+  "typ": "Bundesanstalt",
+  "rechtsform": "Anstalt des öffentlichen Rechts",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 2002,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Finanzaufsicht, Bankenaufsicht, Versicherungsaufsicht, Wertpapieraufsicht, Verbraucherschutz",
+  "website": "https://www.bafin.de",
+  "rechtsgrundlage": "Finanzdienstleistungsaufsichtsgesetz (FinDAG)",
+  "haushalt_mio_eur": 450.0,
+  "beschaeftigte": 3100,
+  "ministerium_id": "bmf",
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "RECHTSAUFSICHT",
+      "richtung": "eingehend",
+      "seit": 2002
+    },
+    {
+      "zu_id": "dbb",
+      "typ": "KOORDINIERT_MIT",
+      "richtung": "ausgehend",
+      "seit": 2002
+    }
+  ],
+  "quellen": [
+    "https://www.bafin.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

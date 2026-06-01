@@ -1,0 +1,35 @@
+{
+  "id": "wasschmitelbsei_928",
+  "excel_id": 928,
+  "name": "Wasserstraßen- und Schifffahrtsamt Mittellandkanal / Elbe-Seitenkanal",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Dienststelle der WSV",
+  "ebene": "Bund",
+  "sitz": "Mittellandkanal",
+  "bundesland": null,
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Wasser- und Schiffahrtsamt",
+  "website": "https://www.wsv.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 1103.96,
+  "beschaeftigte": null,
+  "ministerium_id": "bmv",
+  "ressort": "Bundesministerium für Digitales und Verkehr (BMDV)",
+  "klassifikation": "Wasser- und Schiffahrtsamt",
+  "anmerkung": "Aggregiert unter Generaldirektion Wasserstraßen und Schifffahrt (GDWS)",
+  "beziehungen": [
+    {
+      "zu_id": "bmv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.wsv.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

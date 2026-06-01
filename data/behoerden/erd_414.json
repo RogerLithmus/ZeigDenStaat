@@ -1,0 +1,35 @@
+{
+  "id": "erd_414",
+  "excel_id": 414,
+  "name": "Erdölbevorratungsverband",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Energie",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmwi",
+  "ressort": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+  "klassifikation": "Energie",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+  "beziehungen": [
+    {
+      "zu_id": "bmwi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

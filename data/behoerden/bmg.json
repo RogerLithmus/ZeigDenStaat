@@ -1,0 +1,50 @@
+{
+  "id": "bmg",
+  "name": "Bundesministerium für Gesundheit",
+  "kuerzel": "BMG",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1961,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Gesundheitspolitik, Krankenversicherung, Arzneimittelrecht, Infektionsschutz, Pflege",
+  "website": "https://www.bundesgesundheitsministerium.de",
+  "rechtsgrundlage": "Grundgesetz Art. 65, 74 Abs. 1 Nr. 19",
+  "haushalt_mio_eur": 19282.6,
+  "beschaeftigte": 1000,
+  "ministerium_id": null,
+  "beziehungen": [
+    {
+      "zu_id": "rki",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1994
+    },
+    {
+      "zu_id": "pei",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1972
+    },
+    {
+      "zu_id": "bzga",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1967
+    },
+    {
+      "zu_id": "bfarm",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1994
+    }
+  ],
+  "quellen": [
+    "https://www.bundesgesundheitsministerium.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

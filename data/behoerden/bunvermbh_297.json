@@ -1,0 +1,35 @@
+{
+  "id": "bunvermbh_297",
+  "excel_id": 297,
+  "name": "Bundesanzeiger Verlagsgesellschaft mbH",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Anzeigenblatt",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmjv",
+  "ressort": "Bundesministerium der Justiz (BMJ)",
+  "klassifikation": "Anzeigenblatt",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Justiz (BMJ)",
+  "beziehungen": [
+    {
+      "zu_id": "bmjv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

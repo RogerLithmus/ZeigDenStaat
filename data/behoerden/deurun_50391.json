@@ -1,0 +1,35 @@
+{
+  "id": "deurun_50391",
+  "excel_id": 50391,
+  "name": "Deutsches Rundfunkarchiv",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Archiv",
+  "website": "https://www.dra.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 40.55,
+  "beschaeftigte": null,
+  "ministerium_id": "bkamt",
+  "ressort": "Beauftragte der Bundesregierung für Kultur und Medien (BKM)",
+  "klassifikation": "Archiv",
+  "anmerkung": "Finanzierung über das Ressort Beauftragte der Bundesregierung für Kultur und Medien (BKM)",
+  "beziehungen": [
+    {
+      "zu_id": "bkamt",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.dra.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "deubun_317",
+  "excel_id": 317,
+  "name": "Deutsche Bundesbank",
+  "kuerzel": null,
+  "typ": "AdöR",
+  "rechtsform": "Juristische Person des öffentlichen Rechts (Sonderform)",
+  "ebene": "Bund",
+  "sitz": "Frankfurt am Main",
+  "bundesland": "Hessen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bank",
+  "website": "https://www.bundesbank.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 1500.0,
+  "beschaeftigte": 10200,
+  "ministerium_id": "bmf",
+  "ressort": "Bundesministerium der Finanzen (BMF)",
+  "klassifikation": "Bank",
+  "anmerkung": "Notenbank der Bundesrepublik",
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundesbank.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

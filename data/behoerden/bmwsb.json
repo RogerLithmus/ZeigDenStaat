@@ -1,0 +1,25 @@
+{
+  "id": "bmwsb",
+  "name": "Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen",
+  "kuerzel": "BMWSB",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 2021,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Wohnungspolitik, Stadtentwicklung, Bauwesen, Raumordnung",
+  "website": "https://www.bmwsb.bund.de",
+  "rechtsgrundlage": "Grundgesetz Art. 65, Organisationserlass vom 08.12.2021",
+  "haushalt_mio_eur": 7369.8,
+  "beschaeftigte": 600,
+  "ministerium_id": null,
+  "beziehungen": [],
+  "quellen": [
+    "https://www.bmwsb.bund.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "base",
+  "name": "Bundesamt für die Sicherheit der nuklearen Entsorgung",
+  "kuerzel": "BASE",
+  "typ": "Bundesamt",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 2014,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Nukleare Entsorgungssicherheit, Endlagersuche, Zwischenlagerüberwachung, Genehmigungen",
+  "website": "https://www.base.bund.de",
+  "rechtsgrundlage": "Gesetz zur Errichtung eines Bundesamtes für kerntechnische Entsorgungssicherheit",
+  "haushalt_mio_eur": 60.9,
+  "beschaeftigte": 450,
+  "ministerium_id": "bmuv",
+  "beziehungen": [
+    {
+      "zu_id": "bmuv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 2014
+    }
+  ],
+  "quellen": [
+    "https://www.base.bund.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "wehdeubun_949",
+  "excel_id": 949,
+  "name": "Wehrbeauftragte des Deutschen Bundestages",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bundeswehr",
+  "website": "https://www.bundestag.de/parlament/wehrbeauftragter",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 4.8,
+  "beschaeftigte": null,
+  "ministerium_id": "bkamt",
+  "ressort": "Bundeskanzleramt (BKAmt)",
+  "klassifikation": "Bundeswehr",
+  "anmerkung": "Finanzierung über das Ressort Bundeskanzleramt (BKAmt)",
+  "beziehungen": [
+    {
+      "zu_id": "bkamt",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundestag.de/parlament/wehrbeauftragter"
+  ],
+  "recherche_datum": "2026-06-01"
+}

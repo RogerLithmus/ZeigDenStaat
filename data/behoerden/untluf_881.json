@@ -1,0 +1,35 @@
+{
+  "id": "untluf_881",
+  "excel_id": 881,
+  "name": "Unteroffizierschule der Luftwaffe",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Militärische Ausbildungsstätte",
+  "website": "https://www.bundeswehr.de/de/organisation/luftwaffe/organisation-/luftwaffentruppenkommando/unteroffizierschule-der-luftwaffe/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmvg",
+  "ressort": "Bundesministerium der Verteidigung (BMVg)",
+  "klassifikation": "Militärische Ausbildungsstätte",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Verteidigung (BMVg)",
+  "beziehungen": [
+    {
+      "zu_id": "bmvg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundeswehr.de/de/organisation/luftwaffe/organisation-/luftwaffentruppenkommando/unteroffizierschule-der-luftwaffe/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

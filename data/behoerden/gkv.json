@@ -1,0 +1,31 @@
+{
+  "id": "gkv",
+  "name": "GKV-Spitzenverband",
+  "kuerzel": "GKV-SV",
+  "typ": "KdöR",
+  "rechtsform": "Körperschaft des öffentlichen Rechts",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 2008,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Interessenvertretung gesetzlicher Krankenkassen, Vertragsverhandlungen, Richtlinien",
+  "website": "https://www.gkv-spitzenverband.de",
+  "rechtsgrundlage": "Sozialgesetzbuch V (SGB V) § 217a-217f",
+  "haushalt_mio_eur": null,
+  "beschaeftigte": 530,
+  "ministerium_id": "bmg",
+  "beziehungen": [
+    {
+      "zu_id": "bmg",
+      "typ": "RECHTSAUFSICHT",
+      "richtung": "eingehend",
+      "seit": 2008
+    }
+  ],
+  "quellen": [
+    "https://www.gkv-spitzenverband.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "bun_72",
+  "excel_id": 72,
+  "name": "Bundeskanzleramt",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Staatskanzlei",
+  "website": "https://www.bundeskanzleramt.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 3950.0,
+  "beschaeftigte": 850,
+  "ministerium_id": "bkamt",
+  "ressort": "Bundeskanzleramt (BKAmt)",
+  "klassifikation": "Staatskanzlei",
+  "anmerkung": "Leitung der Bundesregierung",
+  "beziehungen": [
+    {
+      "zu_id": "bkamt",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundeskanzleramt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "bunkob_230",
+  "excel_id": 230,
+  "name": "Bundeswehrzentralkrankenhaus Koblenz",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Dienststelle der Bundeswehrverwaltung",
+  "ebene": "Bund",
+  "sitz": "Koblenz",
+  "bundesland": "Rheinland-Pfalz",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bundeswehrkrankenhaus",
+  "website": "https://www.bundeswehr.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmvg",
+  "ressort": "Bundesministerium der Verteidigung (BMVg)",
+  "klassifikation": "Bundeswehrkrankenhaus",
+  "anmerkung": "Aggregiert unter Bundesministerium der Verteidigung (BMVg)",
+  "beziehungen": [
+    {
+      "zu_id": "bmvg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundeswehr.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

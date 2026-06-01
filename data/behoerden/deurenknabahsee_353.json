@@ -1,0 +1,35 @@
+{
+  "id": "deurenknabahsee_353",
+  "excel_id": 353,
+  "name": "Deutsche Rentenversicherung Knappschaft-Bahn-See",
+  "kuerzel": null,
+  "typ": "KdöR",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Sozialversicherung",
+  "website": "https://www.kbs.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 65600.0,
+  "beschaeftigte": 23680,
+  "ministerium_id": "bmas",
+  "ressort": "Bundesministerium für Arbeit und Soziales (BMAS)",
+  "klassifikation": "Sozialversicherung",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Arbeit und Soziales (BMAS)",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.kbs.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

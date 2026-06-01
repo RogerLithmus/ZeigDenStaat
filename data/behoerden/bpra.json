@@ -1,0 +1,25 @@
+{
+  "id": "bpra",
+  "name": "Bundespräsidialamt",
+  "kuerzel": "BPrA",
+  "typ": "Verfassungsorgan",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1949,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Unterstützung des Bundespräsidenten bei Amtsgeschäften und Repräsentation",
+  "website": "https://www.bundespraesident.de",
+  "rechtsgrundlage": "Grundgesetz Art. 54-61, Erlass über die Errichtung des Bundespräsidialamtes",
+  "haushalt_mio_eur": 40.4,
+  "beschaeftigte": 220,
+  "ministerium_id": null,
+  "beziehungen": [],
+  "quellen": [
+    "https://www.bundespraesident.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

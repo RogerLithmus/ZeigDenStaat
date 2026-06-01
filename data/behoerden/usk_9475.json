@@ -1,0 +1,35 @@
+{
+  "id": "usk_9475",
+  "excel_id": 9475,
+  "name": "Unterhaltungssoftware Selbstkontrolle (USK)",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Medien",
+  "website": "https://usk.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmi",
+  "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
+  "klassifikation": "Medien",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium des Innern und für Heimat (BMI)",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://usk.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "mad",
+  "name": "Militärischer Abschirmdienst",
+  "kuerzel": "MAD",
+  "typ": "Bundesamt",
+  "rechtsform": "Dienststelle der Bundeswehrverwaltung",
+  "ebene": "Bund",
+  "sitz": "Köln",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1956,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Militärischer Nachrichtendienst, Spionageabwehr Bundeswehr, Extremismuserkennung, Sicherheitsüberprüfungen",
+  "website": "https://www.bundeswehr.de/de/organisation/weitere-bmvg-dienststellen/mad-amt-fuer-den-militaerischen-abschirmdienst",
+  "rechtsgrundlage": "MAD-Gesetz (MADG)",
+  "haushalt_mio_eur": 262.2,
+  "beschaeftigte": 1300,
+  "ministerium_id": "bmvg",
+  "beziehungen": [
+    {
+      "zu_id": "bmvg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1956
+    }
+  ],
+  "quellen": [
+    "https://www.bundeswehr.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

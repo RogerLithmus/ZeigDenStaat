@@ -1,0 +1,38 @@
+{
+  "id": "bmvg",
+  "name": "Bundesministerium der Verteidigung",
+  "kuerzel": "BMVg",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1955,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Landesverteidigung, Bundeswehr, Rüstung, militärische Auslandseinsätze",
+  "website": "https://www.bmvg.de",
+  "rechtsgrundlage": "Grundgesetz Art. 65a, 87a, 87b",
+  "haushalt_mio_eur": 86776.9,
+  "beschaeftigte": 2500,
+  "ministerium_id": null,
+  "beziehungen": [
+    {
+      "zu_id": "mad",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1956
+    },
+    {
+      "zu_id": "baaInBw",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 2012
+    }
+  ],
+  "quellen": [
+    "https://www.bmvg.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "frainsfürverinf_503",
+  "excel_id": 503,
+  "name": "Fraunhofer-Institut für Verkehrs- und Infrastruktursysteme",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Forschung",
+  "website": "http://www.ivi.fraunhofer.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": 160,
+  "ministerium_id": "bmv",
+  "ressort": "Bundesministerium für Digitales und Verkehr (BMDV)",
+  "klassifikation": "Forschung",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Digitales und Verkehr (BMDV)",
+  "beziehungen": [
+    {
+      "zu_id": "bmv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "http://www.ivi.fraunhofer.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

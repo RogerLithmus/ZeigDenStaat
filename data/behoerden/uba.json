@@ -1,0 +1,32 @@
+{
+  "id": "uba",
+  "name": "Umweltbundesamt",
+  "kuerzel": "UBA",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Dessau-Roßlau",
+  "bundesland": "Sachsen-Anhalt",
+  "gruendungsjahr": 1974,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Umweltschutz, Emissionshandel, Luftqualität, Wasserwirtschaft, Abfallwirtschaft, Klimaschutz",
+  "website": "https://www.umweltbundesamt.de",
+  "rechtsgrundlage": "Gesetz über die Errichtung eines Umweltbundesamtes",
+  "haushalt_mio_eur": 205.2,
+  "beschaeftigte": 1600,
+  "ministerium_id": "bmuv",
+  "beziehungen": [
+    {
+      "zu_id": "bmuv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1986
+    }
+  ],
+  "quellen": [
+    "https://www.umweltbundesamt.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

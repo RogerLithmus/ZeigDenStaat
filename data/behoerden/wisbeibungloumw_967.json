@@ -1,0 +1,35 @@
+{
+  "id": "wisbeibungloumw_967",
+  "excel_id": 967,
+  "name": "Wissenschaftlicher Beirat der Bundesregierung Globale Umweltveränderungen",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Konferenz",
+  "website": "http://www.wbgu.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 31.31,
+  "beschaeftigte": null,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Bildung und Forschung (BMBF)",
+  "klassifikation": "Konferenz",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Bildung und Forschung (BMBF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "http://www.wbgu.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

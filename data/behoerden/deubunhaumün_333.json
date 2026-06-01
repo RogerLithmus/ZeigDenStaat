@@ -1,0 +1,35 @@
+{
+  "id": "deubunhaumün_333",
+  "excel_id": 333,
+  "name": "Deutsche Bundesbank - Hauptverwaltung München",
+  "kuerzel": null,
+  "typ": "AdöR",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "München",
+  "bundesland": "Bayern",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bank",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 177.32,
+  "beschaeftigte": null,
+  "ministerium_id": "bmf",
+  "ressort": "Bundesministerium der Finanzen (BMF)",
+  "klassifikation": "Bank",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Finanzen (BMF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

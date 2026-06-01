@@ -1,0 +1,35 @@
+{
+  "id": "kra_654",
+  "excel_id": 654,
+  "name": "Kraftfahrt-Bundesamt",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Automobil",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 114.6,
+  "beschaeftigte": 1080,
+  "ministerium_id": "bmv",
+  "ressort": "Bundesministerium für Digitales und Verkehr (BMDV)",
+  "klassifikation": "Automobil",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Digitales und Verkehr (BMDV)",
+  "beziehungen": [
+    {
+      "zu_id": "bmv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

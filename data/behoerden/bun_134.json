@@ -1,0 +1,35 @@
+{
+  "id": "bun_134",
+  "excel_id": 134,
+  "name": "Bundesverfassungsgericht",
+  "kuerzel": null,
+  "typ": "Verfassungsorgan",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Verfassungsgericht",
+  "website": "https://www.bundesverfassungsgericht.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 44.5,
+  "beschaeftigte": 16,
+  "ministerium_id": "bmjv",
+  "ressort": "Bundesministerium der Justiz (BMJ)",
+  "klassifikation": "Verfassungsgericht",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Justiz (BMJ)",
+  "beziehungen": [
+    {
+      "zu_id": "bmjv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundesverfassungsgericht.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

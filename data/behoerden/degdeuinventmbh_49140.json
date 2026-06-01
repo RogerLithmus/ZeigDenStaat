@@ -1,0 +1,35 @@
+{
+  "id": "degdeuinventmbh_49140",
+  "excel_id": 49140,
+  "name": "DEG - Deutsche Investitions- und Entwicklungsgesellschaft mbH",
+  "kuerzel": null,
+  "typ": "AdöR",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Förderbank",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 177.32,
+  "beschaeftigte": null,
+  "ministerium_id": "bmz",
+  "ressort": "Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)",
+  "klassifikation": "Förderbank",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ)",
+  "beziehungen": [
+    {
+      "zu_id": "bmz",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

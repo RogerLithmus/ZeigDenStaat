@@ -1,0 +1,32 @@
+{
+  "id": "ble",
+  "name": "Bundesanstalt für Landwirtschaft und Ernährung",
+  "kuerzel": "BLE",
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesanstalt",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1995,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Agrarmarktordnung, Ernährungsvorsorge, ländliche Entwicklung, Fischerei, Holzwirtschaft",
+  "website": "https://www.ble.de",
+  "rechtsgrundlage": "Gesetz über die Errichtung einer Bundesanstalt für Landwirtschaft und Ernährung (BLEG)",
+  "haushalt_mio_eur": 212.8,
+  "beschaeftigte": 1800,
+  "ministerium_id": "bmelh",
+  "beziehungen": [
+    {
+      "zu_id": "bmelh",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1995
+    }
+  ],
+  "quellen": [
+    "https://www.ble.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

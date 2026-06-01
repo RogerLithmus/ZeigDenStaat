@@ -1,0 +1,32 @@
+{
+  "id": "bfarm",
+  "name": "Bundesinstitut für Arzneimittel und Medizinprodukte",
+  "kuerzel": "BfArM",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1994,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Arzneimittelzulassung, Medizinprodukte, Betäubungsmittel, Risikobewertung",
+  "website": "https://www.bfarm.de",
+  "rechtsgrundlage": "Arzneimittelgesetz (AMG), Medizinprodukterecht-Durchführungsgesetz (MPDG)",
+  "haushalt_mio_eur": 140.4,
+  "beschaeftigte": 1350,
+  "ministerium_id": "bmg",
+  "beziehungen": [
+    {
+      "zu_id": "bmg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1994
+    }
+  ],
+  "quellen": [
+    "https://www.bfarm.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

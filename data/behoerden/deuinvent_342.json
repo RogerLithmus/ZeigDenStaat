@@ -1,0 +1,35 @@
+{
+  "id": "deuinvent_342",
+  "excel_id": 342,
+  "name": "Deutsche Investitions- und Entwicklungsgesellschaft",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Wirtschaftsförderung",
+  "website": "https://www.deginvest.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 177.32,
+  "beschaeftigte": 770,
+  "ministerium_id": "bmwi",
+  "ressort": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+  "klassifikation": "Wirtschaftsförderung",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+  "beziehungen": [
+    {
+      "zu_id": "bmwi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.deginvest.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

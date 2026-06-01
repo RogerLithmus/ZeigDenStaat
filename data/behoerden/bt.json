@@ -1,0 +1,44 @@
+{
+  "id": "bt",
+  "name": "Deutscher Bundestag",
+  "kuerzel": "BT",
+  "typ": "Verfassungsorgan",
+  "rechtsform": "Verfassungsorgan (Parlament)",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1949,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Gesetzgebung, Haushaltsbewilligung, Kontrolle der Bundesregierung, Wahl des Bundeskanzlers",
+  "website": "https://www.bundestag.de",
+  "rechtsgrundlage": "Grundgesetz Art. 38-49",
+  "haushalt_mio_eur": 1143.3,
+  "beschaeftigte": 3200,
+  "ministerium_id": null,
+  "beziehungen": [
+    {
+      "zu_id": "br",
+      "typ": "KOORDINIERT_MIT",
+      "richtung": "ausgehend",
+      "seit": 1949
+    },
+    {
+      "zu_id": "bpra",
+      "typ": "KOORDINIERT_MIT",
+      "richtung": "ausgehend",
+      "seit": 1949
+    },
+    {
+      "zu_id": "bverfg",
+      "typ": "KOORDINIERT_MIT",
+      "richtung": "ausgehend",
+      "seit": 1951
+    }
+  ],
+  "quellen": [
+    "https://www.bundestag.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

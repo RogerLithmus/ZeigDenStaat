@@ -1,0 +1,25 @@
+{
+  "id": "aa",
+  "name": "Auswärtiges Amt",
+  "kuerzel": "AA",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1951,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Außenpolitik, diplomatische Beziehungen, konsularische Angelegenheiten, Europapolitik",
+  "website": "https://www.auswaertiges-amt.de",
+  "rechtsgrundlage": "Grundgesetz Art. 32, 59, 73 Abs. 1 Nr. 1",
+  "haushalt_mio_eur": 5893.2,
+  "beschaeftigte": 13600,
+  "ministerium_id": null,
+  "beziehungen": [],
+  "quellen": [
+    "https://www.auswaertiges-amt.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

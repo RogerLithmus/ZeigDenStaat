@@ -1,0 +1,38 @@
+{
+  "id": "thw",
+  "name": "Bundesanstalt Technisches Hilfswerk",
+  "kuerzel": "THW",
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesanstalt",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1950,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Technische Hilfe, Katastrophenschutz, Bergung, Auslandseinsätze, Infrastruktur-Nothilfe",
+  "website": "https://www.thw.de",
+  "rechtsgrundlage": "THW-Gesetz (THWG)",
+  "haushalt_mio_eur": 458.0,
+  "beschaeftigte": 2100,
+  "ministerium_id": "bmi",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1950
+    },
+    {
+      "zu_id": "bbk",
+      "typ": "KOORDINIERT_MIT",
+      "richtung": "ausgehend",
+      "seit": 2004
+    }
+  ],
+  "quellen": [
+    "https://www.thw.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

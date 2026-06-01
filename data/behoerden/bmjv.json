@@ -1,0 +1,32 @@
+{
+  "id": "bmjv",
+  "name": "Bundesministerium der Justiz und für Verbraucherschutz",
+  "kuerzel": "BMJ",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1949,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Rechtspolitik, Gesetzgebung, Verbraucherschutz, Bundesgerichtsbarkeit",
+  "website": "https://www.bmj.de",
+  "rechtsgrundlage": "Grundgesetz Art. 65, 96",
+  "haushalt_mio_eur": 1162.7,
+  "beschaeftigte": 676,
+  "ministerium_id": null,
+  "beziehungen": [
+    {
+      "zu_id": "gba",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1950
+    }
+  ],
+  "quellen": [
+    "https://www.bmj.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

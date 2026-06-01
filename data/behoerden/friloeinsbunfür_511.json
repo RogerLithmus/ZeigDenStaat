@@ -1,0 +1,35 @@
+{
+  "id": "friloeinsbunfür_511",
+  "excel_id": 511,
+  "name": "Friedrich-Loeffler-Institut, Bundesforschungsinstitut für Tiergesundheit",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Forschung",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 159.06,
+  "beschaeftigte": null,
+  "ministerium_id": "bmelh",
+  "ressort": "Bundesministerium für Ernährung und Landwirtschaft (BMEL)",
+  "klassifikation": "Forschung",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Ernährung und Landwirtschaft (BMEL)",
+  "beziehungen": [
+    {
+      "zu_id": "bmelh",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

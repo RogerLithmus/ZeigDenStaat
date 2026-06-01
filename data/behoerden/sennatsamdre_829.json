@@ -1,0 +1,35 @@
+{
+  "id": "sennatsamdre_829",
+  "excel_id": 829,
+  "name": "Senckenberg Naturhistorische Sammlungen Dresden",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Dresden",
+  "bundesland": "Sachsen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Museum und Ausstellungen",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bkamt",
+  "ressort": "Beauftragte der Bundesregierung für Kultur und Medien (BKM)",
+  "klassifikation": "Museum und Ausstellungen",
+  "anmerkung": "Finanzierung über das Ressort Beauftragte der Bundesregierung für Kultur und Medien (BKM)",
+  "beziehungen": [
+    {
+      "zu_id": "bkamt",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

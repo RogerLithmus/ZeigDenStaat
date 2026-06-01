@@ -1,0 +1,35 @@
+{
+  "id": "johheithüinsbun_616",
+  "excel_id": 616,
+  "name": "Johann Heinrich von Thünen-Institut,Bundesforschungsinstitut für Ländliche Räume, Wald und Fischerei",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": null,
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 104.61,
+  "beschaeftigte": null,
+  "ministerium_id": "bmelh",
+  "ressort": "Bundesministerium für Ernährung und Landwirtschaft (BMEL)",
+  "klassifikation": null,
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Ernährung und Landwirtschaft (BMEL)",
+  "beziehungen": [
+    {
+      "zu_id": "bmelh",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

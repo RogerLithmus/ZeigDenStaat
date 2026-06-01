@@ -1,0 +1,25 @@
+{
+  "id": "bmdsi",
+  "name": "Bundesministerium für Digitalisierung und Staatsmodernisierung",
+  "kuerzel": "BMDSI",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 2025,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Digitalisierung der Verwaltung, Staatsmodernisierung, IT-Konsolidierung",
+  "website": "https://www.bmdsi.bund.de",
+  "rechtsgrundlage": "Grundgesetz Art. 65, Organisationserlass vom 14.01.2025",
+  "haushalt_mio_eur": 11.2,
+  "beschaeftigte": 200,
+  "ministerium_id": null,
+  "beziehungen": [],
+  "quellen": [
+    "https://www.bmdsi.bund.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

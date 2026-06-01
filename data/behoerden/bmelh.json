@@ -1,0 +1,38 @@
+{
+  "id": "bmelh",
+  "name": "Bundesministerium für Ernährung, Landwirtschaft und Heimat",
+  "kuerzel": "BMELH",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1949,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ernährungspolitik, Landwirtschaft, ländliche Räume, Tierschutz, Heimatpolitik",
+  "website": "https://www.bmel.de",
+  "rechtsgrundlage": "Grundgesetz Art. 65, Organisationserlass",
+  "haushalt_mio_eur": 11779.5,
+  "beschaeftigte": 1000,
+  "ministerium_id": null,
+  "beziehungen": [
+    {
+      "zu_id": "ble",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1995
+    },
+    {
+      "zu_id": "bvl",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 2002
+    }
+  ],
+  "quellen": [
+    "https://www.bmel.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

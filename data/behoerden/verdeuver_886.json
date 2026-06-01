@@ -1,0 +1,35 @@
+{
+  "id": "verdeuver_886",
+  "excel_id": 886,
+  "name": "Verband Deutscher Verkehrsunternehmen",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Verband",
+  "website": "https://www.vdv.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 1166.24,
+  "beschaeftigte": null,
+  "ministerium_id": "bmv",
+  "ressort": "Bundesministerium für Digitales und Verkehr (BMDV)",
+  "klassifikation": "Verband",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Digitales und Verkehr (BMDV)",
+  "beziehungen": [
+    {
+      "zu_id": "bmv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.vdv.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

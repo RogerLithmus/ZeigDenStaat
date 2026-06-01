@@ -1,0 +1,86 @@
+{
+  "id": "bmi",
+  "name": "Bundesministerium des Innern",
+  "kuerzel": "BMI",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1949,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Innere Sicherheit, Polizei, Migration, Verfassungsschutz, öffentlicher Dienst, Sport",
+  "website": "https://www.bmi.bund.de",
+  "rechtsgrundlage": "Grundgesetz Art. 65, 87 Abs. 1",
+  "haushalt_mio_eur": 15241.5,
+  "beschaeftigte": 2100,
+  "ministerium_id": null,
+  "beziehungen": [
+    {
+      "zu_id": "bpol",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1949
+    },
+    {
+      "zu_id": "bka",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1951
+    },
+    {
+      "zu_id": "bfv",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1950
+    },
+    {
+      "zu_id": "bamf",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1953
+    },
+    {
+      "zu_id": "bsi",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1991
+    },
+    {
+      "zu_id": "bbk",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 2004
+    },
+    {
+      "zu_id": "bva",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1960
+    },
+    {
+      "zu_id": "destatis",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1953
+    },
+    {
+      "zu_id": "thw",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1950
+    },
+    {
+      "zu_id": "bpb",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1952
+    }
+  ],
+  "quellen": [
+    "https://www.bmi.bund.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

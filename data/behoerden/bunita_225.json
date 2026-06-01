@@ -1,0 +1,35 @@
+{
+  "id": "bunita_225",
+  "excel_id": 225,
+  "name": "Bundeswehrverwaltungsstelle Italien",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Dienststelle der Bundeswehrverwaltung",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bundeswehrverwaltungsstelle",
+  "website": "https://www.bundeswehr.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmvg",
+  "ressort": "Bundesministerium der Verteidigung (BMVg)",
+  "klassifikation": "Bundeswehrverwaltungsstelle",
+  "anmerkung": "Aggregiert unter Bundesministerium der Verteidigung (BMVg)",
+  "beziehungen": [
+    {
+      "zu_id": "bmvg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundeswehr.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

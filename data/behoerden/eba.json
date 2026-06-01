@@ -1,0 +1,32 @@
+{
+  "id": "eba",
+  "name": "Eisenbahn-Bundesamt",
+  "kuerzel": "EBA",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1994,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Eisenbahnaufsicht, Planfeststellung, Sicherheit im Eisenbahnverkehr",
+  "website": "https://www.eba.bund.de",
+  "rechtsgrundlage": "Gesetz über die Eisenbahnverkehrsverwaltung des Bundes (BEVVG)",
+  "haushalt_mio_eur": 168.7,
+  "beschaeftigte": 1200,
+  "ministerium_id": "bmv",
+  "beziehungen": [
+    {
+      "zu_id": "bmv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1994
+    }
+  ],
+  "quellen": [
+    "https://www.eba.bund.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

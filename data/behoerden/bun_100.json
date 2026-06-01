@@ -1,0 +1,35 @@
+{
+  "id": "bun_100",
+  "excel_id": 100,
+  "name": "Bundesnotarkammer",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Notarkammer",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmjv",
+  "ressort": "Bundesministerium der Justiz (BMJ)",
+  "klassifikation": "Notarkammer",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Justiz (BMJ)",
+  "beziehungen": [
+    {
+      "zu_id": "bmjv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

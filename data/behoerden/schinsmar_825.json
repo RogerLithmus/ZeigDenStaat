@@ -1,0 +1,35 @@
+{
+  "id": "schinsmar_825",
+  "excel_id": 825,
+  "name": "Schifffahrtsmedizinisches Institut der Marine",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Dienststelle der WSV",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": null,
+  "website": "https://www.wsv.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 104.61,
+  "beschaeftigte": null,
+  "ministerium_id": "bmvg",
+  "ressort": "Bundesministerium der Verteidigung (BMVg)",
+  "klassifikation": null,
+  "anmerkung": "Aggregiert unter Generaldirektion Wasserstraßen und Schifffahrt (GDWS)",
+  "beziehungen": [
+    {
+      "zu_id": "bmvg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.wsv.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

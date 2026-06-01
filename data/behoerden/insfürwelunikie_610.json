@@ -1,0 +1,35 @@
+{
+  "id": "insfürwelunikie_610",
+  "excel_id": 610,
+  "name": "Institut für Weltwirtschaft an der Universität Kiel",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Kiel",
+  "bundesland": "Schleswig-Holstein",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": null,
+  "website": "http://www.kielinstitut.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 104.61,
+  "beschaeftigte": 180,
+  "ministerium_id": "bmwi",
+  "ressort": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+  "klassifikation": null,
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+  "beziehungen": [
+    {
+      "zu_id": "bmwi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "http://www.kielinstitut.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

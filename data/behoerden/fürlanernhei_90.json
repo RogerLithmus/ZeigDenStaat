@@ -1,0 +1,35 @@
+{
+  "id": "fürlanernhei_90",
+  "excel_id": 90,
+  "name": "Bundesministerium für Landwirtschaft, Ernährung und Heimat",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.bmel.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 7100.0,
+  "beschaeftigte": 1000,
+  "ministerium_id": "bmelh",
+  "ressort": "Bundesministerium für Ernährung und Landwirtschaft (BMEL)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Ernährung und Landwirtschaft",
+  "beziehungen": [
+    {
+      "zu_id": "bmelh",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bmel.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

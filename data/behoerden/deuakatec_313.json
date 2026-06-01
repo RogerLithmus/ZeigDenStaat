@@ -1,0 +1,35 @@
+{
+  "id": "deuakatec_313",
+  "excel_id": 313,
+  "name": "Deutsche Akademie der Technikwissenschaften",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Akademie",
+  "website": "http://www.acatech.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 177.32,
+  "beschaeftigte": null,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Bildung und Forschung (BMBF)",
+  "klassifikation": "Akademie",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Bildung und Forschung (BMBF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "http://www.acatech.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "bamf",
+  "name": "Bundesamt für Migration und Flüchtlinge",
+  "kuerzel": "BAMF",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Nürnberg",
+  "bundesland": "Bayern",
+  "gruendungsjahr": 1953,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Asylverfahren, Migration, Integration, Rückkehrförderung, Integrationskurse",
+  "website": "https://www.bamf.de",
+  "rechtsgrundlage": "Aufenthaltsgesetz § 75, Asylgesetz",
+  "haushalt_mio_eur": 879.1,
+  "beschaeftigte": 8000,
+  "ministerium_id": "bmi",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1953
+    }
+  ],
+  "quellen": [
+    "https://www.bamf.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "bfv",
+  "name": "Bundesamt für Verfassungsschutz",
+  "kuerzel": "BfV",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Köln",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1950,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Inlandsnachrichtendienst, Verfassungsschutz, Extremismusbeobachtung, Spionageabwehr",
+  "website": "https://www.verfassungsschutz.de",
+  "rechtsgrundlage": "Bundesverfassungsschutzgesetz (BVerfSchG)",
+  "haushalt_mio_eur": 577.0,
+  "beschaeftigte": 4200,
+  "ministerium_id": "bmi",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1950
+    }
+  ],
+  "quellen": [
+    "https://www.verfassungsschutz.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

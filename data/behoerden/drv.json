@@ -1,0 +1,32 @@
+{
+  "id": "drv",
+  "name": "Deutsche Rentenversicherung Bund",
+  "kuerzel": "DRV Bund",
+  "typ": "KdöR",
+  "rechtsform": "Körperschaft des öffentlichen Rechts",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 2005,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Gesetzliche Rentenversicherung, Rehabilitation, Rentenberatung, Beitragseinzug",
+  "website": "https://www.deutsche-rentenversicherung.de",
+  "rechtsgrundlage": "Sozialgesetzbuch VI (SGB VI)",
+  "haushalt_mio_eur": 180000.0,
+  "beschaeftigte": 41000,
+  "ministerium_id": "bmas",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "RECHTSAUFSICHT",
+      "richtung": "eingehend",
+      "seit": 2005
+    }
+  ],
+  "quellen": [
+    "https://www.deutsche-rentenversicherung.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

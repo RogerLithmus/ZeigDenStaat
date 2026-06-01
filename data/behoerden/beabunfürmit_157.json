@@ -1,0 +1,35 @@
+{
+  "id": "beabunfürmit_157",
+  "excel_id": 157,
+  "name": "Beauftragter der Bundesregierung für Mittelstand",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Beauftragte",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 31.31,
+  "beschaeftigte": null,
+  "ministerium_id": "bmwi",
+  "ressort": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+  "klassifikation": "Beauftragte",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+  "beziehungen": [
+    {
+      "zu_id": "bmwi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

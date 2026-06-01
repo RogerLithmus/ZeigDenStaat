@@ -1,0 +1,35 @@
+{
+  "id": "bunhamhau_16284",
+  "excel_id": 16284,
+  "name": "Bundespolizeirevier Hamburg-Hauptbahnhof",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Dienststelle der Bundespolizei",
+  "ebene": "Bund",
+  "sitz": "Hamburg",
+  "bundesland": "Hamburg",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": null,
+  "website": "https://www.bundespolizei.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 5074.74,
+  "beschaeftigte": null,
+  "ministerium_id": "bmv",
+  "ressort": "Bundesministerium für Digitales und Verkehr (BMDV)",
+  "klassifikation": null,
+  "anmerkung": "Aggregiert unter Bundespolizei (BPOL)",
+  "beziehungen": [
+    {
+      "zu_id": "bmv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundespolizei.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

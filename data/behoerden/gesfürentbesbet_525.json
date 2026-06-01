@@ -1,0 +1,35 @@
+{
+  "id": "gesfürentbesbet_525",
+  "excel_id": 525,
+  "name": "Gesellschaft für Entwicklung, Beschaffung und Betrieb mbH",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bundeswehr",
+  "website": "https://www.bwconsulting.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 22.3,
+  "beschaeftigte": 205,
+  "ministerium_id": "bmvg",
+  "ressort": "Bundesministerium der Verteidigung (BMVg)",
+  "klassifikation": "Bundeswehr",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Verteidigung (BMVg)",
+  "beziehungen": [
+    {
+      "zu_id": "bmvg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bwconsulting.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

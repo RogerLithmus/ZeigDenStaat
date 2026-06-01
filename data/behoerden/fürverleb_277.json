@@ -1,0 +1,35 @@
+{
+  "id": "fürverleb_277",
+  "excel_id": 277,
+  "name": "Bundesamt für Verbraucherschutz und Lebensmittelsicherheit",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Verbraucherschutzamt",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 101.0,
+  "beschaeftigte": 950,
+  "ministerium_id": "bmelh",
+  "ressort": "Bundesministerium für Ernährung und Landwirtschaft (BMEL)",
+  "klassifikation": "Verbraucherschutzamt",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Ernährung und Landwirtschaft (BMEL)",
+  "beziehungen": [
+    {
+      "zu_id": "bmelh",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

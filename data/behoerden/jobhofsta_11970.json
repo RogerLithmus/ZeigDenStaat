@@ -1,0 +1,35 @@
+{
+  "id": "jobhofsta_11970",
+  "excel_id": 11970,
+  "name": "Jobcenter Hof Stadt",
+  "kuerzel": null,
+  "typ": "KdöR",
+  "rechtsform": "Dienststelle der BA",
+  "ebene": "Bund",
+  "sitz": "Hof Stadt",
+  "bundesland": null,
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Jobcenter",
+  "website": "https://www.arbeitsagentur.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 931.98,
+  "beschaeftigte": null,
+  "ministerium_id": "bmas",
+  "ressort": "Bundesministerium für Arbeit und Soziales (BMAS)",
+  "klassifikation": "Jobcenter",
+  "anmerkung": "Aggregiert unter Bundesagentur für Arbeit (BA)",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.arbeitsagentur.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

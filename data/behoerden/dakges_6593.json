@@ -1,0 +1,35 @@
+{
+  "id": "dakges_6593",
+  "excel_id": 6593,
+  "name": "DAK-Gesundheit",
+  "kuerzel": null,
+  "typ": "KdöR",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Krankenkasse",
+  "website": "https://www.dak.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 29000.0,
+  "beschaeftigte": 10700,
+  "ministerium_id": "bmas",
+  "ressort": "Bundesministerium für Arbeit und Soziales (BMAS)",
+  "klassifikation": "Krankenkasse",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Arbeit und Soziales (BMAS)",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.dak.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

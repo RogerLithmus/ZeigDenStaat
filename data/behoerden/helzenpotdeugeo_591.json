@@ -1,0 +1,35 @@
+{
+  "id": "helzenpotdeugeo_591",
+  "excel_id": 591,
+  "name": "Helmholtz-Zentrum Potsdam Deutsches GeoForschungsZentrum",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Potsdam",
+  "bundesland": "Brandenburg",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Helmholtz-Zentrum",
+  "website": "https://www.gfz.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 40.55,
+  "beschaeftigte": 1514,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Bildung und Forschung (BMBF)",
+  "klassifikation": "Helmholtz-Zentrum",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Bildung und Forschung (BMBF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.gfz.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

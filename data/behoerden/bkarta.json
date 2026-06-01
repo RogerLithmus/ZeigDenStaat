@@ -1,0 +1,32 @@
+{
+  "id": "bkarta",
+  "name": "Bundeskartellamt",
+  "kuerzel": "BKartA",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1958,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Wettbewerbsschutz, Kartellrecht, Fusionskontrolle, Missbrauchsaufsicht, Vergaberecht",
+  "website": "https://www.bundeskartellamt.de",
+  "rechtsgrundlage": "Gesetz gegen Wettbewerbsbeschränkungen (GWB)",
+  "haushalt_mio_eur": 60.2,
+  "beschaeftigte": 402,
+  "ministerium_id": "bmwi",
+  "beziehungen": [
+    {
+      "zu_id": "bmwi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1958
+    }
+  ],
+  "quellen": [
+    "https://www.bundeskartellamt.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

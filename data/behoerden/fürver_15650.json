@@ -1,0 +1,35 @@
+{
+  "id": "fürver_15650",
+  "excel_id": 15650,
+  "name": "Bundesanstalt für Verwaltungsdienstleistungen",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Anstalt des öffentlichen Rechts",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bundesanstalt",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 35.6,
+  "beschaeftigte": 500,
+  "ministerium_id": "bmi",
+  "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
+  "klassifikation": "Bundesanstalt",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium des Innern und für Heimat (BMI)",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

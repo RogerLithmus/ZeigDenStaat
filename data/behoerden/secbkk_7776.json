@@ -1,0 +1,35 @@
+{
+  "id": "secbkk_7776",
+  "excel_id": 7776,
+  "name": "SECURVITA BKK",
+  "kuerzel": null,
+  "typ": "KdöR",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Krankenkasse",
+  "website": "https://www.securvita.de/krankenkasse-securvita.html",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 656.7,
+  "beschaeftigte": null,
+  "ministerium_id": "bmg",
+  "ressort": "Bundesministerium für Gesundheit (BMG)",
+  "klassifikation": "Krankenkasse",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Gesundheit (BMG)",
+  "beziehungen": [
+    {
+      "zu_id": "bmg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.securvita.de/krankenkasse-securvita.html"
+  ],
+  "recherche_datum": "2026-06-01"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "deuwel_406",
+  "excel_id": 406,
+  "name": "Deutsche Welle",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Rundfunkanstalt des Bundes",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Rundfunkanstalt",
+  "website": "https://www.dw.com",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 400.0,
+  "beschaeftigte": 3000,
+  "ministerium_id": "bkamt",
+  "ressort": "Beauftragte der Bundesregierung für Kultur und Medien (BKM)",
+  "klassifikation": "Rundfunkanstalt",
+  "anmerkung": "Auslandsrundfunk der Bundesrepublik",
+  "beziehungen": [
+    {
+      "zu_id": "bkamt",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.dw.com"
+  ],
+  "recherche_datum": "2026-06-01"
+}

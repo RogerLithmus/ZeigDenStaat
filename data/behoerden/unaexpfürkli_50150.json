@@ -1,0 +1,35 @@
+{
+  "id": "unaexpfürkli_50150",
+  "excel_id": 50150,
+  "name": "Unabhängiger Expertenrat für Klimafragen",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Umweltschutz",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 13.92,
+  "beschaeftigte": null,
+  "ministerium_id": "bmuv",
+  "ressort": "Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz (BMUV)",
+  "klassifikation": "Umweltschutz",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz (BMUV)",
+  "beziehungen": [
+    {
+      "zu_id": "bmuv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

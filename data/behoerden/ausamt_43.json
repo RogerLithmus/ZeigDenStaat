@@ -1,0 +1,35 @@
+{
+  "id": "ausamt_43",
+  "excel_id": 43,
+  "name": "Auswärtiges Amt",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 6030.0,
+  "beschaeftigte": 13600,
+  "ministerium_id": "aa",
+  "ressort": "Auswärtiges Amt (AA)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Finanzierung über das Ressort Auswärtiges Amt (AA)",
+  "beziehungen": [
+    {
+      "zu_id": "aa",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

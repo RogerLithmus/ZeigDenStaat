@@ -1,0 +1,35 @@
+{
+  "id": "fürjus_270",
+  "excel_id": 270,
+  "name": "Bundesamt für Justiz",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Justiz",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 139.27,
+  "beschaeftigte": null,
+  "ministerium_id": "bmjv",
+  "ressort": "Bundesministerium der Justiz (BMJ)",
+  "klassifikation": "Justiz",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Justiz (BMJ)",
+  "beziehungen": [
+    {
+      "zu_id": "bmjv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

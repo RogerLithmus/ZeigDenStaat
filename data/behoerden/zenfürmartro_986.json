@@ -1,0 +1,35 @@
+{
+  "id": "zenfürmartro_986",
+  "excel_id": 986,
+  "name": "Zentrum für Marine Tropenökologie",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": null,
+  "website": "http://www.leibniz-zmt.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 1609.24,
+  "beschaeftigte": 150,
+  "ministerium_id": "bmvg",
+  "ressort": "Bundesministerium der Verteidigung (BMVg)",
+  "klassifikation": null,
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Verteidigung (BMVg)",
+  "beziehungen": [
+    {
+      "zu_id": "bmvg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "http://www.leibniz-zmt.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

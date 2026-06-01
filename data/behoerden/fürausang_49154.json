@@ -1,0 +1,35 @@
+{
+  "id": "fürausang_49154",
+  "excel_id": 49154,
+  "name": "Bundesamt für Auswärtige Angelegenheiten",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": null,
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 54.2,
+  "beschaeftigte": 739,
+  "ministerium_id": "aa",
+  "ressort": "Auswärtiges Amt (AA)",
+  "klassifikation": null,
+  "anmerkung": "Finanzierung über das Ressort Auswärtiges Amt (AA)",
+  "beziehungen": [
+    {
+      "zu_id": "aa",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

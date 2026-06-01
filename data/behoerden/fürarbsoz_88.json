@@ -1,0 +1,35 @@
+{
+  "id": "fürarbsoz_88",
+  "excel_id": 88,
+  "name": "Bundesministerium für Arbeit und Soziales",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.bmas.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 171200.0,
+  "beschaeftigte": 1300,
+  "ministerium_id": "bmas",
+  "ressort": "Bundesministerium für Arbeit und Soziales (BMAS)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Höchstes Budget im Bundeshaushalt (Soziales)",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bmas.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

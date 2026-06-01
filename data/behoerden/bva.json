@@ -1,0 +1,32 @@
+{
+  "id": "bva",
+  "name": "Bundesverwaltungsamt",
+  "kuerzel": "BVA",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Köln",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1960,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Verwaltungsdienstleistungen, Auslandsschulwesen, Zuwendungsverwaltung, IT-Dienstleistungen",
+  "website": "https://www.bva.bund.de",
+  "rechtsgrundlage": "Gesetz über die Errichtung des Bundesverwaltungsamtes",
+  "haushalt_mio_eur": 619.8,
+  "beschaeftigte": 6400,
+  "ministerium_id": "bmi",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1960
+    }
+  ],
+  "quellen": [
+    "https://www.bva.bund.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

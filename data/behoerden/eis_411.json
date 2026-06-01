@@ -1,0 +1,35 @@
+{
+  "id": "eis_411",
+  "excel_id": 411,
+  "name": "Eisenbahn-Bundesamt",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bahn",
+  "website": "https://www.eba.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 85.0,
+  "beschaeftigte": 1200,
+  "ministerium_id": "bmv",
+  "ressort": "Bundesministerium für Digitales und Verkehr (BMDV)",
+  "klassifikation": "Bahn",
+  "anmerkung": "Aufsichtsbehörde für Schienenbahnen",
+  "beziehungen": [
+    {
+      "zu_id": "bmv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.eba.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

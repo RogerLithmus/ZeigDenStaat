@@ -1,0 +1,32 @@
+{
+  "id": "bnd",
+  "name": "Bundesnachrichtendienst",
+  "kuerzel": "BND",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1956,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Auslandsnachrichtendienst, Auslandsaufklärung, Spionageabwehr im Ausland",
+  "website": "https://www.bnd.bund.de",
+  "rechtsgrundlage": "BND-Gesetz (BNDG)",
+  "haushalt_mio_eur": 1195.2,
+  "beschaeftigte": 7600,
+  "ministerium_id": "bkamt",
+  "beziehungen": [
+    {
+      "zu_id": "bkamt",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1949
+    }
+  ],
+  "quellen": [
+    "https://www.bnd.bund.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

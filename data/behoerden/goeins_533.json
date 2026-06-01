@@ -1,0 +1,35 @@
+{
+  "id": "goeins_533",
+  "excel_id": 533,
+  "name": "Goethe-Institut e.V.",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Internationale Beziehungen",
+  "website": "https://www.goethe.de/ins/de/de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": 468,
+  "ministerium_id": "aa",
+  "ressort": "Auswärtiges Amt (AA)",
+  "klassifikation": "Internationale Beziehungen",
+  "anmerkung": "Finanzierung über das Ressort Auswärtiges Amt (AA)",
+  "beziehungen": [
+    {
+      "zu_id": "aa",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.goethe.de/ins/de/de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

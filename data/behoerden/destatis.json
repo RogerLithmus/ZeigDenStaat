@@ -1,0 +1,32 @@
+{
+  "id": "destatis",
+  "name": "Statistisches Bundesamt",
+  "kuerzel": "Destatis",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Wiesbaden",
+  "bundesland": "Hessen",
+  "gruendungsjahr": 1953,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Amtliche Statistik, Wirtschaftsstatistik, Bevölkerungsstatistik, Zensus, Mikrozensus",
+  "website": "https://www.destatis.de",
+  "rechtsgrundlage": "Bundesstatistikgesetz (BStatG)",
+  "haushalt_mio_eur": 232.6,
+  "beschaeftigte": 2800,
+  "ministerium_id": "bmi",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1953
+    }
+  ],
+  "quellen": [
+    "https://www.destatis.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

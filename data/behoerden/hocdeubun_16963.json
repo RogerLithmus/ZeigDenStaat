@@ -1,0 +1,35 @@
+{
+  "id": "hocdeubun_16963",
+  "excel_id": 16963,
+  "name": "Hochschule der Deutschen Bundesbank",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Hochschule",
+  "website": "https://www.hochschule-bundesbank.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 177.32,
+  "beschaeftigte": 201,
+  "ministerium_id": "bmf",
+  "ressort": "Bundesministerium der Finanzen (BMF)",
+  "klassifikation": "Hochschule",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium der Finanzen (BMF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.hochschule-bundesbank.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

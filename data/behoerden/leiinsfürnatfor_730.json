@@ -1,0 +1,35 @@
+{
+  "id": "leiinsfürnatfor_730",
+  "excel_id": 730,
+  "name": "Leibniz-Institut für Naturstoff-Forschung und Infektionsbiologie - Hans-Knöll-Institut e.V.",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Leibniz-Institut",
+  "website": "https://www.leibniz-hki.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": 380,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Bildung und Forschung (BMBF)",
+  "klassifikation": "Leibniz-Institut",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Bildung und Forschung (BMBF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.leibniz-hki.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

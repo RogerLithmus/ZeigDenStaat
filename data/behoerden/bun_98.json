@@ -1,0 +1,35 @@
+{
+  "id": "bun_98",
+  "excel_id": 98,
+  "name": "Bundesnachrichtendienst",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Geheimdienst",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 988.5,
+  "beschaeftigte": 7600,
+  "ministerium_id": "bkamt",
+  "ressort": "Bundeskanzleramt (BKAmt)",
+  "klassifikation": "Geheimdienst",
+  "anmerkung": "Finanzierung über das Ressort Bundeskanzleramt (BKAmt)",
+  "beziehungen": [
+    {
+      "zu_id": "bkamt",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

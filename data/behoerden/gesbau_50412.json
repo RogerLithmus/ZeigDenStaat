@@ -1,0 +1,35 @@
+{
+  "id": "gesbau_50412",
+  "excel_id": 50412,
+  "name": "Geschäftsstelle der Bauministerkonferenz",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bau",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmwsb",
+  "ressort": "Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen (BMWSB)",
+  "klassifikation": "Bau",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen (BMWSB)",
+  "beziehungen": [
+    {
+      "zu_id": "bmwsb",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

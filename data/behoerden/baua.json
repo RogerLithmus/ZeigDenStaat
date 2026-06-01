@@ -1,0 +1,32 @@
+{
+  "id": "baua",
+  "name": "Bundesanstalt für Arbeitsschutz und Arbeitsmedizin",
+  "kuerzel": "BAuA",
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesanstalt",
+  "ebene": "Bund",
+  "sitz": "Dortmund",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1996,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Arbeitsschutz, Arbeitsmedizin, Arbeitssicherheit, Gefahrstoffe, Produktsicherheit",
+  "website": "https://www.baua.de",
+  "rechtsgrundlage": "Gesetz über die Errichtung der Bundesanstalt für Arbeitsschutz und Arbeitsmedizin",
+  "haushalt_mio_eur": 94.9,
+  "beschaeftigte": 650,
+  "ministerium_id": "bmas",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1996
+    }
+  ],
+  "quellen": [
+    "https://www.baua.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

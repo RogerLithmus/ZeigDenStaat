@@ -1,0 +1,44 @@
+{
+  "id": "bmuv",
+  "name": "Bundesministerium für Umwelt, Klimaschutz, Naturschutz und nukleare Sicherheit",
+  "kuerzel": "BMUV",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1986,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Umweltschutz, Klimaschutz, Naturschutz, nukleare Sicherheit, Strahlenschutz",
+  "website": "https://www.bmuv.de",
+  "rechtsgrundlage": "Grundgesetz Art. 65, Organisationserlass",
+  "haushalt_mio_eur": 2693.0,
+  "beschaeftigte": 1200,
+  "ministerium_id": null,
+  "beziehungen": [
+    {
+      "zu_id": "uba",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1986
+    },
+    {
+      "zu_id": "bfn",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1993
+    },
+    {
+      "zu_id": "base",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 2014
+    }
+  ],
+  "quellen": [
+    "https://www.bmuv.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

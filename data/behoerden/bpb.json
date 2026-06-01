@@ -1,0 +1,32 @@
+{
+  "id": "bpb",
+  "name": "Bundeszentrale für politische Bildung",
+  "kuerzel": "bpb",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1952,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Politische Bildung, Demokratieförderung, Publikationen, Medienkompetenz",
+  "website": "https://www.bpb.de",
+  "rechtsgrundlage": "Erlass über die Bundeszentrale für politische Bildung",
+  "haushalt_mio_eur": 105.2,
+  "beschaeftigte": 300,
+  "ministerium_id": "bmi",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1952
+    }
+  ],
+  "quellen": [
+    "https://www.bpb.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

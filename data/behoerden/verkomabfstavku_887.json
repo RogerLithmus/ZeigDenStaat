@@ -1,0 +1,35 @@
+{
+  "id": "verkomabfstavku_887",
+  "excel_id": 887,
+  "name": "Verband kommunale Abfallwirtschaft und Stadtreinigung im VKU",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Abfallwirtschaft",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 1324.89,
+  "beschaeftigte": null,
+  "ministerium_id": "bmwi",
+  "ressort": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+  "klassifikation": "Abfallwirtschaft",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+  "beziehungen": [
+    {
+      "zu_id": "bmwi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

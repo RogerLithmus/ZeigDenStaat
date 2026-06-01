@@ -1,0 +1,35 @@
+{
+  "id": "frainsfürferang_463",
+  "excel_id": 463,
+  "name": "Fraunhofer-Institut für Fertigungstechnik und Angewandte Materialforschung",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Forschung",
+  "website": "https://www.ifam.fraunhofer.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 178.99,
+  "beschaeftigte": 730,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Bildung und Forschung (BMBF)",
+  "klassifikation": "Forschung",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Bildung und Forschung (BMBF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.ifam.fraunhofer.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

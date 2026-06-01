@@ -1,0 +1,35 @@
+{
+  "id": "robkocins_814",
+  "excel_id": 814,
+  "name": "Robert Koch-Institut",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": null,
+  "website": "https://www.rki.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 180.0,
+  "beschaeftigte": 1300,
+  "ministerium_id": "bmg",
+  "ressort": "Bundesministerium für Gesundheit (BMG)",
+  "klassifikation": null,
+  "anmerkung": "Gesundheitsforschung und Infektionsschutz",
+  "beziehungen": [
+    {
+      "zu_id": "bmg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.rki.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

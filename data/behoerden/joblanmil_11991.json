@@ -1,0 +1,35 @@
+{
+  "id": "joblanmil_11991",
+  "excel_id": 11991,
+  "name": "Jobcenter Landkreis Miltenberg",
+  "kuerzel": null,
+  "typ": "KdöR",
+  "rechtsform": "Dienststelle der BA",
+  "ebene": "Bund",
+  "sitz": "Landkreis Miltenberg",
+  "bundesland": null,
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Jobcenter",
+  "website": "https://www.arbeitsagentur.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "beschaeftigte": null,
+  "ministerium_id": "bmas",
+  "ressort": "Bundesministerium für Arbeit und Soziales (BMAS)",
+  "klassifikation": "Jobcenter",
+  "anmerkung": "Aggregiert unter Bundesagentur für Arbeit (BA)",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.arbeitsagentur.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

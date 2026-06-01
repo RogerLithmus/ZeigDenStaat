@@ -1,0 +1,35 @@
+{
+  "id": "deuinsfürwir_386",
+  "excel_id": 386,
+  "name": "Deutsches Institut für Wirtschaftsforschung",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": null,
+  "website": "https://www.diw.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 104.61,
+  "beschaeftigte": 334,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Bildung und Forschung (BMBF)",
+  "klassifikation": null,
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Bildung und Forschung (BMBF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.diw.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

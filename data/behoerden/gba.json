@@ -1,0 +1,32 @@
+{
+  "id": "gba",
+  "name": "Generalbundesanwalt beim Bundesgerichtshof",
+  "kuerzel": "GBA",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Karlsruhe",
+  "bundesland": "Baden-Württemberg",
+  "gruendungsjahr": 1950,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Strafverfolgung bei Staatsschutzsachen, Terrorismus, Völkerstrafrecht, Spionage",
+  "website": "https://www.generalbundesanwalt.de",
+  "rechtsgrundlage": "Gerichtsverfassungsgesetz (GVG) § 141-152",
+  "haushalt_mio_eur": 80.9,
+  "beschaeftigte": 300,
+  "ministerium_id": "bmjv",
+  "beziehungen": [
+    {
+      "zu_id": "bmjv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1950
+    }
+  ],
+  "quellen": [
+    "https://www.generalbundesanwalt.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

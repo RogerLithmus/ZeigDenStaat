@@ -1,0 +1,25 @@
+{
+  "id": "bmftr",
+  "name": "Bundesministerium für Forschung, Technologie und Raumfahrt",
+  "kuerzel": "BMFTR",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 2025,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Forschungsförderung, Technologiepolitik, Raumfahrt, Wissenschaftssystem",
+  "website": "https://www.bmftr.de",
+  "rechtsgrundlage": "Grundgesetz Art. 65, Organisationserlass vom 14.01.2025",
+  "haushalt_mio_eur": 22363.8,
+  "beschaeftigte": 1500,
+  "ministerium_id": null,
+  "beziehungen": [],
+  "quellen": [
+    "https://www.bmftr.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

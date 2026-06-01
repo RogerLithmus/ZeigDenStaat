@@ -1,0 +1,38 @@
+{
+  "id": "bkamt",
+  "name": "Bundeskanzleramt",
+  "kuerzel": "BKAmt",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1949,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Koordinierung der Regierungspolitik, Unterstützung des Bundeskanzlers, Nachrichtendienstkoordination",
+  "website": "https://www.bundeskanzler.de",
+  "rechtsgrundlage": "Grundgesetz Art. 62-69, Geschäftsordnung der Bundesregierung",
+  "haushalt_mio_eur": 4043.3,
+  "beschaeftigte": 850,
+  "ministerium_id": null,
+  "beziehungen": [
+    {
+      "zu_id": "bnd",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1949
+    },
+    {
+      "zu_id": "bpa",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1949
+    }
+  ],
+  "quellen": [
+    "https://www.bundeskanzler.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

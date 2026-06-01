@@ -1,0 +1,35 @@
+{
+  "id": "fürdigsta_51919",
+  "excel_id": 51919,
+  "name": "Bundesministerium für Digitales und Staatsmodernisierung",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.bmdv.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 38700.0,
+  "beschaeftigte": 1600,
+  "ministerium_id": "bmv",
+  "ressort": "Bundesministerium für Digitales und Verkehr (BMDV)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Digitales und Verkehr",
+  "beziehungen": [
+    {
+      "zu_id": "bmv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bmdv.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

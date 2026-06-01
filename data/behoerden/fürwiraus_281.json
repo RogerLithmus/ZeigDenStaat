@@ -1,0 +1,35 @@
+{
+  "id": "fürwiraus_281",
+  "excel_id": 281,
+  "name": "Bundesamt für Wirtschaft und Ausfuhrkontrolle",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Eschborn",
+  "bundesland": null,
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Regulierungsbehörde",
+  "website": "https://www.bafa.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 105.0,
+  "beschaeftigte": 1400,
+  "ministerium_id": "bmwi",
+  "ressort": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+  "klassifikation": "Regulierungsbehörde",
+  "anmerkung": "Wirtschafts- und Ausfuhrkontrolle",
+  "beziehungen": [
+    {
+      "zu_id": "bmwi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bafa.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

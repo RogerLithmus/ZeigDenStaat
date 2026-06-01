@@ -1,0 +1,32 @@
+{
+  "id": "br",
+  "name": "Bundesrat",
+  "kuerzel": "BR",
+  "typ": "Verfassungsorgan",
+  "rechtsform": "Verfassungsorgan (Länderkammer)",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1949,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Mitwirkung der Länder bei der Gesetzgebung und Verwaltung des Bundes",
+  "website": "https://www.bundesrat.de",
+  "rechtsgrundlage": "Grundgesetz Art. 50-53",
+  "haushalt_mio_eur": 30.8,
+  "beschaeftigte": 200,
+  "ministerium_id": null,
+  "beziehungen": [
+    {
+      "zu_id": "bt",
+      "typ": "KOORDINIERT_MIT",
+      "richtung": "ausgehend",
+      "seit": 1949
+    }
+  ],
+  "quellen": [
+    "https://www.bundesrat.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

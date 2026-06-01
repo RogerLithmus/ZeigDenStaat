@@ -1,0 +1,32 @@
+{
+  "id": "ba",
+  "name": "Bundesagentur für Arbeit",
+  "kuerzel": "BA",
+  "typ": "KdöR",
+  "rechtsform": "Körperschaft des öffentlichen Rechts",
+  "ebene": "Bund",
+  "sitz": "Nürnberg",
+  "bundesland": "Bayern",
+  "gruendungsjahr": 1952,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Arbeitsvermittlung, Arbeitslosenversicherung, Berufsberatung, Arbeitsmarktstatistik",
+  "website": "https://www.arbeitsagentur.de",
+  "rechtsgrundlage": "Sozialgesetzbuch III (SGB III)",
+  "haushalt_mio_eur": 42500.0,
+  "beschaeftigte": 113000,
+  "ministerium_id": "bmas",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "RECHTSAUFSICHT",
+      "richtung": "eingehend",
+      "seit": 1952
+    }
+  ],
+  "quellen": [
+    "https://www.arbeitsagentur.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

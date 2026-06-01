@@ -1,0 +1,35 @@
+{
+  "id": "polbunbeideubun_51646",
+  "excel_id": 51646,
+  "name": "Polizeibeauftragter des Bundes beim Deutschen Bundestag",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Polizei",
+  "website": "https://www.bundestag.de/polizeibeauftragter",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 766.0,
+  "beschaeftigte": null,
+  "ministerium_id": "bmi",
+  "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
+  "klassifikation": "Polizei",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium des Innern und für Heimat (BMI)",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundestag.de/polizeibeauftragter"
+  ],
+  "recherche_datum": "2026-06-01"
+}

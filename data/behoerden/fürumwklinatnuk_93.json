@@ -1,0 +1,35 @@
+{
+  "id": "fürumwklinatnuk_93",
+  "excel_id": 93,
+  "name": "Bundesministerium für Umwelt, Klimaschutz, Naturschutz und nukleare Sicherheit",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.bmuv.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 2400.0,
+  "beschaeftigte": 1200,
+  "ministerium_id": "bmuv",
+  "ressort": "Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz (BMUV)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Umwelt, Naturschutz, nukleare Sicherheit",
+  "beziehungen": [
+    {
+      "zu_id": "bmuv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bmuv.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

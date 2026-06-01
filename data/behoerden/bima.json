@@ -1,0 +1,32 @@
+{
+  "id": "bima",
+  "name": "Bundesanstalt für Immobilienaufgaben",
+  "kuerzel": "BImA",
+  "typ": "Bundesanstalt",
+  "rechtsform": "Anstalt des öffentlichen Rechts",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 2005,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Immobilienmanagement des Bundes, Verwaltung und Verwertung von Bundesimmobilien",
+  "website": "https://www.bundesimmobilien.de",
+  "rechtsgrundlage": "Gesetz über die Bundesanstalt für Immobilienaufgaben (BImAG)",
+  "haushalt_mio_eur": 3500.0,
+  "beschaeftigte": 7200,
+  "ministerium_id": "bmf",
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "RECHTSAUFSICHT",
+      "richtung": "eingehend",
+      "seit": 2005
+    }
+  ],
+  "quellen": [
+    "https://www.bundesimmobilien.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

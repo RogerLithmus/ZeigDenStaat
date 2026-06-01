@@ -1,0 +1,32 @@
+{
+  "id": "bast",
+  "name": "Bundesanstalt für Straßenwesen",
+  "kuerzel": "BASt",
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesanstalt",
+  "ebene": "Bund",
+  "sitz": "Bergisch Gladbach",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1951,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Straßenverkehrssicherheit, Straßenbautechnik, Brückenbau, Fahrzeugtechnik, Verkehrsforschung",
+  "website": "https://www.bast.de",
+  "rechtsgrundlage": "Gesetz über die Errichtung der Bundesanstalt für Straßenwesen",
+  "haushalt_mio_eur": 53.4,
+  "beschaeftigte": 380,
+  "ministerium_id": "bmv",
+  "beziehungen": [
+    {
+      "zu_id": "bmv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1951
+    }
+  ],
+  "quellen": [
+    "https://www.bast.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

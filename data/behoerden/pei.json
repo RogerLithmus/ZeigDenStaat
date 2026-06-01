@@ -1,0 +1,32 @@
+{
+  "id": "pei",
+  "name": "Paul-Ehrlich-Institut",
+  "kuerzel": "PEI",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Langen",
+  "bundesland": "Hessen",
+  "gruendungsjahr": 1972,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Impfstoffe, biomedizinische Arzneimittel, Blutprodukte, Sera, Zulassung und Überwachung",
+  "website": "https://www.pei.de",
+  "rechtsgrundlage": "Arzneimittelgesetz (AMG), Transfusionsgesetz (TFG)",
+  "haushalt_mio_eur": 96.7,
+  "beschaeftigte": 900,
+  "ministerium_id": "bmg",
+  "beziehungen": [
+    {
+      "zu_id": "bmg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1972
+    }
+  ],
+  "quellen": [
+    "https://www.pei.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

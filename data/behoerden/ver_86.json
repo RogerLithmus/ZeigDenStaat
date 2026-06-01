@@ -1,0 +1,35 @@
+{
+  "id": "ver_86",
+  "excel_id": 86,
+  "name": "Bundesministerium der Verteidigung",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.bmvg.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 51800.0,
+  "beschaeftigte": 2500,
+  "ministerium_id": "bmvg",
+  "ressort": "Bundesministerium der Verteidigung (BMVg)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Zuzüglich 19,8 Mrd. € Sondervermögen, ca. 180.000 Soldaten",
+  "beziehungen": [
+    {
+      "zu_id": "bmvg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bmvg.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

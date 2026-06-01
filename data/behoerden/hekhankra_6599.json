@@ -1,0 +1,35 @@
+{
+  "id": "hekhankra_6599",
+  "excel_id": 6599,
+  "name": "HEK - Hanseatische Krankenkasse",
+  "kuerzel": null,
+  "typ": "KdöR",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Krankenkasse",
+  "website": "https://www.hek.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 2800.0,
+  "beschaeftigte": 900,
+  "ministerium_id": "bmas",
+  "ressort": "Bundesministerium für Arbeit und Soziales (BMAS)",
+  "klassifikation": "Krankenkasse",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Arbeit und Soziales (BMAS)",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.hek.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

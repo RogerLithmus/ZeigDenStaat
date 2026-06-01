@@ -1,0 +1,32 @@
+{
+  "id": "bzga",
+  "name": "Bundeszentrale für gesundheitliche Aufklärung",
+  "kuerzel": "BZgA",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Köln",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1967,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Gesundheitsaufklärung, Prävention, Suchtprävention, Sexualaufklärung, Organspende",
+  "website": "https://www.bzga.de",
+  "rechtsgrundlage": "Erlass über die Errichtung der Bundeszentrale für gesundheitliche Aufklärung",
+  "haushalt_mio_eur": 23.4,
+  "beschaeftigte": 350,
+  "ministerium_id": "bmg",
+  "beziehungen": [
+    {
+      "zu_id": "bmg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1967
+    }
+  ],
+  "quellen": [
+    "https://www.bzga.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

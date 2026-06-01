@@ -1,0 +1,32 @@
+{
+  "id": "gzd",
+  "name": "Generalzolldirektion",
+  "kuerzel": "GZD",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 2016,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Zollverwaltung, Schwarzarbeitbekämpfung, Verbrauchsteuern, Außenwirtschaftsüberwachung",
+  "website": "https://www.zoll.de",
+  "rechtsgrundlage": "Finanzverwaltungsgesetz (FVG) § 12",
+  "haushalt_mio_eur": 3580.9,
+  "beschaeftigte": 43000,
+  "ministerium_id": "bmf",
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 2016
+    }
+  ],
+  "quellen": [
+    "https://www.zoll.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

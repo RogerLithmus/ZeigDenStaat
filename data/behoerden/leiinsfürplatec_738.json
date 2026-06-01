@@ -1,0 +1,35 @@
+{
+  "id": "leiinsfürplatec_738",
+  "excel_id": 738,
+  "name": "Leibniz-Institut für Plasmaforschung und Technologie",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Leibniz-Institut",
+  "website": "http://www.leibniz-inp.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 1852.94,
+  "beschaeftigte": 203,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Bildung und Forschung (BMBF)",
+  "klassifikation": "Leibniz-Institut",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Bildung und Forschung (BMBF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "http://www.leibniz-inp.de/"
+  ],
+  "recherche_datum": "2026-06-01"
+}

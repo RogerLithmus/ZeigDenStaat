@@ -1,0 +1,35 @@
+{
+  "id": "bunbon_48832",
+  "excel_id": 48832,
+  "name": "Bundespolizeirevier Bonn",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Dienststelle der Bundespolizei",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bundespolizei",
+  "website": "https://www.bundespolizei.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 5074.74,
+  "beschaeftigte": null,
+  "ministerium_id": "bmi",
+  "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
+  "klassifikation": "Bundespolizei",
+  "anmerkung": "Aggregiert unter Bundespolizei (BPOL)",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundespolizei.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

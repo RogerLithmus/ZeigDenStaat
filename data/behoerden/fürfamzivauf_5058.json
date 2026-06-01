@@ -1,0 +1,35 @@
+{
+  "id": "fürfamzivauf_5058",
+  "excel_id": 5058,
+  "name": "Bundesamt für Familie und zivilgesellschaftliche Aufgaben",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Familie",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 134.9,
+  "beschaeftigte": 1500,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Familie, Senioren, Frauen und Jugend (BMFSFJ)",
+  "klassifikation": "Familie",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Familie, Senioren, Frauen und Jugend (BMFSFJ)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

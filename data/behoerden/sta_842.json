@@ -1,0 +1,35 @@
+{
+  "id": "sta_842",
+  "excel_id": 842,
+  "name": "Statistisches Bundesamt",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Wiesbaden",
+  "bundesland": "Hessen",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Statistik",
+  "website": "https://www.destatis.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 310.0,
+  "beschaeftigte": 2800,
+  "ministerium_id": "bmi",
+  "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
+  "klassifikation": "Statistik",
+  "anmerkung": "Statistisches Bundesamt",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.destatis.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

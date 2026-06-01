@@ -1,0 +1,35 @@
+{
+  "id": "fürarbpas_11087",
+  "excel_id": 11087,
+  "name": "Agentur für Arbeit Passau",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Dienststelle der BA",
+  "ebene": "Bund",
+  "sitz": "Passau",
+  "bundesland": "Bayern",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Agentur für Arbeit",
+  "website": "https://www.arbeitsagentur.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 21.88,
+  "beschaeftigte": null,
+  "ministerium_id": "bmas",
+  "ressort": "Bundesministerium für Arbeit und Soziales (BMAS)",
+  "klassifikation": "Agentur für Arbeit",
+  "anmerkung": "Aggregiert unter Bundesagentur für Arbeit (BA)",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.arbeitsagentur.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

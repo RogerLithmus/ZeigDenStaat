@@ -1,0 +1,44 @@
+{
+  "id": "bmv",
+  "name": "Bundesministerium für Verkehr",
+  "kuerzel": "BMV",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": 1949,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Verkehrspolitik, Straßen-, Schienen-, Wasser- und Luftverkehr, Mobilität",
+  "website": "https://www.bmv.de",
+  "rechtsgrundlage": "Grundgesetz Art. 65, 87e, 89, 90",
+  "haushalt_mio_eur": 38287.8,
+  "beschaeftigte": 1700,
+  "ministerium_id": null,
+  "beziehungen": [
+    {
+      "zu_id": "kba",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1951
+    },
+    {
+      "zu_id": "eba",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1994
+    },
+    {
+      "zu_id": "bast",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1951
+    }
+  ],
+  "quellen": [
+    "https://www.bmv.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

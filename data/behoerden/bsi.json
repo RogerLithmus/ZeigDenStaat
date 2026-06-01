@@ -1,0 +1,32 @@
+{
+  "id": "bsi",
+  "name": "Bundesamt für Sicherheit in der Informationstechnik",
+  "kuerzel": "BSI",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "gruendungsjahr": 1991,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "IT-Sicherheit, Cybersicherheit, Kritische Infrastrukturen, Kryptografie, Zertifizierung",
+  "website": "https://www.bsi.bund.de",
+  "rechtsgrundlage": "BSI-Gesetz (BSIG)",
+  "haushalt_mio_eur": 230.7,
+  "beschaeftigte": 1400,
+  "ministerium_id": "bmi",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1991
+    }
+  ],
+  "quellen": [
+    "https://www.bsi.bund.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}

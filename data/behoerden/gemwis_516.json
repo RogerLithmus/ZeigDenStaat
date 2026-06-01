@@ -1,0 +1,35 @@
+{
+  "id": "gemwis_516",
+  "excel_id": 516,
+  "name": "Gemeinsame Wissenschaftskonferenz",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Konferenz",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 3.18,
+  "beschaeftigte": null,
+  "ministerium_id": "bkamt",
+  "ressort": "Bundeskanzleramt (BKAmt)",
+  "klassifikation": "Konferenz",
+  "anmerkung": "Finanzierung über das Ressort Bundeskanzleramt (BKAmt)",
+  "beziehungen": [
+    {
+      "zu_id": "bkamt",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-01"
+}
