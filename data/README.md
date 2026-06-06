@@ -1,72 +1,79 @@
 # Bundesbehörden Datenbank
 
-Generiert am: 2026-06-01
+## Überblick
+- **Gesamtanzahl Behörden:** 62
+- **Recherche-Datum:** 2026-06-06
+- **Datenquellen:** Bundeshaushalt 2025, Bundesbehörden-Verzeichnis, offizielle Websites
+- **Beziehungen:** 86
 
-## Statistiken
-
-| | |
-|---|---|
-| **Gesamt Behörden** | 1403 |
-| **Recherchierte (alte JSONs)** | 62 |
-| **Neue (aus Excel generiert)** | 1341 |
-| **Beziehungen gesamt** | 1427 |
-| **Fehler** | 0 |
-
-## Feldvollständigkeit (%)
-
-| Feld | Vollständigkeit |
-|------|----------------|
-| `name` | ██████████ 100.0% |
-| `kuerzel` | ░░░░░░░░░░ 4.4% |
-| `typ` | ██████████ 100.0% |
-| `rechtsform` | ██████████ 100.0% |
-| `sitz` | ██████████ 100.0% |
-| `bundesland` | ███████░░░ 75.2% |
-| `gruendungsjahr` | ░░░░░░░░░░ 4.4% |
-| `website` | ██████████ 100.0% |
-| `rechtsgrundlage` | ░░░░░░░░░░ 4.4% |
-| `haushalt_mio_eur` | █████░░░░░ 55.1% |
-| `beschaeftigte` | ██░░░░░░░░ 24.9% |
-| `ministerium_id` | █████████░ 98.4% |
-
-## Typ-Verteilung
-
+## Verteilung nach Typ
 | Typ | Anzahl |
 |-----|--------|
-| Bundesoberbehörde | 588 |
-| KdöR | 384 |
-| Bundesanstalt | 356 |
-| Ministerium | 33 |
-| AdöR | 28 |
-| Verfassungsorgan | 8 |
+| Bundesoberbehörde | 24 |
+| Ministerium | 17 |
 | Bundesamt | 6 |
+| Bundesanstalt | 6 |
+| Verfassungsorgan | 5 |
+| KdöR | 4 |
 
-## Top 25 Klassifikationen
+## Verteilung nach Bundesland
+| Bundesland | Anzahl |
+|------------|--------|
+| Berlin | 26 |
+| Nordrhein-Westfalen | 22 |
+| Hessen | 4 |
+| Baden-Württemberg | 2 |
+| Bayern | 2 |
+| Niedersachsen | 2 |
+| Brandenburg | 1 |
+| Schleswig-Holstein | 1 |
+| Sachsen-Anhalt | 1 |
+| Rheinland-Pfalz | 1 |
 
-| Klassifikation | Anzahl |
-|---------------|--------|
-| Jobcenter | 298 |
-| Agentur für Arbeit | 172 |
-| Unbekannt | 163 |
-| Forschung | 79 |
-| Bundeswehr | 61 |
-| Krankenkasse | 60 |
-| Hauptzollamt | 43 |
-| Militärische Ausbildungsstätte | 36 |
-| Beauftragte | 36 |
-| Leibniz-Institut | 32 |
-| Wasser- und Schiffahrtsamt | 19 |
-| Bank | 17 |
-| Ministerium | 16 |
-| Bundespolizei | 13 |
-| Familienkasse | 12 |
-| Regionaldirektion der Agentur für Arbeit | 11 |
-| THW | 10 |
-| Berufsgenossenschaft | 9 |
-| Prüfungsamt | 9 |
-| Bahn | 8 |
-| Museum und Ausstellungen | 8 |
-| Zollfahndungsamt | 8 |
-| Polizei | 7 |
-| Bundeswehrverwaltungsstelle | 7 |
-| Konferenz | 7 |
+## Feldvollständigkeit
+| Feld | Befüllt | Gesamt | Vollständigkeit |
+|------|---------|--------|-----------------|
+| `id` | 62 | 62 | 100.0% |
+| `name` | 62 | 62 | 100.0% |
+| `kuerzel` | 62 | 62 | 100.0% |
+| `typ` | 62 | 62 | 100.0% |
+| `rechtsform` | 62 | 62 | 100.0% |
+| `ebene` | 62 | 62 | 100.0% |
+| `sitz` | 62 | 62 | 100.0% |
+| `bundesland` | 62 | 62 | 100.0% |
+| `gruendungsjahr` | 62 | 62 | 100.0% |
+| `aufgeloest` | 62 | 62 | 100.0% |
+| `zustaendigkeit` | 62 | 62 | 100.0% |
+| `website` | 62 | 62 | 100.0% |
+| `rechtsgrundlage` | 62 | 62 | 100.0% |
+| `haushalt_mio_eur` | 60 | 62 | 96.8% |
+| `beschaeftigte` | 62 | 62 | 100.0% |
+| `ministerium_id` | 39 | 62 | 62.9% |
+
+## Dateien
+| Datei | Beschreibung |
+|-------|--------------|
+| `behoerden/*.json` | Einzeldateien pro Behörde (62 Dateien) |
+| `alle_behoerden.json` | Alle Behörden als Array (Import-ready) |
+| `beziehungen.json` | Flache Liste aller Beziehungen |
+| `fortschritt.json` | Fortschritt der Recherche |
+| `fehler.json` | Nicht vollständig recherchierte IDs |
+
+## Schema
+Jede Behörde enthält folgende Felder:
+- `id` - Eindeutiger Identifier (lowercase)
+- `name` - Offizielle Bezeichnung
+- `kuerzel` - Abkürzung
+- `typ` - Verfassungsorgan / Ministerium / Bundesoberbehörde / etc.
+- `rechtsform` - Rechtsform
+- `ebene` - Verwaltungsebene (Bund)
+- `sitz` - Hauptsitz (Stadt)
+- `bundesland` - Bundesland des Sitzes
+- `gruendungsjahr` - Gründungsjahr
+- `zustaendigkeit` - Sachgebiet
+- `website` - Offizielle Website
+- `rechtsgrundlage` - Gesetzliche Grundlage
+- `haushalt_mio_eur` - Haushalt in Mio. EUR (2025)
+- `beschaeftigte` - Anzahl Beschäftigte
+- `ministerium_id` - Übergeordnetes Ministerium (ID)
+- `beziehungen` - Organisationsbeziehungen

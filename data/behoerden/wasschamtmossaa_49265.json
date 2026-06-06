@@ -1,6 +1,7 @@
 {
   "id": "wasschamtmossaa_49265",
   "excel_id": 49265,
+  "schema_version": "1.0",
   "name": "Wasserstraßen- und Schifffahrts­amt Mosel-Saar-Lahn",
   "kuerzel": null,
   "typ": "Bundesoberbehörde",
@@ -8,6 +9,10 @@
   "ebene": "Bund",
   "sitz": "Berlin",
   "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": null,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
@@ -15,7 +20,9 @@
   "website": "https://www.wsv.de",
   "rechtsgrundlage": null,
   "haushalt_mio_eur": 1103.96,
+  "haushalt_jahr": 2025,
   "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
   "ministerium_id": "bmv",
   "ressort": "Bundesministerium für Digitales und Verkehr (BMDV)",
   "klassifikation": "Wasser- und Schiffahrtsamt",
@@ -25,11 +32,18 @@
       "zu_id": "bmv",
       "typ": "UNTERSTELLT",
       "richtung": "eingehend",
-      "seit": null
+      "seit": null,
+      "quelle": null
     }
   ],
   "quellen": [
     "https://www.wsv.de"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 66.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }

@@ -1,5 +1,7 @@
 {
   "id": "bkamt",
+  "excel_id": null,
+  "schema_version": "1.0",
   "name": "Bundeskanzleramt",
   "kuerzel": "BKAmt",
   "typ": "Ministerium",
@@ -7,6 +9,10 @@
   "ebene": "Bund",
   "sitz": "Berlin",
   "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": 1949,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
@@ -14,8 +20,13 @@
   "website": "https://www.bundeskanzler.de",
   "rechtsgrundlage": "Grundgesetz Art. 62-69, Geschäftsordnung der Bundesregierung",
   "haushalt_mio_eur": 4043.3,
+  "haushalt_jahr": 2025,
   "beschaeftigte": 850,
+  "beschaeftigte_jahr": 2024,
   "ministerium_id": null,
+  "ressort": null,
+  "klassifikation": null,
+  "anmerkung": null,
   "beziehungen": [
     {
       "zu_id": "bnd",
@@ -34,5 +45,11 @@
     "https://www.bundeskanzler.de",
     "https://www.bundeshaushalt.de"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 91.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }

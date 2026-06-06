@@ -1,6 +1,7 @@
 {
   "id": "kfw_656",
   "excel_id": 656,
+  "schema_version": "1.0",
   "name": "Kreditanstalt für Wiederaufbau Bankengruppe (KfW)",
   "kuerzel": null,
   "typ": "AdöR",
@@ -8,6 +9,10 @@
   "ebene": "Bund",
   "sitz": "Frankfurt am Main",
   "bundesland": "Hessen",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": null,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
@@ -15,7 +20,9 @@
   "website": "https://www.kfw.de",
   "rechtsgrundlage": null,
   "haushalt_mio_eur": 3200.0,
+  "haushalt_jahr": 2025,
   "beschaeftigte": 8200,
+  "beschaeftigte_jahr": 2024,
   "ministerium_id": "bmf",
   "ressort": "Bundesministerium der Finanzen (BMF)",
   "klassifikation": "Bank",
@@ -25,11 +32,18 @@
       "zu_id": "bmf",
       "typ": "UNTERSTELLT",
       "richtung": "eingehend",
-      "seit": null
+      "seit": null,
+      "quelle": null
     }
   ],
   "quellen": [
     "https://www.kfw.de"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 75.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }

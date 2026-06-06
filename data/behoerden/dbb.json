@@ -1,5 +1,7 @@
 {
   "id": "dbb",
+  "excel_id": null,
+  "schema_version": "1.0",
   "name": "Deutsche Bundesbank",
   "kuerzel": "BBk",
   "typ": "KdöR",
@@ -7,6 +9,10 @@
   "ebene": "Bund",
   "sitz": "Frankfurt am Main",
   "bundesland": "Hessen",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": 1957,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
@@ -14,8 +20,13 @@
   "website": "https://www.bundesbank.de",
   "rechtsgrundlage": "Bundesbankgesetz (BBankG)",
   "haushalt_mio_eur": 1500.0,
+  "haushalt_jahr": 2025,
   "beschaeftigte": 10200,
+  "beschaeftigte_jahr": 2024,
   "ministerium_id": null,
+  "ressort": null,
+  "klassifikation": null,
+  "anmerkung": null,
   "beziehungen": [
     {
       "zu_id": "bafin",
@@ -28,5 +39,11 @@
     "https://www.bundesbank.de",
     "https://www.bundeshaushalt.de"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 91.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }

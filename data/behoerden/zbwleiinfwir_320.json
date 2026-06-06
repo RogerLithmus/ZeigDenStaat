@@ -1,6 +1,7 @@
 {
   "id": "zbwleiinfwir_320",
   "excel_id": 320,
+  "schema_version": "1.0",
   "name": "ZBW – Leibniz-Informationszentrum Wirtschaft",
   "kuerzel": null,
   "typ": "Bundesanstalt",
@@ -8,14 +9,20 @@
   "ebene": "Bund",
   "sitz": "Berlin",
   "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": null,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
   "zustaendigkeit": "Bibliothek",
   "website": "https://www.zbw.eu/",
   "rechtsgrundlage": null,
-  "haushalt_mio_eur": 131.67,
+  "haushalt_mio_eur": 201.05,
+  "haushalt_jahr": 2025,
   "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
   "ministerium_id": "bkamt",
   "ressort": "Beauftragte der Bundesregierung für Kultur und Medien (BKM)",
   "klassifikation": "Bibliothek",
@@ -25,11 +32,18 @@
       "zu_id": "bkamt",
       "typ": "UNTERSTELLT",
       "richtung": "eingehend",
-      "seit": null
+      "seit": null,
+      "quelle": null
     }
   ],
   "quellen": [
     "https://www.zbw.eu/"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 66.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }

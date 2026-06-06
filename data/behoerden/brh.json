@@ -1,5 +1,7 @@
 {
   "id": "brh",
+  "excel_id": null,
+  "schema_version": "1.0",
   "name": "Bundesrechnungshof",
   "kuerzel": "BRH",
   "typ": "Verfassungsorgan",
@@ -7,6 +9,10 @@
   "ebene": "Bund",
   "sitz": "Bonn",
   "bundesland": "Nordrhein-Westfalen",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": 1950,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
@@ -14,8 +20,13 @@
   "website": "https://www.bundesrechnungshof.de",
   "rechtsgrundlage": "Grundgesetz Art. 114, Bundesrechnungshofgesetz (BRHG)",
   "haushalt_mio_eur": 123.0,
+  "haushalt_jahr": 2025,
   "beschaeftigte": 600,
+  "beschaeftigte_jahr": 2024,
   "ministerium_id": null,
+  "ressort": null,
+  "klassifikation": null,
+  "anmerkung": null,
   "beziehungen": [
     {
       "zu_id": "bt",
@@ -28,5 +39,11 @@
     "https://www.bundesrechnungshof.de",
     "https://www.bundeshaushalt.de"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 91.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }

@@ -1,6 +1,7 @@
 {
   "id": "prübunframai_801",
   "excel_id": 801,
+  "schema_version": "1.0",
   "name": "Prüfungsamt des Bundes Frankfurt am Main",
   "kuerzel": null,
   "typ": "Bundesoberbehörde",
@@ -8,14 +9,20 @@
   "ebene": "Bund",
   "sitz": "Frankfurt",
   "bundesland": "Hessen",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": null,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
   "zustaendigkeit": "Prüfungsamt",
   "website": "https://www.service.bund.de",
   "rechtsgrundlage": null,
-  "haushalt_mio_eur": 7356.56,
+  "haushalt_mio_eur": 183.68,
+  "haushalt_jahr": 2025,
   "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
   "ministerium_id": "bmf",
   "ressort": "Bundesministerium der Finanzen (BMF)",
   "klassifikation": "Prüfungsamt",
@@ -25,11 +32,18 @@
       "zu_id": "bmf",
       "typ": "UNTERSTELLT",
       "richtung": "eingehend",
-      "seit": null
+      "seit": null,
+      "quelle": null
     }
   ],
   "quellen": [
     "https://www.service.bund.de"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 66.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }

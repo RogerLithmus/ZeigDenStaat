@@ -1,6 +1,7 @@
 {
   "id": "gesfürwehsic_528",
   "excel_id": 528,
+  "schema_version": "1.0",
   "name": "Gesellschaft für Wehr- und Sicherheitspolitik e. V.",
   "kuerzel": null,
   "typ": "Bundesoberbehörde",
@@ -8,14 +9,20 @@
   "ebene": "Bund",
   "sitz": "Berlin",
   "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": null,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
   "zustaendigkeit": "Bundeswehr",
   "website": "https://www.service.bund.de",
   "rechtsgrundlage": null,
-  "haushalt_mio_eur": 441.85,
+  "haushalt_mio_eur": 1324.89,
+  "haushalt_jahr": 2025,
   "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
   "ministerium_id": "bmvg",
   "ressort": "Bundesministerium der Verteidigung (BMVg)",
   "klassifikation": "Bundeswehr",
@@ -25,11 +32,18 @@
       "zu_id": "bmvg",
       "typ": "UNTERSTELLT",
       "richtung": "eingehend",
-      "seit": null
+      "seit": null,
+      "quelle": null
     }
   ],
   "quellen": [
     "https://www.service.bund.de"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 66.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }

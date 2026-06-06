@@ -1,6 +1,7 @@
 {
   "id": "kurfürtecbaulan_630",
   "excel_id": 630,
+  "schema_version": "1.0",
   "name": "Kuratorium für Technik und Bauwesen in der Landwirtschaft e.V.",
   "kuerzel": null,
   "typ": "Bundesoberbehörde",
@@ -8,14 +9,20 @@
   "ebene": "Bund",
   "sitz": "Berlin",
   "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": null,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
   "zustaendigkeit": "Technologie",
   "website": "http://www.ktbl.de",
   "rechtsgrundlage": null,
-  "haushalt_mio_eur": 4169.9,
+  "haushalt_mio_eur": 201.05,
+  "haushalt_jahr": 2025,
   "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
   "ministerium_id": "bmwi",
   "ressort": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
   "klassifikation": "Technologie",
@@ -25,11 +32,18 @@
       "zu_id": "bmwi",
       "typ": "UNTERSTELLT",
       "richtung": "eingehend",
-      "seit": null
+      "seit": null,
+      "quelle": null
     }
   ],
   "quellen": [
     "http://www.ktbl.de"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 66.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }

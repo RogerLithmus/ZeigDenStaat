@@ -1,6 +1,7 @@
 {
   "id": "deuverfüröffpri_366",
   "excel_id": 366,
+  "schema_version": "1.0",
   "name": "Deutscher Verein für öffentliche und private Fürsorge e.V.",
   "kuerzel": null,
   "typ": "Bundesoberbehörde",
@@ -8,14 +9,20 @@
   "ebene": "Bund",
   "sitz": "Berlin",
   "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": null,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
   "zustaendigkeit": "Verein",
   "website": "https://www.deutscher-verein.de/",
   "rechtsgrundlage": null,
-  "haushalt_mio_eur": 21528.48,
+  "haushalt_mio_eur": 1166.24,
+  "haushalt_jahr": 2025,
   "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
   "ministerium_id": "bmi",
   "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
   "klassifikation": "Verein",
@@ -25,11 +32,18 @@
       "zu_id": "bmi",
       "typ": "UNTERSTELLT",
       "richtung": "eingehend",
-      "seit": null
+      "seit": null,
+      "quelle": null
     }
   ],
   "quellen": [
     "https://www.deutscher-verein.de/"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 66.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }

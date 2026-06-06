@@ -1,5 +1,7 @@
 {
   "id": "uba",
+  "excel_id": null,
+  "schema_version": "1.0",
   "name": "Umweltbundesamt",
   "kuerzel": "UBA",
   "typ": "Bundesoberbehörde",
@@ -7,6 +9,10 @@
   "ebene": "Bund",
   "sitz": "Dessau-Roßlau",
   "bundesland": "Sachsen-Anhalt",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": 1974,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
@@ -14,8 +20,13 @@
   "website": "https://www.umweltbundesamt.de",
   "rechtsgrundlage": "Gesetz über die Errichtung eines Umweltbundesamtes",
   "haushalt_mio_eur": 205.2,
+  "haushalt_jahr": 2025,
   "beschaeftigte": 1600,
+  "beschaeftigte_jahr": 2024,
   "ministerium_id": "bmuv",
+  "ressort": null,
+  "klassifikation": null,
+  "anmerkung": null,
   "beziehungen": [
     {
       "zu_id": "bmuv",
@@ -28,5 +39,11 @@
     "https://www.umweltbundesamt.de",
     "https://www.bundeshaushalt.de"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 100.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }

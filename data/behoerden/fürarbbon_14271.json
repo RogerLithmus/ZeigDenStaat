@@ -1,6 +1,7 @@
 {
   "id": "fürarbbon_14271",
   "excel_id": 14271,
+  "schema_version": "1.0",
   "name": "Agentur für Arbeit Bonn",
   "kuerzel": null,
   "typ": "Bundesanstalt",
@@ -8,14 +9,20 @@
   "ebene": "Bund",
   "sitz": "Bonn",
   "bundesland": "Nordrhein-Westfalen",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": null,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
   "zustaendigkeit": "Agentur für Arbeit",
   "website": "https://www.arbeitsagentur.de",
   "rechtsgrundlage": null,
-  "haushalt_mio_eur": 21.88,
+  "haushalt_mio_eur": 96.46,
+  "haushalt_jahr": 2025,
   "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
   "ministerium_id": "bmas",
   "ressort": "Bundesministerium für Arbeit und Soziales (BMAS)",
   "klassifikation": "Agentur für Arbeit",
@@ -25,11 +32,18 @@
       "zu_id": "bmas",
       "typ": "UNTERSTELLT",
       "richtung": "eingehend",
-      "seit": null
+      "seit": null,
+      "quelle": null
     }
   ],
   "quellen": [
     "https://www.arbeitsagentur.de"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 66.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }

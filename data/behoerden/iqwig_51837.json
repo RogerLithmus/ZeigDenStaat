@@ -1,6 +1,7 @@
 {
   "id": "iqwig_51837",
   "excel_id": 51837,
+  "schema_version": "1.0",
   "name": "Institut für Qualität und Wirtschaftlichkeit im Gesundheitswesen (IQWiG)",
   "kuerzel": null,
   "typ": "Bundesoberbehörde",
@@ -8,14 +9,20 @@
   "ebene": "Bund",
   "sitz": "Berlin",
   "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
   "gruendungsjahr": null,
   "aufgeloest": false,
   "aufgeloest_jahr": null,
   "zustaendigkeit": "Gutachterausschuss",
   "website": "https://www.iqwig.de/",
   "rechtsgrundlage": null,
-  "haushalt_mio_eur": 104.61,
+  "haushalt_mio_eur": 2.01,
+  "haushalt_jahr": 2025,
   "beschaeftigte": 246,
+  "beschaeftigte_jahr": 2024,
   "ministerium_id": "bmg",
   "ressort": "Bundesministerium für Gesundheit (BMG)",
   "klassifikation": "Gutachterausschuss",
@@ -25,11 +32,18 @@
       "zu_id": "bmg",
       "typ": "UNTERSTELLT",
       "richtung": "eingehend",
-      "seit": null
+      "seit": null,
+      "quelle": null
     }
   ],
   "quellen": [
     "https://www.iqwig.de/"
   ],
-  "recherche_datum": "2026-06-01"
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 75.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
 }
