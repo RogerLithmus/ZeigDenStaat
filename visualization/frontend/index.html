@@ -40,6 +40,11 @@
         <div id="timeline-chart"></div>
     </div>
 
+    <!-- Full-Screen Sankey Container (Concept A) -->
+    <div id="sankey-container" class="full-screen-view hidden">
+        <div id="sankey-chart"></div>
+    </div>
+
     <!-- Floating UI Dashboard Sidebar -->
     <main class="dashboard-panel" id="sidebar">
         <!-- Brand Header -->
@@ -59,6 +64,7 @@
                 <button class="view-tab" id="tab-supervision">🔄 Aufsicht</button>
                 <button class="view-tab" id="tab-coordination">🤝 Kooperation</button>
                 <button class="view-tab" id="tab-timeline">⏳ Chronologie</button>
+                <button class="view-tab" id="tab-sankey">💸 Finanzfluss</button>
             </div>
 
             <div id="conn-status" class="status-indicator connecting" title="Verbindung zu Neo4j wird hergestellt...">
@@ -275,6 +281,44 @@
                 </section>
             </div>
 
+            <!-- ================= SANKEY VIEW SECTIONS ================= -->
+            <div id="sankey-sidebar-content" class="hidden">
+                <!-- Description -->
+                <section class="panel-section description-section">
+                    <h3>💸 Finanzströme</h3>
+                    <p class="section-hint">Diese Sankey-Kaskade visualisiert den Fluss der Haushaltsmittel. Das Gesamtbudget des Bundes verteilt sich auf die Ressorts und fließt von dort in die einzelnen nachgeordneten Behörden.</p>
+                </section>
+
+                <!-- Dynamic filters -->
+                <section class="panel-section sankey-filter-section">
+                    <h3>🎛️ Ressort-Fokus</h3>
+                    <div class="select-container">
+                        <select id="sankey-ministry-select" class="dropdown-select">
+                            <option value="all">🌐 Alle Ressorts</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Stats summary -->
+                <section class="panel-section sankey-stats-section">
+                    <h3>📈 Haushalts-Statistik</h3>
+                    <div class="stats-list">
+                        <div class="stat-list-item">
+                            <span>Gesamtsumme:</span>
+                            <strong id="sankey-stat-total">-</strong>
+                        </div>
+                        <div class="stat-list-item">
+                            <span>Abgebildete Behörden:</span>
+                            <strong id="sankey-stat-count">-</strong>
+                        </div>
+                        <div class="stat-list-item">
+                            <span>Größter Empfänger:</span>
+                            <strong id="sankey-stat-top-recipient" style="font-size: 11px;">-</strong>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
             <!-- ================= SHARED SELECTION DETAILS (FOR D3 VIEWS) ================= -->
             <div id="shared-selection-sidebar" class="hidden">
                 <section class="panel-section selection-detail-section">
@@ -326,6 +370,7 @@
     
     <!-- D3.js -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
     
     <!-- Neo4j Browser Driver -->
     <script src="https://cdn.jsdelivr.net/npm/neo4j-driver@5.15.0/lib/browser/neo4j-web.min.js"></script>
@@ -335,6 +380,7 @@
     <script src="supervision.js"></script>
     <script src="coordination.js"></script>
     <script src="timeline.js"></script>
+    <script src="sankey.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -186,6 +186,7 @@ async function loadDataFromNeo4j(creds) {
 
         renderFilters(ressortCounts);
         populateMinistrySelect(); // populate select dropdown in supervision
+        populateSankeyMinistrySelect(); // populate select dropdown in sankey
         updateUI();
 
     } catch (e) {
@@ -406,6 +407,12 @@ function updateUI() {
         updateTimelineGraph(timeCurrentYear);
         searchHighlightTimeline(document.getElementById('search-input').value);
     }
+
+    // Refresh D3 Sankey if the tab is currently active
+    if (document.getElementById('tab-sankey').classList.contains('active')) {
+        renderSankeyGraph();
+        searchHighlightSankey(document.getElementById('search-input').value);
+    }
 }
 
 function renderLeaderboard(citiesArray) {
@@ -514,6 +521,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             searchHighlightCoordination(val);
         } else if (document.getElementById('tab-timeline').classList.contains('active')) {
             searchHighlightTimeline(val);
+        } else if (document.getElementById('tab-sankey').classList.contains('active')) {
+            searchHighlightSankey(val);
         }
     });
 
@@ -530,6 +539,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             searchHighlightCoordination('');
         } else if (document.getElementById('tab-timeline').classList.contains('active')) {
             searchHighlightTimeline('');
+        } else if (document.getElementById('tab-sankey').classList.contains('active')) {
+            searchHighlightSankey('');
         }
     };
 
@@ -539,18 +550,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     const tabSupervision = document.getElementById('tab-supervision');
     const tabCoordination = document.getElementById('tab-coordination');
     const tabTimeline = document.getElementById('tab-timeline');
+    const tabSankey = document.getElementById('tab-sankey');
     
     const mapEl = document.getElementById('map');
     const treemapEl = document.getElementById('treemap-container');
     const supervisionEl = document.getElementById('supervision-container');
     const coordinationEl = document.getElementById('coordination-container');
     const timelineEl = document.getElementById('timeline-container');
+    const sankeyEl = document.getElementById('sankey-container');
     
     const mapSidebar = document.getElementById('map-sidebar-content');
     const treemapSidebar = document.getElementById('treemap-sidebar-content');
     const supervisionSidebar = document.getElementById('supervision-sidebar-content');
     const coordinationSidebar = document.getElementById('coordination-sidebar-content');
     const timelineSidebar = document.getElementById('timeline-sidebar-content');
+    const sankeySidebar = document.getElementById('sankey-sidebar-content');
     const sharedSelectionSidebar = document.getElementById('shared-selection-sidebar');
 
     function switchView(view) {
@@ -561,24 +575,35 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById('btn-timeline-play').textContent = '▶️ Abspielen';
         }
 
+        // Reset details panel to default placeholder
+        const selectionDetails = document.getElementById('treemap-selection-details');
+        if (selectionDetails) {
+            selectionDetails.innerHTML = `
+                <div class="loading-placeholder">Bewege die Maus über ein Element oder klicke es an.</div>
+            `;
+        }
+
         if (view === 'map') {
             tabMap.classList.add('active');
             tabTreemap.classList.remove('active');
             tabSupervision.classList.remove('active');
             tabCoordination.classList.remove('active');
             tabTimeline.classList.remove('active');
+            tabSankey.classList.remove('active');
             
             mapEl.classList.remove('hidden');
             treemapEl.classList.add('hidden');
             supervisionEl.classList.add('hidden');
             coordinationEl.classList.add('hidden');
             timelineEl.classList.add('hidden');
+            sankeyEl.classList.add('hidden');
             
             mapSidebar.classList.remove('hidden');
             treemapSidebar.classList.add('hidden');
             supervisionSidebar.classList.add('hidden');
             coordinationSidebar.classList.add('hidden');
             timelineSidebar.classList.add('hidden');
+            sankeySidebar.classList.add('hidden');
             sharedSelectionSidebar.classList.add('hidden');
             
             closeDetailPanel();
@@ -589,18 +614,21 @@ document.addEventListener('DOMContentLoaded', async () => {
             tabSupervision.classList.remove('active');
             tabCoordination.classList.remove('active');
             tabTimeline.classList.remove('active');
+            tabSankey.classList.remove('active');
             
             mapEl.classList.add('hidden');
             treemapEl.classList.remove('hidden');
             supervisionEl.classList.add('hidden');
             coordinationEl.classList.add('hidden');
             timelineEl.classList.add('hidden');
+            sankeyEl.classList.add('hidden');
             
             mapSidebar.classList.add('hidden');
             treemapSidebar.classList.remove('hidden');
             supervisionSidebar.classList.add('hidden');
             coordinationSidebar.classList.add('hidden');
             timelineSidebar.classList.add('hidden');
+            sankeySidebar.classList.add('hidden');
             sharedSelectionSidebar.classList.remove('hidden');
             
             closeDetailPanel();
@@ -615,18 +643,21 @@ document.addEventListener('DOMContentLoaded', async () => {
             tabSupervision.classList.add('active');
             tabCoordination.classList.remove('active');
             tabTimeline.classList.remove('active');
+            tabSankey.classList.remove('active');
             
             mapEl.classList.add('hidden');
             treemapEl.classList.add('hidden');
             supervisionEl.classList.remove('hidden');
             coordinationEl.classList.add('hidden');
             timelineEl.classList.add('hidden');
+            sankeyEl.classList.add('hidden');
             
             mapSidebar.classList.add('hidden');
             treemapSidebar.classList.add('hidden');
             supervisionSidebar.classList.remove('hidden');
             coordinationSidebar.classList.add('hidden');
             timelineSidebar.classList.add('hidden');
+            sankeySidebar.classList.add('hidden');
             sharedSelectionSidebar.classList.remove('hidden');
             
             closeDetailPanel();
@@ -641,18 +672,21 @@ document.addEventListener('DOMContentLoaded', async () => {
             tabSupervision.classList.remove('active');
             tabCoordination.classList.add('active');
             tabTimeline.classList.remove('active');
+            tabSankey.classList.remove('active');
             
             mapEl.classList.add('hidden');
             treemapEl.classList.add('hidden');
             supervisionEl.classList.add('hidden');
             coordinationEl.classList.remove('hidden');
             timelineEl.classList.add('hidden');
+            sankeyEl.classList.add('hidden');
             
             mapSidebar.classList.add('hidden');
             treemapSidebar.classList.add('hidden');
             supervisionSidebar.classList.add('hidden');
             coordinationSidebar.classList.remove('hidden');
             timelineSidebar.classList.add('hidden');
+            sankeySidebar.classList.add('hidden');
             sharedSelectionSidebar.classList.remove('hidden');
             
             closeDetailPanel();
@@ -667,18 +701,21 @@ document.addEventListener('DOMContentLoaded', async () => {
             tabSupervision.classList.remove('active');
             tabCoordination.classList.remove('active');
             tabTimeline.classList.add('active');
+            tabSankey.classList.remove('active');
             
             mapEl.classList.add('hidden');
             treemapEl.classList.add('hidden');
             supervisionEl.classList.add('hidden');
             coordinationEl.classList.add('hidden');
             timelineEl.classList.remove('hidden');
+            sankeyEl.classList.add('hidden');
             
             mapSidebar.classList.add('hidden');
             treemapSidebar.classList.add('hidden');
             supervisionSidebar.classList.add('hidden');
             coordinationSidebar.classList.add('hidden');
             timelineSidebar.classList.remove('hidden');
+            sankeySidebar.classList.add('hidden');
             sharedSelectionSidebar.classList.remove('hidden');
             
             closeDetailPanel();
@@ -689,6 +726,36 @@ document.addEventListener('DOMContentLoaded', async () => {
             initTimelinePlayback();
             updateTimelineGraph(timeCurrentYear);
             searchHighlightTimeline(searchInput.value);
+        } else if (view === 'sankey') {
+            tabMap.classList.remove('active');
+            tabTreemap.classList.remove('active');
+            tabSupervision.classList.remove('active');
+            tabCoordination.classList.remove('active');
+            tabTimeline.classList.remove('active');
+            tabSankey.classList.add('active');
+            
+            mapEl.classList.add('hidden');
+            treemapEl.classList.add('hidden');
+            supervisionEl.classList.add('hidden');
+            coordinationEl.classList.add('hidden');
+            timelineEl.classList.add('hidden');
+            sankeyEl.classList.remove('hidden');
+            
+            mapSidebar.classList.add('hidden');
+            treemapSidebar.classList.add('hidden');
+            supervisionSidebar.classList.add('hidden');
+            coordinationSidebar.classList.add('hidden');
+            timelineSidebar.classList.add('hidden');
+            sankeySidebar.classList.remove('hidden');
+            sharedSelectionSidebar.classList.remove('hidden');
+            
+            closeDetailPanel();
+            
+            // Re-render Sankey financial cascade
+            initSankeyLayout();
+            populateSankeyMinistrySelect();
+            renderSankeyGraph();
+            searchHighlightSankey(searchInput.value);
         }
     }
 
@@ -697,6 +764,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     tabSupervision.onclick = () => switchView('supervision');
     tabCoordination.onclick = () => switchView('coordination');
     tabTimeline.onclick = () => switchView('timeline');
+    tabSankey.onclick = () => switchView('sankey');
 
     // D3 Treemap metric toggle buttons
     document.getElementById('btn-metric-budget').onclick = () => {
