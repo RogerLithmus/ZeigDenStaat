@@ -247,8 +247,8 @@ function getFilteredAuthorities() {
         // Filter by Ressort
         if (!activeRessorts.has(a.ressort)) return false;
 
-        // Filter by Search text
-        if (searchVal) {
+        // Filter by Search text (Map view filters lists; Treemap handles highlight separately, but starts with active filters)
+        if (searchVal && document.getElementById('tab-map').classList.contains('active')) {
             const nameMatch = a.name.toLowerCase().includes(searchVal);
             const kuerzelMatch = a.kuerzel.toLowerCase().includes(searchVal);
             const sitzMatch = a.sitz.toLowerCase().includes(searchVal);
@@ -362,6 +362,12 @@ function updateUI() {
     } else if (selectedCity) {
         closeDetailPanel();
     }
+
+    // Refresh D3 Treemap if the tab is currently active
+    if (document.getElementById('tab-treemap').classList.contains('active')) {
+        renderTreemap(filtered, tmActiveMetric);
+        searchHighlightTreemap(document.getElementById('search-input').value);
+    }
 }
 
 function renderLeaderboard(citiesArray) {
@@ -458,7 +464,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     searchInput.addEventListener('input', (e) => {
         const val = e.target.value.trim();
         searchClearBtn.style.display = val ? 'block' : 'none';
-        updateUI();
+        
+        updateUI(); // Updates map circles
+        
+        // Updates treemap highlighting if visible
+        if (document.getElementById('tab-treemap').classList.contains('active')) {
+            searchHighlightTreemap(val);
+        }
     });
 
     searchClearBtn.onclick = () => {
@@ -466,6 +478,63 @@ document.addEventListener('DOMContentLoaded', async () => {
         searchClearBtn.style.display = 'none';
         searchInput.focus();
         updateUI();
+        if (document.getElementById('tab-treemap').classList.contains('active')) {
+            searchHighlightTreemap('');
+        }
+    };
+
+    // Tab view switching logic
+    const tabMap = document.getElementById('tab-map');
+    const tabTreemap = document.getElementById('tab-treemap');
+    const mapEl = document.getElementById('map');
+    const treemapEl = document.getElementById('treemap-container');
+    const mapSidebar = document.getElementById('map-sidebar-content');
+    const treemapSidebar = document.getElementById('treemap-sidebar-content');
+
+    function switchView(view) {
+        if (view === 'map') {
+            tabMap.classList.add('active');
+            tabTreemap.classList.remove('active');
+            mapEl.classList.remove('hidden');
+            treemapEl.classList.add('hidden');
+            mapSidebar.classList.remove('hidden');
+            treemapSidebar.classList.add('hidden');
+            closeDetailPanel();
+            setTimeout(() => map.invalidateSize(), 50); // Re-align Leaflet bounds
+        } else {
+            tabMap.classList.remove('active');
+            tabTreemap.classList.add('active');
+            mapEl.classList.add('hidden');
+            treemapEl.classList.remove('hidden');
+            mapSidebar.classList.add('hidden');
+            treemapSidebar.classList.remove('hidden');
+            closeDetailPanel();
+            
+            // Re-render D3 treemap
+            initTreemapLayout();
+            renderTreemap(getFilteredAuthorities(), tmActiveMetric);
+            searchHighlightTreemap(searchInput.value);
+        }
+    }
+
+    tabMap.onclick = () => switchView('map');
+    tabTreemap.onclick = () => switchView('treemap');
+
+    // D3 Treemap metric toggle buttons
+    document.getElementById('btn-metric-budget').onclick = () => {
+        document.getElementById('btn-metric-budget').classList.add('active');
+        document.getElementById('btn-metric-staff').classList.remove('active');
+        tmActiveMetric = 'budget';
+        renderTreemap(getFilteredAuthorities(), 'budget');
+        searchHighlightTreemap(searchInput.value);
+    };
+
+    document.getElementById('btn-metric-staff').onclick = () => {
+        document.getElementById('btn-metric-budget').classList.remove('active');
+        document.getElementById('btn-metric-staff').classList.add('active');
+        tmActiveMetric = 'employees';
+        renderTreemap(getFilteredAuthorities(), 'employees');
+        searchHighlightTreemap(searchInput.value);
     };
 
     // Load credentials & run query

@@ -61,14 +61,22 @@ body, html {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* ---- Leaflet Map Base ---- */
-#map {
+/* ---- View containers ---- */
+.full-screen-view {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    background-color: var(--bg-dark);
+}
+.hidden {
+    display: none !important;
+}
+
+/* ---- Leaflet Map Base ---- */
+#map {
     background-color: var(--bg-dark);
 }
 
@@ -113,7 +121,7 @@ body, html {
     color: var(--text-muted);
 }
 
-/* Custom glowing effect for Leaflet SVG Circles */
+/* Custom glowing circle markers */
 .glowing-circle {
     filter: drop-shadow(0 0 5px rgba(var(--accent-rgb), 0.5));
     transition: fill-opacity 0.2s ease, stroke-width 0.2s ease, filter 0.2s ease;
@@ -152,7 +160,7 @@ body, html {
     border-bottom: 1px solid var(--border-panel);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 .brand {
     display: flex;
@@ -174,6 +182,38 @@ body, html {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 500;
+}
+
+/* Tab selector */
+.view-selector {
+    display: flex;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border-panel);
+    border-radius: 8px;
+    padding: 3px;
+    width: 100%;
+}
+.view-tab {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 8px 10px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+.view-tab.active {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.25);
+}
+.view-tab:hover:not(.active) {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 /* Connection Status Indicator */
@@ -227,7 +267,7 @@ body, html {
 .panel-scrollable {
     flex: 1;
     overflow-y: auto;
-    padding: 0 20px 20px 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -244,6 +284,12 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.section-hint {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 8px;
+    line-height: 1.4;
 }
 
 /* Search Box */
@@ -302,9 +348,6 @@ body, html {
 }
 
 /* KPI Grid */
-.stats-section {
-    padding-top: 15px;
-}
 .kpi-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -346,7 +389,7 @@ body, html {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-card);
     color: var(--text-muted);
-    padding: 4px 8px;
+    padding: 6px 10px;
     font-size: 11px;
     border-radius: 6px;
     cursor: pointer;
@@ -354,10 +397,14 @@ body, html {
     font-weight: 600;
     transition: all 0.2s ease;
 }
-.btn-sm:hover {
+.btn-sm:hover:not(:disabled) {
     background: rgba(255, 255, 255, 0.08);
     color: #fff;
     border-color: rgba(255, 255, 255, 0.15);
+}
+.btn-sm:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
 .checkboxes-grid {
     display: flex;
@@ -425,9 +472,9 @@ body, html {
     color: var(--primary);
     width: 24px;
 }
-.ranking-item:nth-child(1) .rank-num { color: #f59e0b; }
-.ranking-item:nth-child(2) .rank-num { color: #cbd5e1; }
-.ranking-item:nth-child(3) .rank-num { color: #b45309; }
+.ranking-item:nth-child(1) .rank-num { color: #f59e0b; } /* Gold */
+.ranking-item:nth-child(2) .rank-num { color: #cbd5e1; } /* Silver */
+.ranking-item:nth-child(3) .rank-num { color: #b45309; } /* Bronze */
 
 .city-name {
     font-size: 14px;
@@ -449,6 +496,220 @@ body, html {
     color: var(--text-dimmed);
     text-align: center;
     padding: 10px;
+}
+
+/* ---- D3 Treemap Views ---- */
+#treemap-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 420px; /* Leave space for left sidebar */
+    padding-right: 20px;
+}
+
+#treemap-chart {
+    width: 100%;
+    height: calc(100% - 40px);
+    margin: 20px 0;
+    position: relative;
+}
+
+#treemap-chart svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* D3 Treemap SVG Elements styling */
+.node rect {
+    stroke: var(--bg-dark);
+    stroke-width: 1px;
+    vector-effect: non-scaling-stroke;
+    transition: filter 0.2s ease;
+}
+.node:hover rect {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(255,255,255,0.1));
+    cursor: pointer;
+}
+.node text {
+    font-family: var(--font-sans);
+    fill: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    pointer-events: none;
+}
+.grandparent rect {
+    fill: var(--bg-panel-solid);
+    stroke: var(--border-panel);
+    stroke-width: 1.5px;
+    cursor: pointer;
+}
+.grandparent:hover rect {
+    fill: var(--primary);
+}
+.grandparent text {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    fill: var(--text-main);
+    cursor: pointer;
+    pointer-events: none;
+}
+.grandparent:hover text {
+    fill: #fff;
+}
+
+/* Metric buttons for Treemap */
+.metric-toggle-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border-panel);
+    border-radius: 8px;
+    padding: 3px;
+}
+.metric-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 8px 10px;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+.metric-btn.active {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(var(--accent-rgb), 0.25);
+}
+.metric-btn:hover:not(.active) {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Stats list */
+.stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+    padding: 14px;
+}
+.stat-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+.stat-list-item span {
+    color: var(--text-muted);
+}
+.stat-list-item strong {
+    color: #fff;
+    font-family: var(--font-mono);
+}
+
+/* Selection card */
+.selection-card {
+    background: rgba(var(--primary-rgb), 0.05);
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.selected-auth-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+.selected-auth-ressort {
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+.selected-auth-badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+.badge-item {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.badge-item.primary {
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--primary);
+}
+.badge-item.accent {
+    background: rgba(var(--accent-rgb), 0.15);
+    color: var(--accent);
+}
+.selected-auth-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 12px;
+}
+.selected-auth-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.selected-auth-metric span {
+    font-size: 10px;
+    color: var(--text-dimmed);
+    text-transform: uppercase;
+}
+.selected-auth-metric strong {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: #fff;
+}
+
+/* Glassmorphic Tooltip for D3 Treemap */
+.treemap-tooltip {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2000;
+    background: rgba(13, 13, 23, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-panel);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: var(--shadow-main);
+    color: var(--text-muted);
+    font-size: 12px;
+    max-width: 280px;
+}
+.treemap-tooltip h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
 }
 
 /* ---- Floating Detail Panel (Right) ---- */
@@ -642,14 +903,22 @@ body, html {
         top: 10px;
         bottom: 10px;
     }
+    #treemap-container {
+        padding-left: 360px;
+    }
 }
 @media (max-width: 768px) {
     .dashboard-panel {
         width: calc(100% - 20px);
-        height: 60%;
+        height: 45%;
         bottom: 10px;
         top: auto;
         left: 10px;
+    }
+    #treemap-container {
+        padding-left: 20px;
+        padding-bottom: calc(45% + 20px);
+        height: 100%;
     }
     .detail-panel {
         width: calc(100% - 20px);
