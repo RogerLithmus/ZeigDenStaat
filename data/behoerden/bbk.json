@@ -1,0 +1,55 @@
+{
+  "id": "bbk",
+  "excel_id": null,
+  "schema_version": "1.0",
+  "name": "Bundesamt für Bevölkerungsschutz und Katastrophenhilfe",
+  "kuerzel": "BBK",
+  "typ": "Bundesamt",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": 2004,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bevölkerungsschutz, Katastrophenhilfe, Warnung, KRITIS, Zivilschutz",
+  "website": "https://www.bbk.bund.de",
+  "rechtsgrundlage": "Zivilschutz- und Katastrophenhilfegesetz (ZSKG), BBK-Errichtungsgesetz",
+  "haushalt_mio_eur": 332.8,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 502,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmi",
+  "ressort": null,
+  "klassifikation": null,
+  "anmerkung": null,
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 2004
+    },
+    {
+      "zu_id": "thw",
+      "typ": "KOORDINIERT_MIT",
+      "richtung": "ausgehend",
+      "seit": 2004
+    }
+  ],
+  "quellen": [
+    "https://www.bbk.bund.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 100.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

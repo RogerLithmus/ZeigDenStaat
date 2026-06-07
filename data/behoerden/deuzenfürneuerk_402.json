@@ -1,0 +1,49 @@
+{
+  "id": "deuzenfürneuerk_402",
+  "excel_id": 402,
+  "schema_version": "1.0",
+  "name": "Deutsches Zentrum für Neurodegenerative Erkrankungen e.V.",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Medizinisches Zentrum",
+  "website": "https://www.dzne.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 40.55,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 1100,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Bildung und Forschung (BMBF)",
+  "klassifikation": "Medizinisches Zentrum",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Bildung und Forschung (BMBF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.dzne.de/"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 75.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

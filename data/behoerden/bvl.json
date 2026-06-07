@@ -1,0 +1,49 @@
+{
+  "id": "bvl",
+  "excel_id": null,
+  "schema_version": "1.0",
+  "name": "Bundesamt für Verbraucherschutz und Lebensmittelsicherheit",
+  "kuerzel": "BVL",
+  "typ": "Bundesamt",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Braunschweig",
+  "bundesland": "Niedersachsen",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": 2002,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Lebensmittelsicherheit, Verbraucherschutz, Pflanzenschutz, Tierarzneimittel, Gentechnik",
+  "website": "https://www.bvl.bund.de",
+  "rechtsgrundlage": "Gesetz über die Errichtung eines Bundesamtes für Verbraucherschutz und Lebensmittelsicherheit (BVLG)",
+  "haushalt_mio_eur": 100.9,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 950,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmelh",
+  "ressort": null,
+  "klassifikation": null,
+  "anmerkung": null,
+  "beziehungen": [
+    {
+      "zu_id": "bmelh",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 2002
+    }
+  ],
+  "quellen": [
+    "https://www.bvl.bund.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 100.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

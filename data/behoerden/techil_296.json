@@ -1,0 +1,49 @@
+{
+  "id": "techil_296",
+  "excel_id": 296,
+  "schema_version": "1.0",
+  "name": "Bundesanstalt Technisches Hilfswerk",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "THW",
+  "website": "https://www.thw.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 520.0,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 2100,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmi",
+  "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
+  "klassifikation": "THW",
+  "anmerkung": "Hauptamtlich. Unterstützt durch ca. 88.000 Ehrenamtliche",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.thw.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 75.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

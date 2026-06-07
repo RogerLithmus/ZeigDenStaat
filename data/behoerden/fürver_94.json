@@ -1,0 +1,49 @@
+{
+  "id": "fürver_94",
+  "excel_id": 94,
+  "schema_version": "1.0",
+  "name": "Bundesministerium für Verkehr",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 27901.36,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
+  "ministerium_id": "bmv",
+  "ressort": "Bundesministerium für Digitales und Verkehr (BMDV)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Digitales und Verkehr (BMDV)",
+  "beziehungen": [
+    {
+      "zu_id": "bmv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 66.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

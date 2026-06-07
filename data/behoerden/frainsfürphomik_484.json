@@ -1,0 +1,49 @@
+{
+  "id": "frainsfürphomik_484",
+  "excel_id": 484,
+  "schema_version": "1.0",
+  "name": "Fraunhofer-Institut für Photonische Mikrosysteme",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Forschung",
+  "website": "http://www.ipms.fraunhofer.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "haushalt_jahr": null,
+  "beschaeftigte": 500,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Bildung und Forschung (BMBF)",
+  "klassifikation": "Forschung",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Bildung und Forschung (BMBF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "http://www.ipms.fraunhofer.de/"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 75.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

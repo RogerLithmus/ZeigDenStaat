@@ -1,0 +1,61 @@
+{
+  "id": "bmwi",
+  "excel_id": null,
+  "schema_version": "1.0",
+  "name": "Bundesministerium für Wirtschaft und Energie",
+  "kuerzel": "BMWK",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": 1949,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Wirtschaftspolitik, Energiepolitik, Mittelstand, Außenwirtschaft, Wettbewerb",
+  "website": "https://www.bmwk.de",
+  "rechtsgrundlage": "Grundgesetz Art. 65, Organisationserlass des Bundeskanzlers",
+  "haushalt_mio_eur": 9021.7,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 2300,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": null,
+  "ressort": null,
+  "klassifikation": null,
+  "anmerkung": null,
+  "beziehungen": [
+    {
+      "zu_id": "bnetza",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 2005
+    },
+    {
+      "zu_id": "bkarta",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1958
+    },
+    {
+      "zu_id": "ptb",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 1887
+    }
+  ],
+  "quellen": [
+    "https://www.bmwk.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 91.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

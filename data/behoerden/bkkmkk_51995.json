@@ -1,0 +1,49 @@
+{
+  "id": "bkkmkk_51995",
+  "excel_id": 51995,
+  "schema_version": "1.0",
+  "name": "BKK mkk",
+  "kuerzel": null,
+  "typ": "KdöR",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Krankenkasse",
+  "website": "https://www.meine-krankenkasse.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 2070.0,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 1150,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmg",
+  "ressort": "Bundesministerium für Gesundheit (BMG)",
+  "klassifikation": "Krankenkasse",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Gesundheit (BMG)",
+  "beziehungen": [
+    {
+      "zu_id": "bmg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.meine-krankenkasse.de/"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 75.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

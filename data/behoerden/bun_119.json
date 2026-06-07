@@ -1,0 +1,49 @@
+{
+  "id": "bun_119",
+  "excel_id": 119,
+  "schema_version": "1.0",
+  "name": "Bundesrechnungshof",
+  "kuerzel": null,
+  "typ": "Verfassungsorgan",
+  "rechtsform": "Oberste Bundesbehörde (Sonderstellung)",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Rechnungshof",
+  "website": "https://www.bundesrechnungshof.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 195.0,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 600,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmf",
+  "ressort": "Bundesministerium der Finanzen (BMF)",
+  "klassifikation": "Rechnungshof",
+  "anmerkung": "Prüfung der Bundesfinanzen",
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundesrechnungshof.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 75.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

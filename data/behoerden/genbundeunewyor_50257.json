@@ -1,0 +1,49 @@
+{
+  "id": "genbundeunewyor_50257",
+  "excel_id": 50257,
+  "schema_version": "1.0",
+  "name": "Generalkonsulat der Bundesrepublik Deutschland New York",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": null,
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 17.24,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
+  "ministerium_id": "aa",
+  "ressort": "Auswärtiges Amt (AA)",
+  "klassifikation": null,
+  "anmerkung": "Finanzierung über das Ressort Auswärtiges Amt (AA)",
+  "beziehungen": [
+    {
+      "zu_id": "aa",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 58.3,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "heibun_52237",
+  "excel_id": 52237,
+  "schema_version": "1.0",
+  "name": "Heimatschutzdivision der Bundeswehr",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Dienststelle der Bundeswehrverwaltung",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": null,
+  "website": "https://www.bundeswehr.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 8862.05,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
+  "ministerium_id": "bmvg",
+  "ressort": "Bundesministerium der Verteidigung (BMVg)",
+  "klassifikation": null,
+  "anmerkung": "Aggregiert unter Bundesministerium der Verteidigung (BMVg)",
+  "beziehungen": [
+    {
+      "zu_id": "bmvg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundeswehr.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 58.3,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "bmf",
+  "excel_id": null,
+  "schema_version": "1.0",
+  "name": "Bundesministerium der Finanzen",
+  "kuerzel": "BMF",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": 1949,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Bundeshaushalt, Steuerpolitik, Zoll, Finanzmarktregulierung, Bundesvermögen",
+  "website": "https://www.bundesfinanzministerium.de",
+  "rechtsgrundlage": "Grundgesetz Art. 108, 112, 114, Bundeshaushaltsordnung",
+  "haushalt_mio_eur": 10562.7,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 2200,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": null,
+  "ressort": null,
+  "klassifikation": null,
+  "anmerkung": null,
+  "beziehungen": [
+    {
+      "zu_id": "gzd",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 2016
+    },
+    {
+      "zu_id": "bzst",
+      "typ": "FACHAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 2006
+    },
+    {
+      "zu_id": "bafin",
+      "typ": "RECHTSAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 2002
+    },
+    {
+      "zu_id": "bima",
+      "typ": "RECHTSAUFSICHT",
+      "richtung": "ausgehend",
+      "seit": 2005
+    }
+  ],
+  "quellen": [
+    "https://www.bundesfinanzministerium.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 91.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "bzst",
+  "excel_id": null,
+  "schema_version": "1.0",
+  "name": "Bundeszentralamt für Steuern",
+  "kuerzel": "BZSt",
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": 2006,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Steuerliche Identifikationsnummern, Umsatzsteuer, zwischenstaatlicher Informationsaustausch",
+  "website": "https://www.bzst.de",
+  "rechtsgrundlage": "Finanzverwaltungsgesetz (FVG) § 5",
+  "haushalt_mio_eur": 894.5,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 2200,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmf",
+  "ressort": null,
+  "klassifikation": null,
+  "anmerkung": null,
+  "beziehungen": [
+    {
+      "zu_id": "bmf",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 2006
+    }
+  ],
+  "quellen": [
+    "https://www.bzst.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 100.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

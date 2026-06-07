@@ -1,0 +1,49 @@
+{
+  "id": "bunfüröffver_261",
+  "excel_id": 261,
+  "schema_version": "1.0",
+  "name": "Bundesakademie für öffentliche Verwaltung",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Akademie",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 9.439,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 52,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmi",
+  "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
+  "klassifikation": "Akademie",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium des Innern und für Heimat (BMI)",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 75.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

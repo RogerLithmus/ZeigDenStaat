@@ -1,0 +1,49 @@
+{
+  "id": "umw_875",
+  "excel_id": 875,
+  "schema_version": "1.0",
+  "name": "Umweltbundesamt",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Dessau-Roßlau",
+  "bundesland": null,
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Umweltamt",
+  "website": "https://www.umweltbundesamt.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 160.0,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 1600,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmuv",
+  "ressort": "Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz (BMUV)",
+  "klassifikation": "Umweltamt",
+  "anmerkung": "Zentrale Umweltbehörde",
+  "beziehungen": [
+    {
+      "zu_id": "bmuv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.umweltbundesamt.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 66.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

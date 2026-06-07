@@ -1,0 +1,49 @@
+{
+  "id": "senfornatsng_828",
+  "excel_id": 828,
+  "schema_version": "1.0",
+  "name": "Senckenberg Forschungsinstitut und Naturmuseum SNG",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Museum und Ausstellungen",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 74.77,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
+  "ministerium_id": "bkamt",
+  "ressort": "Beauftragte der Bundesregierung für Kultur und Medien (BKM)",
+  "klassifikation": "Museum und Ausstellungen",
+  "anmerkung": "Finanzierung über das Ressort Beauftragte der Bundesregierung für Kultur und Medien (BKM)",
+  "beziehungen": [
+    {
+      "zu_id": "bkamt",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 66.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

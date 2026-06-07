@@ -1,0 +1,49 @@
+{
+  "id": "bunfüruntstaehe_303",
+  "excel_id": 303,
+  "schema_version": "1.0",
+  "name": "Bundesbeauftragter für die Unterlagen des Staatssicherheitsdienstes der ehemaligen DDR",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Beauftragte",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 105.84,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 1319,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bkamt",
+  "ressort": "Beauftragte der Bundesregierung für Kultur und Medien (BKM)",
+  "klassifikation": "Beauftragte",
+  "anmerkung": "Finanzierung über das Ressort Beauftragte der Bundesregierung für Kultur und Medien (BKM)",
+  "beziehungen": [
+    {
+      "zu_id": "bkamt",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 75.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

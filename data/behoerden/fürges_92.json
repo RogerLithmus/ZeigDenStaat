@@ -1,0 +1,49 @@
+{
+  "id": "fürges_92",
+  "excel_id": 92,
+  "schema_version": "1.0",
+  "name": "Bundesministerium für Gesundheit",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.bundesgesundheitsministerium.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 16200.0,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 1000,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmg",
+  "ressort": "Bundesministerium für Gesundheit (BMG)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Gesundheit und Pflege",
+  "beziehungen": [
+    {
+      "zu_id": "bmg",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.bundesgesundheitsministerium.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 75.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://zeigdenstaat.de/schemas/behoerde_v1.json",
+  "title": "Bundesbehörde",
+  "description": "Schema für eine deutsche Bundesbehörde oder bundesnahe Körperschaft",
+  "type": "object",
+  "required": ["id", "schema_version", "name", "typ", "ebene", "aufgeloest"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Eindeutige Kennung (lowercase, keine Leerzeichen)"
+    },
+    "excel_id": {
+      "type": ["integer", "null"],
+      "description": "Numerische ID aus der Excel-Quelltabelle"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "name": {
+      "type": "string",
+      "description": "Offizielle Bezeichnung laut Gesetz oder Website"
+    },
+    "kuerzel": {
+      "type": ["string", "null"]
+    },
+    "typ": {
+      "type": "string",
+      "enum": [
+        "Verfassungsorgan",
+        "Ministerium",
+        "Bundesoberbehörde",
+        "Bundesanstalt",
+        "Bundesamt",
+        "KdöR",
+        "AdöR",
+        "Sonstige"
+      ]
+    },
+    "rechtsform": {
+      "type": ["string", "null"]
+    },
+    "ebene": {
+      "type": "string",
+      "const": "Bund"
+    },
+    "sitz": {
+      "type": ["string", "null"],
+      "description": "Stadt des Hauptsitzes"
+    },
+    "bundesland": {
+      "type": ["string", "null"]
+    },
+    "koordinaten": {
+      "type": ["object", "null"],
+      "properties": {
+        "lat": {"type": ["number", "null"]},
+        "lon": {"type": ["number", "null"]}
+      }
+    },
+    "gruendungsjahr": {
+      "type": ["integer", "null"]
+    },
+    "aufgeloest": {
+      "type": "boolean"
+    },
+    "aufgeloest_jahr": {
+      "type": ["integer", "null"]
+    },
+    "zustaendigkeit": {
+      "type": ["string", "null"],
+      "description": "Aufgabenbereich in max. 25 Wörtern"
+    },
+    "website": {
+      "type": ["string", "null"],
+      "format": "uri"
+    },
+    "rechtsgrundlage": {
+      "type": ["string", "null"]
+    },
+    "haushalt_mio_eur": {
+      "type": ["number", "null"]
+    },
+    "haushalt_jahr": {
+      "type": ["integer", "null"]
+    },
+    "beschaeftigte": {
+      "type": ["integer", "null"]
+    },
+    "beschaeftigte_jahr": {
+      "type": ["integer", "null"]
+    },
+    "ministerium_id": {
+      "type": ["string", "null"],
+      "description": "ID des übergeordneten Ministeriums"
+    },
+    "ressort": {
+      "type": ["string", "null"],
+      "description": "Ressortbezeichnung aus Excel-Quelldaten"
+    },
+    "klassifikation": {
+      "type": ["string", "null"],
+      "description": "Klassifikation aus Excel-Quelldaten"
+    },
+    "anmerkung": {
+      "type": ["string", "null"]
+    },
+    "beziehungen": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["zu_id", "typ", "richtung"],
+        "properties": {
+          "zu_id": {"type": "string"},
+          "typ": {
+            "type": "string",
+            "enum": ["UNTERSTELLT", "RECHTSAUFSICHT", "FACHAUFSICHT", "KOORDINIERT_MIT"]
+          },
+          "richtung": {
+            "type": "string",
+            "enum": ["ausgehend", "eingehend"]
+          },
+          "seit": {"type": ["integer", "null"]},
+          "quelle": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "quellen": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "daten_qualitaet": {
+      "type": ["object", "null"],
+      "properties": {
+        "vollstaendigkeit_prozent": {"type": "number", "minimum": 0, "maximum": 100},
+        "zuletzt_verifiziert": {"type": "string"},
+        "verifikation_noetig": {"type": "boolean"}
+      }
+    },
+    "recherche_datum": {
+      "type": "string",
+      "description": "ISO-8601 Datum der letzten Recherche"
+    },
+    "recherche_agent_version": {
+      "type": ["string", "null"]
+    }
+  }
+}

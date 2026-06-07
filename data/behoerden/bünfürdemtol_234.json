@@ -1,0 +1,49 @@
+{
+  "id": "bünfürdemtol_234",
+  "excel_id": 234,
+  "schema_version": "1.0",
+  "name": "Bündnis für Demokratie und Toleranz",
+  "kuerzel": null,
+  "typ": "Bundesoberbehörde",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Politische Bildung",
+  "website": "https://www.service.bund.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "haushalt_jahr": null,
+  "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
+  "ministerium_id": "bmi",
+  "ressort": "Bundesministerium des Innern und für Heimat (BMI)",
+  "klassifikation": "Politische Bildung",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium des Innern und für Heimat (BMI)",
+  "beziehungen": [
+    {
+      "zu_id": "bmi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.service.bund.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 66.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

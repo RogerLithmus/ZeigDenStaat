@@ -1,0 +1,49 @@
+{
+  "id": "fürwirene_96",
+  "excel_id": 96,
+  "schema_version": "1.0",
+  "name": "Bundesministerium für Wirtschaft und Energie",
+  "kuerzel": null,
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Ministerium",
+  "website": "https://www.bmwk.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 14500.0,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 2300,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmwi",
+  "ressort": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+  "klassifikation": "Ministerium",
+  "anmerkung": "Wirtschaft und Klimaschutz",
+  "beziehungen": [
+    {
+      "zu_id": "bmwi",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.bmwk.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 75.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

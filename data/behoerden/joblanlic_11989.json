@@ -1,0 +1,49 @@
+{
+  "id": "joblanlic_11989",
+  "excel_id": 11989,
+  "schema_version": "1.0",
+  "name": "Jobcenter Landkreis Lichtenfels",
+  "kuerzel": null,
+  "typ": "KdöR",
+  "rechtsform": "Dienststelle der BA",
+  "ebene": "Bund",
+  "sitz": "Lichtenfels",
+  "bundesland": null,
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Jobcenter",
+  "website": "https://www.arbeitsagentur.de",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": null,
+  "haushalt_jahr": null,
+  "beschaeftigte": null,
+  "beschaeftigte_jahr": null,
+  "ministerium_id": "bmas",
+  "ressort": "Bundesministerium für Arbeit und Soziales (BMAS)",
+  "klassifikation": "Jobcenter",
+  "anmerkung": "Aggregiert unter Bundesagentur für Arbeit (BA)",
+  "beziehungen": [
+    {
+      "zu_id": "bmas",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "https://www.arbeitsagentur.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 58.3,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

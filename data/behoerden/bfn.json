@@ -1,0 +1,49 @@
+{
+  "id": "bfn",
+  "excel_id": null,
+  "schema_version": "1.0",
+  "name": "Bundesamt für Naturschutz",
+  "kuerzel": "BfN",
+  "typ": "Bundesamt",
+  "rechtsform": "Bundesoberbehörde",
+  "ebene": "Bund",
+  "sitz": "Bonn",
+  "bundesland": "Nordrhein-Westfalen",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": 1993,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Naturschutz, Biodiversität, Artenschutz, Landschaftspflege, Meeresschutz",
+  "website": "https://www.bfn.de",
+  "rechtsgrundlage": "Bundesnaturschutzgesetz (BNatSchG)",
+  "haushalt_mio_eur": 65.6,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 430,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmuv",
+  "ressort": null,
+  "klassifikation": null,
+  "anmerkung": null,
+  "beziehungen": [
+    {
+      "zu_id": "bmuv",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": 1993
+    }
+  ],
+  "quellen": [
+    "https://www.bfn.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 100.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

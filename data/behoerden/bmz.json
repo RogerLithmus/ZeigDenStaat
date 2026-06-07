@@ -1,0 +1,42 @@
+{
+  "id": "bmz",
+  "excel_id": null,
+  "schema_version": "1.0",
+  "name": "Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung",
+  "kuerzel": "BMZ",
+  "typ": "Ministerium",
+  "rechtsform": "Oberste Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": 1961,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Entwicklungspolitik, internationale Zusammenarbeit, humanitäre Hilfe",
+  "website": "https://www.bmz.de",
+  "rechtsgrundlage": "Grundgesetz Art. 65, Organisationserlass",
+  "haushalt_mio_eur": 10306.9,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 1100,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": null,
+  "ressort": null,
+  "klassifikation": null,
+  "anmerkung": null,
+  "beziehungen": [],
+  "quellen": [
+    "https://www.bmz.de",
+    "https://www.bundeshaushalt.de"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 91.7,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}

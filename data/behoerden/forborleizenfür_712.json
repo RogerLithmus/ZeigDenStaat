@@ -1,0 +1,49 @@
+{
+  "id": "forborleizenfür_712",
+  "excel_id": 712,
+  "schema_version": "1.0",
+  "name": "Forschungszentrum Borstel - Leibniz-Zentrum für Medizin und Biowissenschaften",
+  "kuerzel": null,
+  "typ": "Bundesanstalt",
+  "rechtsform": "Bundesbehörde",
+  "ebene": "Bund",
+  "sitz": "Berlin",
+  "bundesland": "Berlin",
+  "koordinaten": {
+    "lat": null,
+    "lon": null
+  },
+  "gruendungsjahr": null,
+  "aufgeloest": false,
+  "aufgeloest_jahr": null,
+  "zustaendigkeit": "Leibniz-Institut",
+  "website": "http://www.fz-borstel.de/",
+  "rechtsgrundlage": null,
+  "haushalt_mio_eur": 96.46,
+  "haushalt_jahr": 2025,
+  "beschaeftigte": 380,
+  "beschaeftigte_jahr": 2024,
+  "ministerium_id": "bmbfsj",
+  "ressort": "Bundesministerium für Bildung und Forschung (BMBF)",
+  "klassifikation": "Leibniz-Institut",
+  "anmerkung": "Finanzierung über das Ressort Bundesministerium für Bildung und Forschung (BMBF)",
+  "beziehungen": [
+    {
+      "zu_id": "bmbfsj",
+      "typ": "UNTERSTELLT",
+      "richtung": "eingehend",
+      "seit": null,
+      "quelle": null
+    }
+  ],
+  "quellen": [
+    "http://www.fz-borstel.de/"
+  ],
+  "recherche_datum": "2026-06-06",
+  "recherche_agent_version": "2.0",
+  "daten_qualitaet": {
+    "vollstaendigkeit_prozent": 75.0,
+    "zuletzt_verifiziert": "2026-06-06",
+    "verifikation_noetig": false
+  }
+}
