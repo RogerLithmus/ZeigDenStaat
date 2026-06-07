@@ -1047,3 +1047,62 @@ body, html {
         height: 100%;
     }
 }
+
+/* =======================================================
+   Horizontal Coordination Constellation Layout Styles
+   ======================================================= */
+#coordination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 420px;
+    padding-right: 20px;
+}
+#coordination-chart {
+    width: 100%;
+    height: calc(100% - 40px);
+    margin: 20px 0;
+    position: relative;
+}
+#coordination-chart svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Scrolling dash animation for horizontal bridges */
+@keyframes dash-pulse {
+    to {
+        stroke-dashoffset: -20;
+    }
+}
+.coord-edge {
+    animation: dash-pulse 0.8s linear infinite;
+    cursor: pointer;
+}
+.coord-node circle {
+    cursor: pointer;
+    transition: filter 0.2s ease, stroke-width 0.2s ease, fill 0.2s ease;
+}
+.coord-node:hover circle {
+    filter: brightness(1.25) drop-shadow(0 0 10px currentColor);
+}
+.coord-node text {
+    font-family: var(--font-sans);
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    #coordination-container {
+        padding-left: 360px;
+    }
+}
+@media (max-width: 768px) {
+    #coordination-container {
+        padding-left: 20px;
+        padding-bottom: calc(45% + 20px);
+        height: 100%;
+    }
+}

@@ -389,6 +389,12 @@ function updateUI() {
         renderSupervisionGraph();
         searchHighlightSupervision(document.getElementById('search-input').value);
     }
+
+    // Refresh D3 Coordination if the tab is currently active
+    if (document.getElementById('tab-coordination').classList.contains('active')) {
+        renderCoordinationGraph();
+        searchHighlightCoordination(document.getElementById('search-input').value);
+    }
 }
 
 function renderLeaderboard(citiesArray) {
@@ -493,6 +499,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             searchHighlightTreemap(val);
         } else if (document.getElementById('tab-supervision').classList.contains('active')) {
             searchHighlightSupervision(val);
+        } else if (document.getElementById('tab-coordination').classList.contains('active')) {
+            searchHighlightCoordination(val);
         }
     });
 
@@ -505,6 +513,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             searchHighlightTreemap('');
         } else if (document.getElementById('tab-supervision').classList.contains('active')) {
             searchHighlightSupervision('');
+        } else if (document.getElementById('tab-coordination').classList.contains('active')) {
+            searchHighlightCoordination('');
         }
     };
 
@@ -512,14 +522,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     const tabMap = document.getElementById('tab-map');
     const tabTreemap = document.getElementById('tab-treemap');
     const tabSupervision = document.getElementById('tab-supervision');
+    const tabCoordination = document.getElementById('tab-coordination');
     
     const mapEl = document.getElementById('map');
     const treemapEl = document.getElementById('treemap-container');
     const supervisionEl = document.getElementById('supervision-container');
+    const coordinationEl = document.getElementById('coordination-container');
     
     const mapSidebar = document.getElementById('map-sidebar-content');
     const treemapSidebar = document.getElementById('treemap-sidebar-content');
     const supervisionSidebar = document.getElementById('supervision-sidebar-content');
+    const coordinationSidebar = document.getElementById('coordination-sidebar-content');
     const sharedSelectionSidebar = document.getElementById('shared-selection-sidebar');
 
     function switchView(view) {
@@ -527,14 +540,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             tabMap.classList.add('active');
             tabTreemap.classList.remove('active');
             tabSupervision.classList.remove('active');
+            tabCoordination.classList.remove('active');
             
             mapEl.classList.remove('hidden');
             treemapEl.classList.add('hidden');
             supervisionEl.classList.add('hidden');
+            coordinationEl.classList.add('hidden');
             
             mapSidebar.classList.remove('hidden');
             treemapSidebar.classList.add('hidden');
             supervisionSidebar.classList.add('hidden');
+            coordinationSidebar.classList.add('hidden');
             sharedSelectionSidebar.classList.add('hidden');
             
             closeDetailPanel();
@@ -543,14 +559,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             tabMap.classList.remove('active');
             tabTreemap.classList.add('active');
             tabSupervision.classList.remove('active');
+            tabCoordination.classList.remove('active');
             
             mapEl.classList.add('hidden');
             treemapEl.classList.remove('hidden');
             supervisionEl.classList.add('hidden');
+            coordinationEl.classList.add('hidden');
             
             mapSidebar.classList.add('hidden');
             treemapSidebar.classList.remove('hidden');
             supervisionSidebar.classList.add('hidden');
+            coordinationSidebar.classList.add('hidden');
             sharedSelectionSidebar.classList.remove('hidden');
             
             closeDetailPanel();
@@ -563,14 +582,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             tabMap.classList.remove('active');
             tabTreemap.classList.remove('active');
             tabSupervision.classList.add('active');
+            tabCoordination.classList.remove('active');
             
             mapEl.classList.add('hidden');
             treemapEl.classList.add('hidden');
             supervisionEl.classList.remove('hidden');
+            coordinationEl.classList.add('hidden');
             
             mapSidebar.classList.add('hidden');
             treemapSidebar.classList.add('hidden');
             supervisionSidebar.classList.remove('hidden');
+            coordinationSidebar.classList.add('hidden');
             sharedSelectionSidebar.classList.remove('hidden');
             
             closeDetailPanel();
@@ -579,12 +601,36 @@ document.addEventListener('DOMContentLoaded', async () => {
             initSupervisionLayout();
             renderSupervisionGraph();
             searchHighlightSupervision(searchInput.value);
+        } else if (view === 'coordination') {
+            tabMap.classList.remove('active');
+            tabTreemap.classList.remove('active');
+            tabSupervision.classList.remove('active');
+            tabCoordination.classList.add('active');
+            
+            mapEl.classList.add('hidden');
+            treemapEl.classList.add('hidden');
+            supervisionEl.classList.add('hidden');
+            coordinationEl.classList.remove('hidden');
+            
+            mapSidebar.classList.add('hidden');
+            treemapSidebar.classList.add('hidden');
+            supervisionSidebar.classList.add('hidden');
+            coordinationSidebar.classList.remove('hidden');
+            sharedSelectionSidebar.classList.remove('hidden');
+            
+            closeDetailPanel();
+            
+            // Re-render Coordination constellation graph
+            initCoordinationLayout();
+            renderCoordinationGraph();
+            searchHighlightCoordination(searchInput.value);
         }
     }
 
     tabMap.onclick = () => switchView('map');
     tabTreemap.onclick = () => switchView('treemap');
     tabSupervision.onclick = () => switchView('supervision');
+    tabCoordination.onclick = () => switchView('coordination');
 
     // D3 Treemap metric toggle buttons
     document.getElementById('btn-metric-budget').onclick = () => {
