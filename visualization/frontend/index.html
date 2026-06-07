@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Interaktive geografische Karte und Ressort-Struktur der deutschen Bundesbehörden. Geladen direkt aus der Neo4j-Datenbank.">
+    <meta name="description" content="Interaktives Cockpit für deutsche Bundesbehörden. Visualisiert Geografie, Ressort-Strukturen und hierarchische Aufsichtslinien direkt geladen aus Neo4j.">
     <title>🏛️ ZeigDenStaat — Bundesbehörden-Cockpit</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +25,11 @@
         <div id="treemap-chart"></div>
     </div>
 
+    <!-- Full-Screen Supervision Container -->
+    <div id="supervision-container" class="full-screen-view hidden">
+        <div id="supervision-chart"></div>
+    </div>
+
     <!-- Floating UI Dashboard Sidebar -->
     <main class="dashboard-panel" id="sidebar">
         <!-- Brand Header -->
@@ -39,8 +44,9 @@
             
             <!-- Tab Selector -->
             <div class="view-selector">
-                <button class="view-tab active" id="tab-map">🗺️ Landkarte</button>
+                <button class="view-tab active" id="tab-map">🗺️ Karte</button>
                 <button class="view-tab" id="tab-treemap">📊 Struktur</button>
+                <button class="view-tab" id="tab-supervision">🔄 Aufsicht</button>
             </div>
 
             <div id="conn-status" class="status-indicator connecting" title="Verbindung zu Neo4j wird hergestellt...">
@@ -119,7 +125,7 @@
                             <span class="btn-icon">👥</span> Beschäftigte
                         </button>
                     </div>
-                    <p class="section-hint">Zeigt die relative Verteilung der Ressourcen nach ministeriellen Ressorts.</p>
+                    <p class="section-hint">Kacheln stellen die Größe relativ zueinander dar.</p>
                 </section>
 
                 <!-- Treemap Stats Summary -->
@@ -145,12 +151,58 @@
                     </div>
                     <button class="btn-sm" id="btn-zoom-reset" style="margin-top: 10px; width: 100%;" disabled>🔍 Zoom zurücksetzen</button>
                 </section>
+            </div>
 
-                <!-- Treemap Selection Details -->
+            <!-- ================= SUPERVISION VIEW SECTIONS ================= -->
+            <div id="supervision-sidebar-content" class="hidden">
+                <!-- Dropdown selector -->
+                <section class="panel-section supervision-select-section">
+                    <h3>🔍 Fokus-Ressort</h3>
+                    <div class="select-container">
+                        <select id="sup-ministry-select" class="dropdown-select">
+                            <option value="all">Wird geladen...</option>
+                        </select>
+                    </div>
+                    <p class="section-hint">Wähle ein Ressort, um das konzentrische Aufsichts- und Kooperationsnetz anzuzeigen.</p>
+                </section>
+
+                <!-- Legend of lines -->
+                <section class="panel-section legend-section">
+                    <h3>🎨 Legende Aufsichtsarten</h3>
+                    <div class="legend-list">
+                        <div class="legend-item"><span class="legend-line" style="background-color: #6366f1;"></span> Subunterstellung (UNTERSTELLT)</div>
+                        <div class="legend-item"><span class="legend-line" style="background-color: #f97316;"></span> Fachaufsicht (FACHAUFSICHT)</div>
+                        <div class="legend-item"><span class="legend-line" style="background-color: #10b981;"></span> Rechtsaufsicht (RECHTSAUFSICHT)</div>
+                        <div class="legend-item"><span class="legend-line" style="background-color: #ec4899;"></span> Kooperation (KOORDINIERT_MIT)</div>
+                    </div>
+                </section>
+
+                <!-- Stats summary -->
+                <section class="panel-section supervision-stats-section">
+                    <h3>📈 Netzwerk-Statistik</h3>
+                    <div class="stats-list">
+                        <div class="stat-list-item">
+                            <span>Fokus-Einheit:</span>
+                            <strong id="sup-stat-focus">-</strong>
+                        </div>
+                        <div class="stat-list-item">
+                            <span>Verknüpfte Behörden:</span>
+                            <strong id="sup-stat-nodes">-</strong>
+                        </div>
+                        <div class="stat-list-item">
+                            <span>Aufsichtslinien:</span>
+                            <strong id="sup-stat-links">-</strong>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ================= SHARED SELECTION DETAILS (FOR D3 VIEWS) ================= -->
+            <div id="shared-selection-sidebar" class="hidden">
                 <section class="panel-section selection-detail-section">
                     <h3>ℹ️ Ausgewählte Behörde</h3>
                     <div id="treemap-selection-details" class="selection-card">
-                        <div class="loading-placeholder">Bewege die Maus über eine Kachel oder klicke sie an.</div>
+                        <div class="loading-placeholder">Bewege die Maus über ein Element oder klicke es an.</div>
                     </div>
                 </section>
             </div>
@@ -188,7 +240,7 @@
         </div>
     </aside>
 
-    <!-- Glassmorphic Tooltip for Treemap (D3) -->
+    <!-- Glassmorphic Tooltip for D3 Views -->
     <div id="treemap-tooltip" class="treemap-tooltip hidden"></div>
 
     <!-- Leaflet JS -->
@@ -202,6 +254,7 @@
     
     <!-- Application Logic -->
     <script src="treemap.js"></script>
+    <script src="supervision.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

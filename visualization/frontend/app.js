@@ -151,7 +151,21 @@ async function loadDataFromNeo4j(creds) {
             };
         });
 
-        console.log(`Loaded ${allAuthorities.length} authorities from Neo4j.`);
+        // Query relationships
+        const relsResult = await session.run(`
+            MATCH (a:Behoerde)-[r:UNTERSTELLT|FACHAUFSICHT|RECHTSAUFSICHT|KOORDINIERT_MIT]->(b:Behoerde)
+            RETURN a.id as from_id, type(r) as type, b.id as to_id
+        `);
+
+        allRelationships = relsResult.records.map(record => {
+            return {
+                from_id: record.get('from_id'),
+                type: record.get('type'),
+                to_id: record.get('to_id')
+            };
+        });
+
+        console.log(`Loaded ${allAuthorities.length} authorities and ${allRelationships.length} relationships from Neo4j.`);
         showStatus('connected', 'Neo4j verbunden');
         document.getElementById('search-input').disabled = false;
 
@@ -167,6 +181,7 @@ async function loadDataFromNeo4j(creds) {
         allRessorts.forEach(r => activeRessorts.add(r));
 
         renderFilters(ressortCounts);
+        populateMinistrySelect(); // populate select dropdown in supervision
         updateUI();
 
     } catch (e) {
@@ -368,6 +383,12 @@ function updateUI() {
         renderTreemap(filtered, tmActiveMetric);
         searchHighlightTreemap(document.getElementById('search-input').value);
     }
+
+    // Refresh D3 Supervision if the tab is currently active
+    if (document.getElementById('tab-supervision').classList.contains('active')) {
+        renderSupervisionGraph();
+        searchHighlightSupervision(document.getElementById('search-input').value);
+    }
 }
 
 function renderLeaderboard(citiesArray) {
@@ -456,7 +477,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Event listeners
     document.getElementById('detail-close').onclick = closeDetailPanel;
-
+    
     // Search bar logic
     const searchInput = document.getElementById('search-input');
     const searchClearBtn = document.getElementById('search-clear');
@@ -467,9 +488,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         updateUI(); // Updates map circles
         
-        // Updates treemap highlighting if visible
+        // Updates D3 views if active
         if (document.getElementById('tab-treemap').classList.contains('active')) {
             searchHighlightTreemap(val);
+        } else if (document.getElementById('tab-supervision').classList.contains('active')) {
+            searchHighlightSupervision(val);
         }
     });
 
@@ -480,45 +503,88 @@ document.addEventListener('DOMContentLoaded', async () => {
         updateUI();
         if (document.getElementById('tab-treemap').classList.contains('active')) {
             searchHighlightTreemap('');
+        } else if (document.getElementById('tab-supervision').classList.contains('active')) {
+            searchHighlightSupervision('');
         }
     };
 
     // Tab view switching logic
     const tabMap = document.getElementById('tab-map');
     const tabTreemap = document.getElementById('tab-treemap');
+    const tabSupervision = document.getElementById('tab-supervision');
+    
     const mapEl = document.getElementById('map');
     const treemapEl = document.getElementById('treemap-container');
+    const supervisionEl = document.getElementById('supervision-container');
+    
     const mapSidebar = document.getElementById('map-sidebar-content');
     const treemapSidebar = document.getElementById('treemap-sidebar-content');
+    const supervisionSidebar = document.getElementById('supervision-sidebar-content');
+    const sharedSelectionSidebar = document.getElementById('shared-selection-sidebar');
 
     function switchView(view) {
         if (view === 'map') {
             tabMap.classList.add('active');
             tabTreemap.classList.remove('active');
+            tabSupervision.classList.remove('active');
+            
             mapEl.classList.remove('hidden');
             treemapEl.classList.add('hidden');
+            supervisionEl.classList.add('hidden');
+            
             mapSidebar.classList.remove('hidden');
             treemapSidebar.classList.add('hidden');
+            supervisionSidebar.classList.add('hidden');
+            sharedSelectionSidebar.classList.add('hidden');
+            
             closeDetailPanel();
             setTimeout(() => map.invalidateSize(), 50); // Re-align Leaflet bounds
-        } else {
+        } else if (view === 'treemap') {
             tabMap.classList.remove('active');
             tabTreemap.classList.add('active');
+            tabSupervision.classList.remove('active');
+            
             mapEl.classList.add('hidden');
             treemapEl.classList.remove('hidden');
+            supervisionEl.classList.add('hidden');
+            
             mapSidebar.classList.add('hidden');
             treemapSidebar.classList.remove('hidden');
+            supervisionSidebar.classList.add('hidden');
+            sharedSelectionSidebar.classList.remove('hidden');
+            
             closeDetailPanel();
             
             // Re-render D3 treemap
             initTreemapLayout();
             renderTreemap(getFilteredAuthorities(), tmActiveMetric);
             searchHighlightTreemap(searchInput.value);
+        } else if (view === 'supervision') {
+            tabMap.classList.remove('active');
+            tabTreemap.classList.remove('active');
+            tabSupervision.classList.add('active');
+            
+            mapEl.classList.add('hidden');
+            treemapEl.classList.add('hidden');
+            supervisionEl.classList.remove('hidden');
+            
+            mapSidebar.classList.add('hidden');
+            treemapSidebar.classList.add('hidden');
+            supervisionSidebar.classList.remove('hidden');
+            sharedSelectionSidebar.classList.remove('hidden');
+            
+            closeDetailPanel();
+            
+            // Re-render Concentric supervision graph
+            initSupervisionLayout();
+            renderSupervisionGraph();
+            searchHighlightSupervision(searchInput.value);
         }
     }
 
     tabMap.onclick = () => switchView('map');
     tabTreemap.onclick = () => switchView('treemap');
+    tabSupervision.onclick = () => switchView('supervision');
 
     // D3 Treemap metric toggle buttons
     document.getElementById('btn-metric-budget').onclick = () => {

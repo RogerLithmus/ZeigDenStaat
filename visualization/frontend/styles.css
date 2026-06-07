@@ -921,7 +921,7 @@ body, html {
         height: 100%;
     }
     .detail-panel {
-        width: calc(100% - 20px);
+        width: calc(100vw - 20px);
         height: 80%;
         bottom: 10px;
         top: auto;
@@ -931,5 +931,119 @@ body, html {
     }
     .detail-panel.active {
         transform: translateY(0);
+    }
+}
+
+/* =======================================================
+   Concentric Supervision Loop Layout Styles
+   ======================================================= */
+#supervision-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 420px;
+    padding-right: 20px;
+}
+#supervision-chart {
+    width: 100%;
+    height: calc(100% - 40px);
+    margin: 20px 0;
+    position: relative;
+}
+#supervision-chart svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Custom Dropdown select */
+.select-container {
+    position: relative;
+    width: 100%;
+}
+.dropdown-select {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border-panel);
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px;
+}
+.dropdown-select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.15);
+}
+
+/* Legend */
+.legend-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+    padding: 14px;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.legend-line {
+    display: inline-block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin-right: 10px;
+    box-shadow: 0 0 6px currentColor;
+}
+
+/* SVG nodes & links */
+.sup-node circle {
+    cursor: pointer;
+    transition: filter 0.2s ease, stroke-width 0.2s ease;
+}
+.sup-node:hover circle {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(255,255,255,0.25));
+}
+.sup-node text {
+    font-family: var(--font-sans);
+    fill: #fff;
+    pointer-events: none;
+}
+.edge-path {
+    transition: stroke-width 0.2s ease, opacity 0.2s ease;
+    cursor: pointer;
+}
+.edge-path:hover {
+    stroke-width: 3.5px !important;
+    opacity: 1.0 !important;
+    filter: drop-shadow(0 0 8px currentColor);
+}
+
+/* responsive addition for supervision */
+@media (max-width: 900px) {
+    #supervision-container {
+        padding-left: 360px;
+    }
+}
+@media (max-width: 768px) {
+    #supervision-container {
+        padding-left: 20px;
+        padding-bottom: calc(45% + 20px);
+        height: 100%;
     }
 }
