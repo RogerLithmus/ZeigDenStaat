@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interaktive geografische Heatmap der deutschen Bundesbehörden. Visualisiert die Verteilung und Konzentration staatlicher Institutionen nach Hauptsitz, direkt geladen aus Neo4j.">
+    <title>🗺️ ZeigDenStaat — Behörden-Landkarte</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet.js Map Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Full-Screen Map Container -->
+    <div id="map"></div>
+
+    <!-- Floating UI Dashboard -->
+    <main class="dashboard-panel" id="sidebar">
+        <!-- Brand Header -->
+        <header class="panel-header">
+            <div class="brand">
+                <span class="brand-emoji">🏛️</span>
+                <div class="brand-text">
+                    <h1>ZeigDenStaat</h1>
+                    <p>Geografische Behördenverteilung</p>
+                </div>
+            </div>
+            <div id="conn-status" class="status-indicator connecting" title="Verbindung zu Neo4j wird hergestellt...">
+                <span class="status-dot"></span>
+                <span class="status-text">Neo4j verbindet...</span>
+            </div>
+        </header>
+
+        <!-- Search & Quick Filter -->
+        <section class="panel-section search-section">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" placeholder="Stadt oder Behörde suchen..." disabled>
+                <button id="search-clear" class="search-clear" style="display: none;">&times;</button>
+            </div>
+        </section>
+
+        <!-- KPI Stats Grid -->
+        <section class="panel-section stats-section">
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <span class="kpi-value" id="stat-total-nodes">-</span>
+                    <span class="kpi-label">Bundesbehörden</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-value" id="stat-total-cities">-</span>
+                    <span class="kpi-label">Städte</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-value" id="stat-total-budget">-</span>
+                    <span class="kpi-label">Budget (Mrd. €)</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-value" id="stat-total-staff">-</span>
+                    <span class="kpi-label">Mitarbeiter</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Content Body -->
+        <div class="panel-scrollable">
+            <!-- Filter Section -->
+            <section class="panel-section filters-section">
+                <h3>🎛️ Ressort-Filter</h3>
+                <div class="filter-controls">
+                    <button class="btn-sm" id="filter-all">Alle</button>
+                    <button class="btn-sm" id="filter-none">Keine</button>
+                </div>
+                <div id="ressort-checkboxes" class="checkboxes-grid">
+                    <div class="loading-placeholder">Lade Filter...</div>
+                </div>
+            </section>
+
+            <!-- Leaderboard / City List -->
+            <section class="panel-section city-list-section">
+                <h3>🏆 Städte-Ranking</h3>
+                <ol id="city-ranking-list" class="ranking-list">
+                    <li class="loading-placeholder">Lade Ranking...</li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <!-- Floating Detail Panel (Slide-In) -->
+    <aside class="detail-panel" id="detail-panel">
+        <header class="detail-header">
+            <button class="btn-close" id="detail-close" aria-label="Schließen">&larr; Zurück</button>
+            <h2 id="detail-city-name">Berlin</h2>
+            <p id="detail-city-subtitle"><span id="detail-city-count">745</span> Behörden gefunden</p>
+        </header>
+        <div class="detail-body">
+            <!-- City KPI summary -->
+            <div class="detail-kpis">
+                <div class="detail-kpi">
+                    <span class="detail-kpi-value" id="detail-kpi-budget">-</span>
+                    <span class="detail-kpi-label">Gesamtbudget</span>
+                </div>
+                <div class="detail-kpi">
+                    <span class="detail-kpi-value" id="detail-kpi-staff">-</span>
+                    <span class="detail-kpi-label">Beschäftigte</span>
+                </div>
+            </div>
+
+            <!-- List of authorities in city -->
+            <div class="detail-list-wrapper">
+                <h3>Behördenliste</h3>
+                <ul id="detail-authorities-list" class="authorities-list">
+                    <!-- Dynamic items -->
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Neo4j Browser Driver -->
+    <script src="https://cdn.jsdelivr.net/npm/neo4j-driver@5.15.0/lib/browser/neo4j-web.min.js"></script>
+    
+    <!-- Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
