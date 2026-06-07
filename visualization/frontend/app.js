@@ -134,7 +134,9 @@ async function loadDataFromNeo4j(creds) {
                 n.haushalt_mio_eur as budget, 
                 n.beschaeftigte as employees, 
                 n.ressort as ressort, 
-                n.bundesland as bundesland
+                n.bundesland as bundesland,
+                n.gruendungsjahr as gruendungsjahr,
+                n.aufgeloest as aufgeloest
         `);
 
         allAuthorities = result.records.map(record => {
@@ -147,7 +149,9 @@ async function loadDataFromNeo4j(creds) {
                 budget: record.get('budget') !== null ? Number(record.get('budget')) : null,
                 employees: record.get('employees') !== null ? Number(record.get('employees')) : null,
                 ressort: record.get('ressort') || 'Keinem Ressort unterstellt',
-                bundesland: record.get('bundesland') || ''
+                bundesland: record.get('bundesland') || '',
+                gruendungsjahr: record.get('gruendungsjahr') !== null ? Number(record.get('gruendungsjahr')) : null,
+                aufgeloest: record.get('aufgeloest') || 'False'
             };
         });
 
@@ -395,6 +399,13 @@ function updateUI() {
         renderCoordinationGraph();
         searchHighlightCoordination(document.getElementById('search-input').value);
     }
+
+    // Refresh D3 Timeline if the tab is currently active
+    if (document.getElementById('tab-timeline').classList.contains('active')) {
+        initTimelineData();
+        updateTimelineGraph(timeCurrentYear);
+        searchHighlightTimeline(document.getElementById('search-input').value);
+    }
 }
 
 function renderLeaderboard(citiesArray) {
@@ -501,6 +512,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             searchHighlightSupervision(val);
         } else if (document.getElementById('tab-coordination').classList.contains('active')) {
             searchHighlightCoordination(val);
+        } else if (document.getElementById('tab-timeline').classList.contains('active')) {
+            searchHighlightTimeline(val);
         }
     });
 
@@ -515,6 +528,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             searchHighlightSupervision('');
         } else if (document.getElementById('tab-coordination').classList.contains('active')) {
             searchHighlightCoordination('');
+        } else if (document.getElementById('tab-timeline').classList.contains('active')) {
+            searchHighlightTimeline('');
         }
     };
 
@@ -523,34 +538,47 @@ document.addEventListener('DOMContentLoaded', async () => {
     const tabTreemap = document.getElementById('tab-treemap');
     const tabSupervision = document.getElementById('tab-supervision');
     const tabCoordination = document.getElementById('tab-coordination');
+    const tabTimeline = document.getElementById('tab-timeline');
     
     const mapEl = document.getElementById('map');
     const treemapEl = document.getElementById('treemap-container');
     const supervisionEl = document.getElementById('supervision-container');
     const coordinationEl = document.getElementById('coordination-container');
+    const timelineEl = document.getElementById('timeline-container');
     
     const mapSidebar = document.getElementById('map-sidebar-content');
     const treemapSidebar = document.getElementById('treemap-sidebar-content');
     const supervisionSidebar = document.getElementById('supervision-sidebar-content');
     const coordinationSidebar = document.getElementById('coordination-sidebar-content');
+    const timelineSidebar = document.getElementById('timeline-sidebar-content');
     const sharedSelectionSidebar = document.getElementById('shared-selection-sidebar');
 
     function switchView(view) {
+        // Pause timeline playback if active when switching views
+        if (timePlayInterval) {
+            clearInterval(timePlayInterval);
+            timePlayInterval = null;
+            document.getElementById('btn-timeline-play').textContent = '▶️ Abspielen';
+        }
+
         if (view === 'map') {
             tabMap.classList.add('active');
             tabTreemap.classList.remove('active');
             tabSupervision.classList.remove('active');
             tabCoordination.classList.remove('active');
+            tabTimeline.classList.remove('active');
             
             mapEl.classList.remove('hidden');
             treemapEl.classList.add('hidden');
             supervisionEl.classList.add('hidden');
             coordinationEl.classList.add('hidden');
+            timelineEl.classList.add('hidden');
             
             mapSidebar.classList.remove('hidden');
             treemapSidebar.classList.add('hidden');
             supervisionSidebar.classList.add('hidden');
             coordinationSidebar.classList.add('hidden');
+            timelineSidebar.classList.add('hidden');
             sharedSelectionSidebar.classList.add('hidden');
             
             closeDetailPanel();
@@ -560,16 +588,19 @@ document.addEventListener('DOMContentLoaded', async () => {
             tabTreemap.classList.add('active');
             tabSupervision.classList.remove('active');
             tabCoordination.classList.remove('active');
+            tabTimeline.classList.remove('active');
             
             mapEl.classList.add('hidden');
             treemapEl.classList.remove('hidden');
             supervisionEl.classList.add('hidden');
             coordinationEl.classList.add('hidden');
+            timelineEl.classList.add('hidden');
             
             mapSidebar.classList.add('hidden');
             treemapSidebar.classList.remove('hidden');
             supervisionSidebar.classList.add('hidden');
             coordinationSidebar.classList.add('hidden');
+            timelineSidebar.classList.add('hidden');
             sharedSelectionSidebar.classList.remove('hidden');
             
             closeDetailPanel();
@@ -583,16 +614,19 @@ document.addEventListener('DOMContentLoaded', async () => {
             tabTreemap.classList.remove('active');
             tabSupervision.classList.add('active');
             tabCoordination.classList.remove('active');
+            tabTimeline.classList.remove('active');
             
             mapEl.classList.add('hidden');
             treemapEl.classList.add('hidden');
             supervisionEl.classList.remove('hidden');
             coordinationEl.classList.add('hidden');
+            timelineEl.classList.add('hidden');
             
             mapSidebar.classList.add('hidden');
             treemapSidebar.classList.add('hidden');
             supervisionSidebar.classList.remove('hidden');
             coordinationSidebar.classList.add('hidden');
+            timelineSidebar.classList.add('hidden');
             sharedSelectionSidebar.classList.remove('hidden');
             
             closeDetailPanel();
@@ -606,16 +640,19 @@ document.addEventListener('DOMContentLoaded', async () => {
             tabTreemap.classList.remove('active');
             tabSupervision.classList.remove('active');
             tabCoordination.classList.add('active');
+            tabTimeline.classList.remove('active');
             
             mapEl.classList.add('hidden');
             treemapEl.classList.add('hidden');
             supervisionEl.classList.add('hidden');
             coordinationEl.classList.remove('hidden');
+            timelineEl.classList.add('hidden');
             
             mapSidebar.classList.add('hidden');
             treemapSidebar.classList.add('hidden');
             supervisionSidebar.classList.add('hidden');
             coordinationSidebar.classList.remove('hidden');
+            timelineSidebar.classList.add('hidden');
             sharedSelectionSidebar.classList.remove('hidden');
             
             closeDetailPanel();
@@ -624,6 +661,34 @@ document.addEventListener('DOMContentLoaded', async () => {
             initCoordinationLayout();
             renderCoordinationGraph();
             searchHighlightCoordination(searchInput.value);
+        } else if (view === 'timeline') {
+            tabMap.classList.remove('active');
+            tabTreemap.classList.remove('active');
+            tabSupervision.classList.remove('active');
+            tabCoordination.classList.remove('active');
+            tabTimeline.classList.add('active');
+            
+            mapEl.classList.add('hidden');
+            treemapEl.classList.add('hidden');
+            supervisionEl.classList.add('hidden');
+            coordinationEl.classList.add('hidden');
+            timelineEl.classList.remove('hidden');
+            
+            mapSidebar.classList.add('hidden');
+            treemapSidebar.classList.add('hidden');
+            supervisionSidebar.classList.add('hidden');
+            coordinationSidebar.classList.add('hidden');
+            timelineSidebar.classList.remove('hidden');
+            sharedSelectionSidebar.classList.remove('hidden');
+            
+            closeDetailPanel();
+            
+            // Re-render Timeline sprout graph
+            initTimelineLayout();
+            initTimelineData();
+            initTimelinePlayback();
+            updateTimelineGraph(timeCurrentYear);
+            searchHighlightTimeline(searchInput.value);
         }
     }
 
@@ -631,6 +696,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     tabTreemap.onclick = () => switchView('treemap');
     tabSupervision.onclick = () => switchView('supervision');
     tabCoordination.onclick = () => switchView('coordination');
+    tabTimeline.onclick = () => switchView('timeline');
 
     // D3 Treemap metric toggle buttons
     document.getElementById('btn-metric-budget').onclick = () => {

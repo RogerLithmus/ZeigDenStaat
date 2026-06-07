@@ -1106,3 +1106,54 @@ body, html {
         height: 100%;
     }
 }
+
+/* =======================================================
+   Temporal Growth Sprout Layout Styles
+   ======================================================= */
+#timeline-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 420px;
+    padding-right: 20px;
+}
+#timeline-chart {
+    width: 100%;
+    height: calc(100% - 40px);
+    margin: 20px 0;
+    position: relative;
+}
+#timeline-chart svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+.time-node circle {
+    cursor: pointer;
+    transition: filter 0.25s ease, stroke 0.25s ease, stroke-width 0.25s ease;
+}
+.time-node:hover circle {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(255,255,255,0.3)) !important;
+}
+.time-node text {
+    font-family: var(--font-sans);
+    pointer-events: none;
+}
+.time-edge {
+    transition: opacity 0.2s ease, stroke-width 0.2s ease, stroke 0.2s ease;
+}
+
+@media (max-width: 900px) {
+    #timeline-container {
+        padding-left: 360px;
+    }
+}
+@media (max-width: 768px) {
+    #timeline-container {
+        padding-left: 20px;
+        padding-bottom: calc(45% + 20px);
+        height: 100%;
+    }
+}

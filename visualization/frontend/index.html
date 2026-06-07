@@ -35,6 +35,11 @@
         <div id="coordination-chart"></div>
     </div>
 
+    <!-- Full-Screen Timeline Container (Concept 3) -->
+    <div id="timeline-container" class="full-screen-view hidden">
+        <div id="timeline-chart"></div>
+    </div>
+
     <!-- Floating UI Dashboard Sidebar -->
     <main class="dashboard-panel" id="sidebar">
         <!-- Brand Header -->
@@ -53,6 +58,7 @@
                 <button class="view-tab" id="tab-treemap">📊 Struktur</button>
                 <button class="view-tab" id="tab-supervision">🔄 Aufsicht</button>
                 <button class="view-tab" id="tab-coordination">🤝 Kooperation</button>
+                <button class="view-tab" id="tab-timeline">⏳ Chronologie</button>
             </div>
 
             <div id="conn-status" class="status-indicator connecting" title="Verbindung zu Neo4j wird hergestellt...">
@@ -231,6 +237,44 @@
                 </section>
             </div>
 
+            <!-- ================= TIMELINE VIEW SECTIONS ================= -->
+            <div id="timeline-sidebar-content" class="hidden">
+                <!-- Playback controls -->
+                <section class="panel-section playback-section">
+                    <h3>⏳ Zeitstrahl</h3>
+                    <div class="timeline-controls" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                        <button id="btn-timeline-play" class="btn-sm" style="flex: 1; font-size: 13px;">▶️ Abspielen</button>
+                        <span id="timeline-year-display" style="font-family: var(--font-mono); font-size: 18px; font-weight: 700; min-width: 60px; text-align: center; color: var(--accent);">1949</span>
+                    </div>
+                    <div class="slider-container" style="width: 100%;">
+                        <input type="range" id="timeline-slider" min="1949" max="2025" value="1949" style="width: 100%; accent-color: var(--accent);">
+                    </div>
+                </section>
+
+                <!-- Stats summary -->
+                <section class="panel-section timeline-stats-section">
+                    <h3>📈 Staats-Wachstum</h3>
+                    <div class="stats-list">
+                        <div class="stat-list-item">
+                            <span>Jahr:</span>
+                            <strong id="time-stat-year">1949</strong>
+                        </div>
+                        <div class="stat-list-item">
+                            <span>Aktive Behörden:</span>
+                            <strong id="time-stat-count">-</strong>
+                        </div>
+                        <div class="stat-list-item">
+                            <span>Gesamtbudget:</span>
+                            <strong id="time-stat-budget">-</strong>
+                        </div>
+                        <div class="stat-list-item">
+                            <span>Beschäftigte:</span>
+                            <strong id="time-stat-staff">-</strong>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
             <!-- ================= SHARED SELECTION DETAILS (FOR D3 VIEWS) ================= -->
             <div id="shared-selection-sidebar" class="hidden">
                 <section class="panel-section selection-detail-section">
@@ -290,6 +334,7 @@
     <script src="treemap.js"></script>
     <script src="supervision.js"></script>
     <script src="coordination.js"></script>
+    <script src="timeline.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
