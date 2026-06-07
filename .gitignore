@@ -1,0 +1,7 @@
+# Antigravity CLI
+.antigravitycli
+
+# dotenv environment variable files
+.env
+.env.local
+.env.*.local
