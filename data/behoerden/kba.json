@@ -10,8 +10,8 @@
   "sitz": "Flensburg",
   "bundesland": "Schleswig-Holstein",
   "koordinaten": {
-    "lat": null,
-    "lon": null
+    "lat": 54.7833021,
+    "lon": 9.4333264
   },
   "gruendungsjahr": 1951,
   "aufgeloest": false,
@@ -39,7 +39,7 @@
     "https://www.kba.de",
     "https://www.bundeshaushalt.de"
   ],
-  "recherche_datum": "2026-06-06",
+  "recherche_datum": "2026-06-08",
   "recherche_agent_version": "2.0",
   "daten_qualitaet": {
     "vollstaendigkeit_prozent": 100.0,

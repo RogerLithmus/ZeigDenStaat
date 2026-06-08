@@ -8,10 +8,10 @@
   "rechtsform": "Dienststelle der Bundeszollverwaltung",
   "ebene": "Bund",
   "sitz": "Lörrach",
-  "bundesland": null,
+  "bundesland": "Baden-Württemberg",
   "koordinaten": {
-    "lat": null,
-    "lon": null
+    "lat": 47.6120896,
+    "lon": 7.6607218
   },
   "gruendungsjahr": null,
   "aufgeloest": false,
@@ -39,7 +39,7 @@
   "quellen": [
     "https://www.zoll.de"
   ],
-  "recherche_datum": "2026-06-06",
+  "recherche_datum": "2026-06-08",
   "recherche_agent_version": "2.0",
   "daten_qualitaet": {
     "vollstaendigkeit_prozent": 58.3,

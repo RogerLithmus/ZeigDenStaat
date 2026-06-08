@@ -191,6 +191,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Keine Änderungen schreiben")
     parser.add_argument("--force", action="store_true", help="Vorhandene Geo-Daten überschreiben")
     parser.add_argument("--data-dir", default=BEHOERDEN_DIR, help="Pfad zum behoerden/ Verzeichnis")
+    parser.add_argument("--limit", default=999999, help="Pfad zum behoerden/ Verzeichnis")
     args = parser.parse_args()
 
     if not HAS_REQUESTS:

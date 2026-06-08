@@ -10,8 +10,8 @@
   "sitz": "Nürnberg",
   "bundesland": "Bayern",
   "koordinaten": {
-    "lat": null,
-    "lon": null
+    "lat": 49.453872,
+    "lon": 11.077298
   },
   "gruendungsjahr": 1952,
   "aufgeloest": false,
@@ -39,7 +39,7 @@
     "https://www.arbeitsagentur.de",
     "https://www.bundeshaushalt.de"
   ],
-  "recherche_datum": "2026-06-06",
+  "recherche_datum": "2026-06-08",
   "recherche_agent_version": "2.0",
   "daten_qualitaet": {
     "vollstaendigkeit_prozent": 100.0,

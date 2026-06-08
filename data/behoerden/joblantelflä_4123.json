@@ -8,10 +8,10 @@
   "rechtsform": "Dienststelle der BA",
   "ebene": "Bund",
   "sitz": "Teltow-Fläming",
-  "bundesland": null,
+  "bundesland": "Brandenburg",
   "koordinaten": {
-    "lat": null,
-    "lon": null
+    "lat": 52.1010266,
+    "lon": 13.2652656
   },
   "gruendungsjahr": null,
   "aufgeloest": false,
@@ -39,7 +39,7 @@
   "quellen": [
     "https://www.arbeitsagentur.de"
   ],
-  "recherche_datum": "2026-06-06",
+  "recherche_datum": "2026-06-08",
   "recherche_agent_version": "2.0",
   "daten_qualitaet": {
     "vollstaendigkeit_prozent": 58.3,

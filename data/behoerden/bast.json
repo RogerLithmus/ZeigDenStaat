@@ -10,8 +10,8 @@
   "sitz": "Bergisch Gladbach",
   "bundesland": "Nordrhein-Westfalen",
   "koordinaten": {
-    "lat": null,
-    "lon": null
+    "lat": 50.9929303,
+    "lon": 7.1277379
   },
   "gruendungsjahr": 1951,
   "aufgeloest": false,
@@ -39,7 +39,7 @@
     "https://www.bast.de",
     "https://www.bundeshaushalt.de"
   ],
-  "recherche_datum": "2026-06-06",
+  "recherche_datum": "2026-06-08",
   "recherche_agent_version": "2.0",
   "daten_qualitaet": {
     "vollstaendigkeit_prozent": 100.0,

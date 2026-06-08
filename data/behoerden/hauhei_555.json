@@ -10,8 +10,8 @@
   "sitz": "Heilbronn",
   "bundesland": "Baden-Württemberg",
   "koordinaten": {
-    "lat": null,
-    "lon": null
+    "lat": 49.142291,
+    "lon": 9.218655
   },
   "gruendungsjahr": null,
   "aufgeloest": false,
@@ -39,7 +39,7 @@
   "quellen": [
     "https://www.zoll.de"
   ],
-  "recherche_datum": "2026-06-06",
+  "recherche_datum": "2026-06-08",
   "recherche_agent_version": "2.0",
   "daten_qualitaet": {
     "vollstaendigkeit_prozent": 66.7,

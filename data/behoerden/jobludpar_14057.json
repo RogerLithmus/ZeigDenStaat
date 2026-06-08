@@ -8,10 +8,10 @@
   "rechtsform": "Dienststelle der BA",
   "ebene": "Bund",
   "sitz": "Ludwigslust- Parchim",
-  "bundesland": null,
+  "bundesland": "Mecklenburg-Vorpommern",
   "koordinaten": {
-    "lat": null,
-    "lon": null
+    "lat": 53.454421,
+    "lon": 11.4828447
   },
   "gruendungsjahr": null,
   "aufgeloest": false,
@@ -39,7 +39,7 @@
   "quellen": [
     "https://www.arbeitsagentur.de"
   ],
-  "recherche_datum": "2026-06-06",
+  "recherche_datum": "2026-06-08",
   "recherche_agent_version": "2.0",
   "daten_qualitaet": {
     "vollstaendigkeit_prozent": 58.3,

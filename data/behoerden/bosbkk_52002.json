@@ -10,8 +10,8 @@
   "sitz": "Berlin",
   "bundesland": "Berlin",
   "koordinaten": {
-    "lat": null,
-    "lon": null
+    "lat": 52.5173885,
+    "lon": 13.3951309
   },
   "gruendungsjahr": null,
   "aufgeloest": false,
@@ -39,7 +39,7 @@
   "quellen": [
     "https://www.bosch-bkk.de/de/bkk/start/startpage.html"
   ],
-  "recherche_datum": "2026-06-06",
+  "recherche_datum": "2026-06-08",
   "recherche_agent_version": "2.0",
   "daten_qualitaet": {
     "vollstaendigkeit_prozent": 75.0,

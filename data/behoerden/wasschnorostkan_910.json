@@ -8,10 +8,10 @@
   "rechtsform": "Dienststelle der WSV",
   "ebene": "Bund",
   "sitz": "Nord-Ostsee-Kanal",
-  "bundesland": null,
+  "bundesland": "Schleswig-Holstein",
   "koordinaten": {
-    "lat": null,
-    "lon": null
+    "lat": 54.2081189,
+    "lon": 9.5721775
   },
   "gruendungsjahr": null,
   "aufgeloest": false,
@@ -39,7 +39,7 @@
   "quellen": [
     "https://www.wsv.de"
   ],
-  "recherche_datum": "2026-06-06",
+  "recherche_datum": "2026-06-08",
   "recherche_agent_version": "2.0",
   "daten_qualitaet": {
     "vollstaendigkeit_prozent": 58.3,

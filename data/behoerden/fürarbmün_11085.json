@@ -10,8 +10,8 @@
   "sitz": "München",
   "bundesland": "Bayern",
   "koordinaten": {
-    "lat": null,
-    "lon": null
+    "lat": 48.1371079,
+    "lon": 11.5753822
   },
   "gruendungsjahr": null,
   "aufgeloest": false,
@@ -39,7 +39,7 @@
   "quellen": [
     "https://www.arbeitsagentur.de"
   ],
-  "recherche_datum": "2026-06-06",
+  "recherche_datum": "2026-06-08",
   "recherche_agent_version": "2.0",
   "daten_qualitaet": {
     "vollstaendigkeit_prozent": 66.7,
