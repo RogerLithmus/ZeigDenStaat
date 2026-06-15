@@ -36,10 +36,8 @@ NOMINATIM_HEADERS = {
 RATE_LIMIT_SLEEP = 1.1
 MAX_RETRIES = 3
 
-BEHOERDEN_DIR = os.environ.get(
-    "BEHOERDEN_DATA_DIR",
-    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "behoerden")
-)
+from utils import _BEHOERDEN_DIR
+
 HEUTE = date.today().isoformat()
 
 geo_cache = {}  # sitz_clean -> {bundesland, lat, lon}
@@ -186,22 +184,15 @@ def enrich_file(obj: dict, force: bool, dry_run: bool) -> tuple[dict, bool, list
     return obj, False, []
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Fehlende Geo-Daten via Nominatim nachladen")
-    parser.add_argument("--dry-run", action="store_true", help="Keine Änderungen schreiben")
-    parser.add_argument("--force", action="store_true", help="Vorhandene Geo-Daten überschreiben")
-    parser.add_argument("--data-dir", default=BEHOERDEN_DIR, help="Pfad zum behoerden/ Verzeichnis")
-    parser.add_argument("--limit", default=999999, help="Pfad zum behoerden/ Verzeichnis")
-    args = parser.parse_args()
-
+def run(data_dir=_BEHOERDEN_DIR, force=False, dry_run=False, limit=999999):
     if not HAS_REQUESTS:
         print("Bitte requests installieren: pip install requests")
-        sys.exit(1)
+        return False
 
-    bdir = args.data_dir
+    bdir = data_dir
     if not os.path.isdir(bdir):
         print(f"FEHLER: Verzeichnis nicht gefunden: {bdir}")
-        sys.exit(1)
+        return False
 
     # Vorab-Cache-Befüllung
     prepopulate_cache(bdir)
@@ -217,7 +208,7 @@ def main():
     start_time = time.time()
 
     for fname in files:
-        if args.limit and processed >= args.limit:
+        if limit and processed >= int(limit):
             break
 
         fpath = os.path.join(bdir, fname)
@@ -228,15 +219,15 @@ def main():
             print(f"FEHLER beim Lesen von {fname}: {e}")
             continue
 
-        if not needs_geo_enrichment(obj, force=args.force):
+        if not needs_geo_enrichment(obj, force=force):
             bereits_vollstaendig += 1
             continue
 
         bid = obj.get("id", fname)
-        obj_updated, changed, felder = enrich_file(obj, force=args.force, dry_run=args.dry_run)
+        obj_updated, changed, felder = enrich_file(obj, force=force, dry_run=dry_run)
 
         if changed:
-            if not args.dry_run:
+            if not dry_run:
                 tmp = fpath + ".tmp"
                 with open(tmp, "w", encoding="utf-8") as f:
                     json.dump(obj_updated, f, ensure_ascii=False, indent=2)
@@ -260,16 +251,26 @@ def main():
         "angereichert": angereichert,
         "nicht_gefunden": nicht_gefunden,
         "bereits_vollstaendig": bereits_vollstaendig,
-        "dry_run": args.dry_run,
+        "dry_run": dry_run,
         "datum": HEUTE,
         "dauer_sekunden": round(duration, 1)
     }
     report_path = os.path.join(os.path.dirname(bdir), "geo_enrichment_report.json")
-    if not args.dry_run:
+    if not dry_run:
         with open(report_path, "w", encoding="utf-8") as f:
             json.dump(bericht, f, ensure_ascii=False, indent=2)
         print(f"\nBericht gespeichert: {report_path}")
 
+    return True
+
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Fehlende Geo-Daten via Nominatim nachladen")
+    parser.add_argument("--dry-run", action="store_true", help="Keine Änderungen schreiben")
+    parser.add_argument("--force", action="store_true", help="Vorhandene Geo-Daten überschreiben")
+    parser.add_argument("--data-dir", default=_BEHOERDEN_DIR, help="Pfad zum behoerden/ Verzeichnis")
+    parser.add_argument("--limit", default=999999, help="Max Anzahl")
+    args = parser.parse_args()
+    
+    success = run(data_dir=args.data_dir, force=args.force, dry_run=args.dry_run, limit=args.limit)
+    sys.exit(0 if success else 1)

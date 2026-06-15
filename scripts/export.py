@@ -31,11 +31,8 @@ try:
 except ImportError:
     HAS_OPENPYXL = False
 
-_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_DEFAULT_DATA_DIR = os.path.join(_ROOT, "data", "behoerden")
-_DEFAULT_SCHEMA_PATH = os.path.join(_ROOT, "data", "schema_v1.json")
-_DEFAULT_BEZIEHUNGEN_PATH = os.path.join(_ROOT, "data", "beziehungen.json")
-_DEFAULT_EXPORT_DIR = os.path.join(_ROOT, "exports")
+from utils import _DATA_DIR, _BEHOERDEN_DIR, _SCHEMA_PATH, _BEZIEHUNGEN_PATH, _EXPORT_DIR
+from loader import load_behoerden
 
 ALLE_FORMATE = ["excel", "csv", "neo4j_cypher", "postgres_sql"]
 
@@ -49,18 +46,7 @@ def load_schema_fields(schema_path: str) -> list:
     return list(schema.get("properties", {}).keys())
 
 
-def load_all(bdir: str) -> list:
-    """Lädt alle Behörden-JSONs."""
-    result = []
-    for fname in sorted(os.listdir(bdir)):
-        if fname.endswith(".json"):
-            fpath = os.path.join(bdir, fname)
-            try:
-                with open(fpath, "r", encoding="utf-8") as f:
-                    result.append(json.load(f))
-            except Exception as e:
-                print(f"WARN: {fname}: {e}", file=sys.stderr)
-    return result
+
 
 
 def load_beziehungen(bez_path: str) -> list:
@@ -404,52 +390,46 @@ def export_postgres(alle: list, beziehungen: list, fields: list, output_dir: str
 
 # ─── HAUPTPROGRAMM ────────────────────────────────────────────────────────────
 
-def main():
-    parser = argparse.ArgumentParser(description="Daten exportieren")
-    parser.add_argument(
-        "--format",
-        default="excel,csv",
-        help="Kommaseparierte Formate: excel, csv, neo4j_cypher, postgres_sql, all"
-    )
-    parser.add_argument("--output", default=_DEFAULT_EXPORT_DIR)
-    parser.add_argument("--data-dir", default=_DEFAULT_DATA_DIR)
-    parser.add_argument("--schema", default=_DEFAULT_SCHEMA_PATH)
-    parser.add_argument("--beziehungen", default=_DEFAULT_BEZIEHUNGEN_PATH)
-    args = parser.parse_args()
-
-    # Formate auflösen
-    formate = args.format.lower().split(",")
+def run(formate_str="excel,csv", output_dir=_EXPORT_DIR, data_dir=_BEHOERDEN_DIR, schema_path=_SCHEMA_PATH, beziehungen_path=_BEZIEHUNGEN_PATH):
+    formate = formate_str.lower().split(",")
     if "all" in formate:
         formate = ALLE_FORMATE
 
-    # Daten laden
-    print(f"Lade Daten aus {args.data_dir}...")
-    alle = load_all(args.data_dir)
-    beziehungen = load_beziehungen(args.beziehungen)
-    fields = load_schema_fields(args.schema)
+    print(f"Lade Daten aus {data_dir}...")
+    alle = load_behoerden(data_dir=data_dir)
+    beziehungen = load_beziehungen(beziehungen_path)
+    fields = load_schema_fields(schema_path)
     if not fields:
-        # Fallback: Felder aus erstem Objekt
         fields = list(alle[0].keys()) if alle else []
     print(f"  {len(alle)} Behörden, {len(beziehungen)} Beziehungen, {len(fields)} Schema-Felder")
 
-    os.makedirs(args.output, exist_ok=True)
-    print(f"\nExportiere nach {args.output}:")
+    os.makedirs(output_dir, exist_ok=True)
+    print(f"\nExportiere nach {output_dir}:")
 
     for fmt in formate:
         fmt = fmt.strip()
         if fmt == "excel":
-            export_excel(alle, beziehungen, fields, args.output)
+            export_excel(alle, beziehungen, fields, output_dir)
         elif fmt == "csv":
-            export_csv(alle, beziehungen, fields, args.output)
+            export_csv(alle, beziehungen, fields, output_dir)
         elif fmt == "neo4j_cypher":
-            export_neo4j(alle, beziehungen, fields, args.output)
+            export_neo4j(alle, beziehungen, fields, output_dir)
         elif fmt == "postgres_sql":
-            export_postgres(alle, beziehungen, fields, args.output)
+            export_postgres(alle, beziehungen, fields, output_dir)
         else:
             print(f"WARN: Unbekanntes Format: {fmt}")
 
     print(f"\nExport abgeschlossen.")
+    return True
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Daten exportieren")
+    parser.add_argument("--format", default="excel,csv", help="Kommaseparierte Formate: excel, csv, neo4j_cypher, postgres_sql, all")
+    parser.add_argument("--output", default=_EXPORT_DIR)
+    parser.add_argument("--data-dir", default=_BEHOERDEN_DIR)
+    parser.add_argument("--schema", default=_SCHEMA_PATH)
+    parser.add_argument("--beziehungen", default=_BEZIEHUNGEN_PATH)
+    args = parser.parse_args()
+    
+    run(formate_str=args.format, output_dir=args.output, data_dir=args.data_dir, schema_path=args.schema, beziehungen_path=args.beziehungen)

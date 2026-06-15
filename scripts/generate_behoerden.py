@@ -401,8 +401,8 @@ def main():
         print("\nStarte Aggregation über Pipeline...")
         sys.path.insert(0, _ROOT)
         try:
-            from scripts.pipeline import run_merge
-            run_merge()
+            from scripts.merge import run
+            run()
         except ImportError as e:
             print(f"WARN: Merge-Schritt konnte nicht geladen werden: {e}", file=sys.stderr)
 

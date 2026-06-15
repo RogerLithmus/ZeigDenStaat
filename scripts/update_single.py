@@ -21,20 +21,10 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_DEFAULT_DATA_DIR = os.path.join(_ROOT, "data", "behoerden")
-_DEFAULT_LOG_PATH = os.path.join(_ROOT, "data", "logs", "updates.jsonl")
-
-# Pflichtfelder für Vollständigkeits-Berechnung
-VOLLSTAENDIGKEITS_FELDER = [
-    "name", "kuerzel", "typ", "rechtsform", "sitz", "bundesland", "beschaeftigte",
-    "gruendungsjahr", "zustaendigkeit", "website", "rechtsgrundlage", "ministerium_id"
-]
+from utils import VOLLSTAENDIGKEITS_FELDER, compute_vollstaendigkeit, _BEHOERDEN_DIR, _LOG_PATH
 
 
-def compute_vollstaendigkeit(obj: dict) -> float:
-    nicht_null = sum(1 for f in VOLLSTAENDIGKEITS_FELDER if obj.get(f) is not None)
-    return round(nicht_null / len(VOLLSTAENDIGKEITS_FELDER) * 100, 1)
+
 
 
 def log_update(log_path: str, entry: dict):
@@ -96,10 +86,10 @@ def parse_set_args(set_args: list) -> dict:
     return updates
 
 
-def update_single(
+def run(
     behörden_id: str,
-    data_dir: str = _DEFAULT_DATA_DIR,
-    log_path: str = _DEFAULT_LOG_PATH,
+    data_dir: str = _BEHOERDEN_DIR,
+    log_path: str = _LOG_PATH,
     force_overwrite: bool = False,
     manual_updates: dict = None,
     dry_run: bool = False,
@@ -176,11 +166,11 @@ def update_single(
     return obj
 
 
-def main():
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Einzelne Behörde aktualisieren")
     parser.add_argument("--id", required=True, help="Behörden-ID (z.B. bka)")
-    parser.add_argument("--data-dir", default=_DEFAULT_DATA_DIR)
-    parser.add_argument("--log", default=_DEFAULT_LOG_PATH)
+    parser.add_argument("--data-dir", default=_BEHOERDEN_DIR)
+    parser.add_argument("--log", default=_LOG_PATH)
     parser.add_argument(
         "--force-overwrite",
         action="store_true",
@@ -197,7 +187,7 @@ def main():
 
     manual_updates = parse_set_args(args.set)
 
-    update_single(
+    run(
         behörden_id=args.id,
         data_dir=args.data_dir,
         log_path=args.log,
@@ -205,7 +195,3 @@ def main():
         manual_updates=manual_updates,
         dry_run=args.dry_run,
     )
-
-
-if __name__ == "__main__":
-    main()

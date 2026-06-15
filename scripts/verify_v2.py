@@ -51,7 +51,7 @@ has_sections = all(s in rm for s in sections)
 checks.append(("data/README.md (mit Anleitung)", has_sections, f"{len(rm)} Bytes"))
 
 # 9. Scripts
-for script in ["loader.py", "enrich_geodata.py", "validate.py", "export.py", "update_single.py", "pipeline.py", "requirements.txt"]:
+for script in ["loader.py", "enrich_geodata.py", "validate.py", "export.py", "update_single.py", "cli.py", "requirements.txt"]:
     ok = os.path.isfile(f"scripts/{script}")
     sz = os.path.getsize(f"scripts/{script}") // 1024 if ok else 0
     checks.append((f"scripts/{script}", ok, f"{sz} KB" if ok else ""))
@@ -81,11 +81,11 @@ with open("scripts/update_single.py", "r", encoding="utf-8") as f:
 has_args = "--id" in us_code and "--force-overwrite" in us_code
 checks.append(("update_single.py --id + --force-overwrite", has_args, ""))
 
-# 14. pipeline.py --skip
-with open("scripts/pipeline.py", "r", encoding="utf-8") as f:
-    pl_code = f.read()
-has_skip = "--skip" in pl_code and "--only" in pl_code
-checks.append(("pipeline.py --skip/--only", has_skip, ""))
+# 14. cli.py structure
+with open("scripts/cli.py", "r", encoding="utf-8") as f:
+    cli_code = f.read()
+has_cli = "import argparse" in cli_code and "generate" in cli_code and "export" in cli_code
+checks.append(("cli.py commands exist", has_cli, ""))
 
 # 15. export.py alle 4 Formate
 with open("scripts/export.py", "r", encoding="utf-8") as f:
@@ -95,7 +95,7 @@ checks.append(("export.py alle 4 Formate", has_formats, ""))
 
 # 16. Keine hardcodierten fachlichen Daten in neuen Scripts
 hardcode_violation = False
-for script in ["loader.py", "enrich_geodata.py", "validate.py", "export.py", "update_single.py", "pipeline.py"]:
+for script in ["loader.py", "enrich_geodata.py", "validate.py", "export.py", "update_single.py", "cli.py"]:
     with open(f"scripts/{script}", "r", encoding="utf-8") as f:
         code = f.read()
     # Prüfe auf typische hardcodierte Stadt→Bundesland-Tabellen

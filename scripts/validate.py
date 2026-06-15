@@ -36,17 +36,9 @@ except ImportError:
     HAS_JSONSCHEMA = False
     print("WARN: jsonschema nicht installiert. Schema-Validierung deaktiviert.", file=sys.stderr)
 
-# Standardpfade
-_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_DEFAULT_DATA_DIR = os.path.join(_ROOT, "data", "behoerden")
-_DEFAULT_SCHEMA_PATH = os.path.join(_ROOT, "data", "schema_v1.json")
-_DEFAULT_BERICHT_PATH = os.path.join(_ROOT, "data", "qualitaetsbericht.json")
+from utils import VOLLSTAENDIGKEITS_FELDER, compute_vollstaendigkeit, _DATA_DIR, _BEHOERDEN_DIR, _SCHEMA_PATH, _ROOT
 
-# Felder für Vollständigkeits-Berechnung (aus Schema-Anforderungen)
-VOLLSTAENDIGKEITS_FELDER = [
-    "name", "kuerzel", "typ", "rechtsform", "sitz", "bundesland", "beschaeftigte",
-    "gruendungsjahr", "zustaendigkeit", "website", "rechtsgrundlage", "ministerium_id"
-]
+_DEFAULT_BERICHT_PATH = os.path.join(_DATA_DIR, "qualitaetsbericht.json")
 
 
 def load_all_behoerden(bdir: str) -> dict:
@@ -80,31 +72,24 @@ def validate_schema(obj: dict, schema: dict) -> list:
     return errors
 
 
-def compute_vollstaendigkeit(obj: dict) -> float:
-    """Berechnet Vollständigkeit aus den definierten Pflichtfeldern."""
-    nicht_null = sum(1 for f in VOLLSTAENDIGKEITS_FELDER if obj.get(f) is not None)
-    return round(nicht_null / len(VOLLSTAENDIGKEITS_FELDER) * 100, 1)
 
+def run(
+    bdir=_BEHOERDEN_DIR,
+    schema_path=_SCHEMA_PATH,
+    output_path=_DEFAULT_BERICHT_PATH,
+    strict=False
+):
 
-def main():
-    parser = argparse.ArgumentParser(description="Datenqualität prüfen")
-    parser.add_argument("--data-dir", default=_DEFAULT_DATA_DIR)
-    parser.add_argument("--schema", default=_DEFAULT_SCHEMA_PATH)
-    parser.add_argument("--output", default=_DEFAULT_BERICHT_PATH)
-    parser.add_argument("--strict", action="store_true", help="Fehler bei jeder Warnung")
-    args = parser.parse_args()
-
-    bdir = args.data_dir
     if not os.path.isdir(bdir):
         print(f"FEHLER: {bdir} nicht gefunden")
-        sys.exit(1)
+        return False
 
     # Schema laden
     schema = None
-    if os.path.isfile(args.schema) and HAS_JSONSCHEMA:
-        with open(args.schema, "r", encoding="utf-8") as f:
+    if os.path.isfile(schema_path) and HAS_JSONSCHEMA:
+        with open(schema_path, "r", encoding="utf-8") as f:
             schema = json.load(f)
-        print(f"Schema geladen: {args.schema}")
+        print(f"Schema geladen: {schema_path}")
     else:
         print("WARN: Kein Schema gefunden oder jsonschema nicht installiert.")
 
@@ -199,10 +184,10 @@ def main():
     }
 
     # Bericht schreiben
-    os.makedirs(os.path.dirname(args.output), exist_ok=True)
-    with open(args.output, "w", encoding="utf-8") as f:
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(bericht, f, ensure_ascii=False, indent=2)
-    print(f"Qualitaetsbericht gespeichert: {args.output}")
+    print(f"Qualitaetsbericht gespeichert: {output_path}")
 
     # Zusammenfassung ausgeben
     print(f"\n=== QUALITAETSBERICHT ===")
@@ -218,16 +203,29 @@ def main():
 
     # Exit-Code
     kritische_fehler = len(schema_fehler) + len(referenz_fehler)
-    if args.strict:
+    if strict:
         kritische_fehler += len(konsistenz_fehler)
 
     if kritische_fehler > 0:
         print(f"\n[EXIT 1] {kritische_fehler} kritische Fehler gefunden.")
-        sys.exit(1)
+        return False
     else:
         print(f"\n[EXIT 0] Validierung erfolgreich.")
-        sys.exit(0)
+        return True
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Datenqualität prüfen")
+    parser.add_argument("--data-dir", default=_BEHOERDEN_DIR)
+    parser.add_argument("--schema", default=_SCHEMA_PATH)
+    parser.add_argument("--output", default=_DEFAULT_BERICHT_PATH)
+    parser.add_argument("--strict", action="store_true", help="Fehler bei jeder Warnung")
+    args = parser.parse_args()
+
+    success = run(
+        bdir=args.data_dir,
+        schema_path=args.schema,
+        output_path=args.output,
+        strict=args.strict
+    )
+    sys.exit(0 if success else 1)

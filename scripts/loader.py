@@ -25,22 +25,12 @@ try:
 except ImportError:
     HAS_JSONSCHEMA = False
 
-# Umgebungsvariable für Daten-Verzeichnis, default: ./data/behoerden
-_DEFAULT_DATA_DIR = os.environ.get(
-    "BEHOERDEN_DATA_DIR",
-    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "behoerden")
-)
-_DEFAULT_SCHEMA_PATH = os.path.join(
-    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "schema_v1.json"
-)
-_DEFAULT_BEZIEHUNGEN_PATH = os.path.join(
-    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "beziehungen.json"
-)
+from utils import _BEHOERDEN_DIR, _SCHEMA_PATH, _BEZIEHUNGEN_PATH
 
 
 def get_schema(data_dir: Optional[str] = None) -> dict:
     """Liest das JSON-Schema aus data/schema_v1.json."""
-    schema_path = _DEFAULT_SCHEMA_PATH
+    schema_path = _SCHEMA_PATH
     if data_dir:
         # Suche schema_v1.json im übergeordneten Verzeichnis
         parent = os.path.dirname(data_dir.rstrip("/\\"))
@@ -78,7 +68,7 @@ def load_behoerden(
     Returns:
         Liste von Behörden-Dicts, gefiltert nach den angegebenen Kriterien
     """
-    resolved_dir = data_dir or _DEFAULT_DATA_DIR
+    resolved_dir = data_dir or _BEHOERDEN_DIR
     if not os.path.isdir(resolved_dir):
         raise NotADirectoryError(f"Verzeichnis nicht gefunden: {resolved_dir}")
 
@@ -146,7 +136,7 @@ def load_beziehungen(data_dir: Optional[str] = None) -> list:
     Returns:
         Liste von Beziehungs-Dicts mit Feldern: von, zu, typ, richtung, seit, quelle
     """
-    bez_path = _DEFAULT_BEZIEHUNGEN_PATH
+    bez_path = _BEZIEHUNGEN_PATH
     if data_dir:
         parent = os.path.dirname(data_dir.rstrip("/\\"))
         candidate = os.path.join(parent, "beziehungen.json")
@@ -156,7 +146,7 @@ def load_beziehungen(data_dir: Optional[str] = None) -> list:
     if not os.path.isfile(bez_path):
         # Fallback: direkt aus Einzel-JSONs aufbauen
         print(f"WARN: {bez_path} nicht gefunden, baue aus Einzeldateien.", file=sys.stderr)
-        resolved_dir = data_dir or _DEFAULT_DATA_DIR
+        resolved_dir = data_dir or _BEHOERDEN_DIR
         result = []
         for fname in sorted(os.listdir(resolved_dir)):
             if not fname.endswith(".json"):
