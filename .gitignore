@@ -142,3 +142,7 @@ x86/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+
+# py Cache
+**/__pycache__
