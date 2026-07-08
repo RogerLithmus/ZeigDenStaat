@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ZeigDenStaat.Application/ZeigDenStaat.Application.csproj" />
+    <Project Path="src/ZeigDenStaat.Domain/ZeigDenStaat.Domain.csproj" />
+    <Project Path="src/ZeigDenStaat.Infrastructure/ZeigDenStaat.Infrastructure.csproj" />
+    <Project Path="src/ZeigDenStaat.WebApi/ZeigDenStaat.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ZeigDenStaat.Tests/ZeigDenStaat.Tests.csproj" />
+  </Folder>
+</Solution>

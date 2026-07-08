@@ -1,0 +1,6 @@
+@ZeigDenStaat.WebApi_HostAddress = http://localhost:5038
+
+GET {{ZeigDenStaat.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
