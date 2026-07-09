@@ -1,0 +1,15 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5038:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Neo4j__Uri=bolt://host.docker.internal:7687
+      - Neo4j__Username=neo4j
+      - Neo4j__Password=neo4jneo4j
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    container_name: zeigdenstaat-backend

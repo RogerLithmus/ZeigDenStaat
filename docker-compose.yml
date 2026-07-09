@@ -1,0 +1,22 @@
+include:
+  - path: ./neo4j/docker-compose.yaml
+  - path: ./backend/docker-compose.yml
+  - path: ./frontend/docker-compose.yml
+
+services:
+  neo4j:
+    # Set credentials for Neo4j instance
+    environment:
+      - NEO4J_AUTH=neo4j/neo4jneo4j
+
+  backend:
+    # Point backend to the neo4j container within the docker network
+    environment:
+      - Neo4j__Uri=bolt://neo4j:7687
+    depends_on:
+      - neo4j
+
+  frontend:
+    # Ensure backend starts first
+    depends_on:
+      - backend

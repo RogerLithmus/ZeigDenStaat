@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - VITE_BACKEND_URL=http://localhost:5038/api/state-graph
+    ports:
+      - "5173:80"
+    container_name: zeigdenstaat-frontend
