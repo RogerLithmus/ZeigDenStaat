@@ -6,5 +6,5 @@ services:
       args:
         - VITE_BACKEND_URL=http://localhost:5038/api/state-graph
     ports:
-      - "5173:80"
+      - "5173:8080"
     container_name: zeigdenstaat-frontend
