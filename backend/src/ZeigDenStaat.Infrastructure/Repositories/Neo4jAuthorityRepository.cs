@@ -39,6 +39,7 @@ public class Neo4jAuthorityRepository : IAuthorityRepository
             {
                 Id = "deutBund",
                 Name = "Deutscher Bundestag",
+                Abbrev = "Bundestag",
                 ParentId = null,
                 Depth = 0,
                 Classification = "parliament",
@@ -108,6 +109,7 @@ public class Neo4jAuthorityRepository : IAuthorityRepository
         var location = GetPropString(node, "location");
         var description = GetPropString(node, "description");
         var head = GetPropString(node, "head");
+        var kuerzel = GetPropString(node, "kuerzel");
 
         // Infer classification/type if empty
         if (string.IsNullOrEmpty(classification))
@@ -119,6 +121,7 @@ public class Neo4jAuthorityRepository : IAuthorityRepository
         {
             Id = id,
             Name = name,
+            Abbrev = kuerzel,
             ParentId = string.IsNullOrEmpty(parentId) ? null : parentId,
             Depth = int.TryParse(depthStr, out var d) ? d : 0,
             Classification = classification,

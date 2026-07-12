@@ -19,8 +19,8 @@ public class GetStateGraphUseCaseTests
         {
             Nodes = new List<Authority>
             {
-                new() { Id = "bundestag", Name = "Deutscher Bundestag" },
-                new() { Id = "bmf", Name = "Bundesministerium der Finanzen" }
+                new() { Id = "bundestag", Name = "Deutscher Bundestag", Abbrev = "Bundestag" },
+                new() { Id = "bmf", Name = "Bundesministerium der Finanzen", Abbrev = "BMF" }
             },
             Edges = new List<Edge>
             {

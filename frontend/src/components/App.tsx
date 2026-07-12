@@ -1,5 +1,6 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useState, useRef, useEffect } from 'react'
+import { MinistryIcon, hasMinistryIcon } from './MinistryIcons'
 
 interface NodeData {
   id: string
@@ -36,17 +37,8 @@ function LogoIcon({ className }: { className?: string }) {
   )
 }
 
-function getAbbrev(name: string): string {
-  if (name.includes('Bundestag')) return 'Bundestag'
-  if (name.includes('Finanzen')) return 'BMF'
-  if (name.includes('Auswärtiges')) return 'AA'
-  if (name.includes('Innern')) return 'BMI'
-  if (name.includes('Justiz')) return 'BMJ'
-  if (name.includes('Wirtschaft')) return 'BMWK'
-  if (name.includes('Verteidigung')) return 'BMVg'
-  if (name.includes('Gesundheit')) return 'BMG'
-  if (name.includes('Bildung')) return 'BMBF'
-  if (name.includes('Digitales')) return 'BMDV'
+function getAbbrev(name: string, abbrev?: string): string {
+  if (abbrev) return abbrev
 
   const match = name.match(/\(([^)]+)\)/)
   if (match) return match[1]
@@ -67,6 +59,7 @@ interface BackendNode {
   location?: string
   description: string
   head: string
+  abbrev?: string
 }
 
 interface BackendEdge {
@@ -119,7 +112,7 @@ function App() {
           return {
             id: node.id,
             name: node.name,
-            abbrev: getAbbrev(node.name),
+            abbrev: getAbbrev(node.name, node.abbrev),
             type: isParliament ? 'parliament' : 'ministry',
             x,
             y,
@@ -378,15 +371,34 @@ function App() {
                     </text>
 
                     {/* Visual icon representation inside circles */}
-                    <text
-                      y="5"
-                      textAnchor="middle"
-                      className={`select-none transition-transform duration-300 group-hover:scale-110 ${
-                        isParliament ? 'text-lg' : 'text-xs'
-                      }`}
-                    >
-                      {isParliament ? '🏛️' : '💼'}
-                    </text>
+                    {(() => {
+                      if (
+                        node.type === 'ministry' &&
+                        hasMinistryIcon(node.abbrev)
+                      ) {
+                        return (
+                          <g transform="translate(-12, -12)">
+                            <MinistryIcon
+                              abbrev={node.abbrev}
+                              width={24}
+                              height={24}
+                              className="transition-transform duration-300 group-hover:scale-110"
+                            />
+                          </g>
+                        )
+                      }
+                      return (
+                        <text
+                          y="5"
+                          textAnchor="middle"
+                          className={`select-none transition-transform duration-300 group-hover:scale-110 ${
+                            isParliament ? 'text-lg' : 'text-xs'
+                          }`}
+                        >
+                          {isParliament ? '🏛️' : '💼'}
+                        </text>
+                      )
+                    })()}
                   </g>
                 )
               })}
@@ -398,17 +410,39 @@ function App() {
         <div className="flex w-full shrink-0 flex-col justify-between border-t border-accent/20 bg-secondary p-6 shadow-2xl lg:w-[400px] lg:border-l lg:border-t-0 lg:p-8">
           {selectedNode ? (
             <div className="space-y-6">
-              <div>
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-accent">
-                  {selectedNode.type === 'parliament'
-                    ? 'Haupt-Organ / Bundestag'
-                    : 'Bundesministerium'}
-                </span>
-                <h2 className="mt-1 text-2xl font-black leading-tight text-on-secondary">
-                  {selectedNode.name}
-                </h2>
-                <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wider text-on-accent shadow-md shadow-accent/20">
-                  📍 {selectedNode.location}
+              <div className="flex items-start gap-4">
+                {(() => {
+                  if (
+                    selectedNode.type === 'ministry' &&
+                    hasMinistryIcon(selectedNode.abbrev)
+                  ) {
+                    return (
+                      <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl border border-accent/20 bg-accent/10 p-2 shadow-inner">
+                        <MinistryIcon
+                          abbrev={selectedNode.abbrev}
+                          className="size-full"
+                        />
+                      </div>
+                    )
+                  }
+                  return (
+                    <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl border border-accent/20 bg-accent/10 p-2 text-2xl shadow-inner">
+                      {selectedNode.type === 'parliament' ? '🏛️' : '💼'}
+                    </div>
+                  )
+                })()}
+                <div className="grow">
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-accent">
+                    {selectedNode.type === 'parliament'
+                      ? 'Haupt-Organ / Bundestag'
+                      : 'Bundesministerium'}
+                  </span>
+                  <h2 className="mt-1 text-2xl font-black leading-tight text-on-secondary">
+                    {selectedNode.name}
+                  </h2>
+                  <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wider text-on-accent shadow-md shadow-accent/20">
+                    📍 {selectedNode.location}
+                  </div>
                 </div>
               </div>
 

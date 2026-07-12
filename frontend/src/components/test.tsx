@@ -15,6 +15,7 @@ describe('<App />', () => {
               {
                 id: 'bundestag',
                 name: 'Deutscher Bundestag',
+                abbrev: 'Bundestag',
                 classification: 'parliament',
                 location: 'Berlin (Reichstagsgebäude)',
                 description:
@@ -24,6 +25,7 @@ describe('<App />', () => {
               {
                 id: 'bmf',
                 name: 'Bundesministerium der Finanzen',
+                abbrev: 'BMF',
                 classification: 'ministry',
                 location: 'Berlin (Detlev-Rohwedder-Haus)',
                 description:
@@ -33,6 +35,7 @@ describe('<App />', () => {
               {
                 id: 'aa',
                 name: 'Auswärtiges Amt',
+                abbrev: 'AA',
                 classification: 'ministry',
                 location: 'Berlin (Werderscher Markt)',
                 description: 'Verantwortlich für die Vertretung...',
