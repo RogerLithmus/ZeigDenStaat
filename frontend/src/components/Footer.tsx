@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4 md:col-span-2">
             <div className="flex items-center gap-3">
-              <LogoIcon className="size-7 text-accent" />
+              <LogoIcon className="size-14 text-accent" />
               <span className="text-lg font-bold tracking-tight">
                 ZeigDenStaat
               </span>

@@ -1,21 +1,9 @@
+import logoUrl from '../assets/logo.svg'
+
 interface LogoIconProps {
   className?: string
 }
 
 export function LogoIcon({ className }: LogoIconProps) {
-  return (
-    <svg
-      viewBox="0 0 410 410"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M205 410C318.218 410 410 318.218 410 205C410 91.7816 318.218 0 205 0C91.7816 0 0 91.7816 0 205C0 318.218 91.7816 410 205 410ZM205 360C290.604 360 360 290.604 360 205C360 119.396 290.604 50 205 50C119.396 50 50 119.396 50 205C50 290.604 119.396 360 205 360Z"
-        fill="currentColor"
-      />
-    </svg>
-  )
+  return <img src={logoUrl} className={className} alt="ZeigDenStaat Logo" />
 }
