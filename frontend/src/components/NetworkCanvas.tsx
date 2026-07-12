@@ -136,6 +136,10 @@ export function NetworkCanvas({
             const toNode = nodes.find((n) => n.id === edge.to)
             if (!fromNode || !toNode) return null
 
+            const isHighlighted =
+              selectedNode &&
+              (selectedNode.id === edge.from || selectedNode.id === edge.to)
+
             return (
               <line
                 key={`edge-${index}`}
@@ -143,10 +147,12 @@ export function NetworkCanvas({
                 y1={fromNode.y}
                 x2={toNode.x}
                 y2={toNode.y}
-                stroke="#4d90ff"
-                strokeWidth="1.5"
-                strokeOpacity="0.45"
-                className="animate-edge"
+                stroke="currentColor"
+                strokeWidth={isHighlighted ? '2' : '1.5'}
+                strokeOpacity={isHighlighted ? '0.9' : '0.45'}
+                className={`animate-edge transition-all duration-300 ${
+                  isHighlighted ? 'text-accent' : 'text-secondary'
+                }`}
               />
             )
           })}
@@ -170,28 +176,31 @@ export function NetworkCanvas({
                 <circle
                   r={isParliament ? 42 : 28}
                   fill="none"
-                  stroke={isSelected ? '#4d90ff' : 'transparent'}
+                  stroke="currentColor"
                   strokeWidth="2"
-                  className="animate-pulse opacity-60 transition-all duration-300"
+                  className={`animate-pulse opacity-60 transition-all duration-300 ${
+                    isSelected ? 'text-accent' : 'text-transparent'
+                  }`}
                 />
 
                 {/* Background Node Circle */}
                 <circle
                   r={isParliament ? 32 : 20}
-                  fill={isParliament ? '#06327a' : '#03183b'}
-                  stroke={isSelected ? '#4d90ff' : '#06327a'}
+                  className={`transition-all duration-300 group-hover:scale-110 ${
+                    isParliament
+                      ? 'fill-secondary stroke-accent'
+                      : 'fill-dominant stroke-secondary group-hover:stroke-accent/70'
+                  } ${isSelected ? 'stroke-accent' : ''}`}
                   strokeWidth={isSelected ? 3 : 1.5}
-                  className="transition-all duration-300 group-hover:scale-110 group-hover:stroke-accent/70"
                 />
 
                 {/* Node Text Label */}
                 <text
                   y={isParliament ? 52 : 36}
                   textAnchor="middle"
-                  fill={isSelected ? '#4d90ff' : '#ffffff'}
                   className={`select-none text-[10px] font-bold tracking-wide transition-colors duration-200 ${
-                    isParliament ? 'text-xs' : ''
-                  }`}
+                    isSelected ? 'fill-accent' : 'fill-on-dominant'
+                  } ${isParliament ? 'text-xs' : ''}`}
                 >
                   {node.abbrev}
                 </text>
