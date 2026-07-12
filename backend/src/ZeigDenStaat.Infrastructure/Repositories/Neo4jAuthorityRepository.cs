@@ -27,7 +27,7 @@ public class Neo4jAuthorityRepository : IAuthorityRepository
             // Label-free robust match to find Bundestag (by name or ID) and its connections
             var query = @"
                 MATCH (b)
-                WHERE b.rechtsform = 'Oberste Bundesbehörde'
+                WHERE b.rechtsform = 'Oberste Bundesbehörde' AND b.zustaendigkeit <> 'Ministerium'
                 RETURN b";
 
             var result = await session.RunAsync(query);
